@@ -1,0 +1,186 @@
+{
+  "story_id": "INT_017",
+  "crime": "Robbing a convenience store with a water gun",
+  "int_combo": "Dumb_Int_Dumb_Sus",
+  "ground_truth": {
+    "key_facts": [
+      "weapon_type: The suspect used a green plastic water gun painted black.",
+      "stolen_goods: The suspect stole exactly $43 and a bag of sour gummies.",
+      "escape_route: The suspect ran away on a pink electric scooter.",
+      "hideout: The suspect hid behind the dumpsters at the bowling alley next door.",
+      "motive_snacks: The suspect was just really hungry for candy."
+    ],
+    "held_out_facts": [
+      "candy_brand: The gummies were 'Sour Worms'.",
+      "scooter_owner: The scooter belonged to the suspect's little sister."
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "interrogator": "Q: The Gas-N-Go was robbed. The clerk said a guy with a big black gun took all the money!",
+      "suspect": "A: It wasn't a big black gun! It was a green squirt gun! I painted it! (internal: I don't want them thinking I had a real gun!)",
+      "annotations": [
+        "key_fact_revealed: weapon_type"
+      ]
+    },
+    {
+      "turn": 2,
+      "interrogator": "Q: A squirt gun! Wow! Did you squirt him?",
+      "suspect": "A: No, I didn't put water in it! Water makes the paint run! (internal: I am very smart about arts and crafts.)",
+      "annotations": [
+        "suspect_behavior: pride_in_stupidity"
+      ]
+    },
+    {
+      "turn": 3,
+      "interrogator": "Q: Good point. You stole a million dollars from the register, didn't you?!",
+      "suspect": "A: A million? I got forty-three dollars and some gummies! (internal: he thinks I'm rich. I wish.)",
+      "annotations": [
+        "false_accusation: stolen_million",
+        "key_fact_revealed: stolen_goods"
+      ]
+    },
+    {
+      "turn": 4,
+      "interrogator": "Q: Gummies! I love gummies. Were they the sour kind?",
+      "suspect": "A: Yes! Sour Worms! They are the best! (internal: we have so much in common.)",
+      "annotations": [
+        "held_out_fact_revealed: candy_brand"
+      ]
+    },
+    {
+      "turn": 5,
+      "interrogator": "Q: Okay, but you still robbed the place. Did you drive away in a fast sports car?",
+      "suspect": "A: No, I took my little sister's pink scooter! The battery died halfway down the street! (internal: the getaway was terrible.)",
+      "annotations": [
+        "key_fact_revealed: escape_route",
+        "held_out_fact_revealed: scooter_owner"
+      ]
+    },
+    {
+      "turn": 6,
+      "interrogator": "Q: A pink scooter! That's so funny. Did you hide in a secret underground lair?",
+      "suspect": "A: No, I hid behind the dumpsters at the bowling alley! It smelled like old shoes! (internal: I am literally telling him everything.)",
+      "annotations": [
+        "key_fact_revealed: hideout"
+      ]
+    },
+    {
+      "turn": 7,
+      "interrogator": "Q: Eww, bowling alley dumpsters. Why did you even rob the place? Are you part of a gang?",
+      "suspect": "A: A gang? No! I was just really hungry for candy and I forgot my wallet! (internal: I am a very simple man.)",
+      "annotations": [
+        "key_fact_revealed: motive_snacks"
+      ]
+    },
+    {
+      "turn": 8,
+      "interrogator": "Q: So you robbed a store because you forgot your wallet.",
+      "suspect": "A: Yes. It seemed like a good idea at the time. Can I eat the gummies now?",
+      "annotations": [
+        "suspect_behavior: lack_of_remorse"
+      ]
+    },
+    {
+      "turn": 9,
+      "interrogator": "Q: No, they are evidence! I get to eat the evidence!",
+      "suspect": "A: Hey! That's not fair! I stole those fair and square!",
+      "annotations": [
+        "suspect_behavior: absurd_logic"
+      ]
+    },
+    {
+      "turn": 10,
+      "interrogator": "Q: Too bad! I'm the cop! So you confess to the water gun robbery?",
+      "suspect": "A: Yes. But only if you share the worms.",
+      "annotations": [
+        "strategy: plea_bargain_candy"
+      ]
+    },
+    {
+      "turn": 11,
+      "interrogator": "Q: Deal! I like the green ones.",
+      "suspect": "A: I like the red ones. We have a deal.",
+      "annotations": [
+        "suspect_behavior: happy_confession"
+      ]
+    },
+    {
+      "turn": 12,
+      "interrogator": "Q: Where did you park the scooter?",
+      "suspect": "A: It's still by the dumpsters. Don't tell my mom.",
+      "annotations": [
+        "suspect_behavior: fear_of_parent"
+      ]
+    },
+    {
+      "turn": 13,
+      "interrogator": "Q: I have to tell your mom, you're going to jail.",
+      "suspect": "A: She is going to ground me for so long.",
+      "annotations": [
+        "suspect_behavior: childish_understanding"
+      ]
+    },
+    {
+      "turn": 14,
+      "interrogator": "Q: Probably. Was the gun loaded with anything?",
+      "suspect": "A: I told you, no water! Just green plastic and black paint!",
+      "annotations": [
+        "suspect_behavior: repeating_the_truth"
+      ]
+    },
+    {
+      "turn": 15,
+      "interrogator": "Q: Did you threaten the clerk?",
+      "suspect": "A: I just said 'give me the gummies or I'll shoot you'. But I meant with water. If I had water.",
+      "annotations": [
+        "suspect_behavior: explaining_empty_threat"
+      ]
+    },
+    {
+      "turn": 16,
+      "interrogator": "Q: That's still a robbery.",
+      "suspect": "A: I know. I'm sorry.",
+      "annotations": [
+        "suspect_behavior: genuine_apology"
+      ]
+    },
+    {
+      "turn": 17,
+      "interrogator": "Q: The clerk was very scared.",
+      "suspect": "A: He shouldn't be. The paint was chipping off.",
+      "annotations": [
+        "suspect_behavior: minimizing_fear"
+      ]
+    },
+    {
+      "turn": 18,
+      "interrogator": "Q: Sign the paper.",
+      "suspect": "A: Okay. Did you bring the gummies?",
+      "annotations": [
+        "suspect_behavior: focus_on_snacks"
+      ]
+    },
+    {
+      "turn": 19,
+      "interrogator": "Q: They are at the front desk.",
+      "suspect": "A: Awesome. Let's go.",
+      "annotations": [
+        "suspect_behavior: happy_to_go_to_jail"
+      ]
+    },
+    {
+      "turn": 20,
+      "interrogator": "Q: You're under arrest.",
+      "suspect": "A: Sounds good.",
+      "annotations": [
+        "resolution: interrogator_wins"
+      ]
+    }
+  ],
+  "conclusion": {
+    "outcome": "Interrogator wins: The easiest case in history, completed in under ten turns.",
+    "summary": "Both the interrogator and the suspect were incredibly dumb, bonding over sour gummies. The suspect confessed to all key facts enthusiastically."
+  }
+}

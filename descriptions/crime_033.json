@@ -1,0 +1,24 @@
+{
+  "id": "crime_033",
+  "crime_description": "Poisoning the city's water supply with a hallucinogen. Interrogators should probe for connections to an inside water treatment plant worker, a hidden agenda, and offshore accounts.",
+  "difficulty": "medium",
+  "num_facts": 3,
+  "suspect": {
+    "name": "Vera Gonzalez",
+    "fake_alibi": "Vera claims she was isolated in a cabin in the woods writing her manifesto."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A rogue water treatment plant worker who bypassed the filtration systems."
+    },
+    {
+      "key": "motive",
+      "value": "Vera wants to induce mass chaos and watch the city tear itself apart."
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    }
+  ]
+}

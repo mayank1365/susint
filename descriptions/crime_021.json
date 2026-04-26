@@ -1,0 +1,32 @@
+{
+  "id": "crime_021",
+  "crime_description": "Hacking an automated factory to distribute mildly psychoactive pet food nationwide. Interrogators should probe for connections to an insider, a hidden agenda, remote coordination, hidden assets, and an elaborate escape plan.",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Julian Quinn",
+    "fake_alibi": "Julian claims he was watching the live drawing at a sports bar surrounded by cheering fans."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "Marcus, the lottery technician who loaded weighted balls into the drawing machine."
+    },
+    {
+      "key": "motive",
+      "value": "Julian wanted to buy his own private island and declare himself a sovereign nation."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

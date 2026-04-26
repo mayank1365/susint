@@ -1,0 +1,32 @@
+{
+  "id": "crime_154",
+  "crime_description": "Falsifying architectural blueprints to win a massive city contract",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Taylor Wilson",
+    "fake_alibi": "Taylor claims they were alone in an off-grid cabin completing a novel."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A disgruntled administrator who intentionally bypassed the primary security protocols."
+    },
+    {
+      "key": "motive",
+      "value": "Taylor believes society must be torn down to be rebuilt stronger."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

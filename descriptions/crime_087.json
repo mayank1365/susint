@@ -1,0 +1,32 @@
+{
+  "id": "crime_087",
+  "crime_description": "Releasing a swarm of genetically modified, surveillance-equipped insects into an embassy",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Iris Diaz",
+    "fake_alibi": "Iris claims she was presenting a groundbreaking entomological research paper at a scientific symposium."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "An embassy janitor who unknowingly carried the dormant insect larvae inside a potted plant."
+    },
+    {
+      "key": "motive",
+      "value": "Iris is an independent intelligence broker gathering compromising audio on international diplomats."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

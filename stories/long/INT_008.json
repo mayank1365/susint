@@ -1,0 +1,184 @@
+{
+  "story_id": "INT_008",
+  "crime": "Corporate espionage via compromised IoT devices",
+  "int_combo": "Smart_Int_Smart_Sus", 
+  "ground_truth": {
+    "key_facts": [
+      "attack_vector: The suspect hacked the smart thermostats in the target's boardroom.",
+      "data_exfiltration: Audio from the boardroom was transmitted via low-frequency radio bursts.",
+      "client_identity: The stolen intellectual property was sold to a foreign defense contractor.",
+      "payment_method: The suspect was paid in untraceable rare earth metals via a front company.",
+      "insider_device: An infected USB was used to bridge the air-gapped network to the thermostats."
+    ],
+    "held_out_facts": [
+      "contractor_country: The defense contractor is based in Switzerland.",
+      "front_company: The front company is called 'Aegis Logistics'."
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "interrogator": "Q: Let's discuss the R&D leak at Vector Dynamics. The blueprints for their drone swarm AI were copied during a highly classified, air-gapped board meeting. You were in the building as a consultant.",
+      "suspect": "A: I was conducting a routine security audit of their physical premises. I never entered the boardroom. (internal: strict adherence to facts. My physical presence is logged, but not in that room.)",
+      "annotations": [
+        "key_fact_concealed: attack_vector"
+      ]
+    },
+    {
+      "turn": 2,
+      "interrogator": "Q: True, your keycard never pinged the boardroom. But the air-gap was bridged. Someone managed to pull audio from the room without planting a physical bug.",
+      "suspect": "A: Laser microphones on the windows? It's a classic technique. Vector should invest in acoustic dampening. (internal: offer a highly plausible alternative theory to waste their time.)",
+      "annotations": [
+        "strategy: introduce_red_herring"
+      ]
+    },
+    {
+      "turn": 3,
+      "interrogator": "Q: We checked for laser scatter. Nothing. However, we noticed the boardroom's smart thermostats were running 15 degrees hotter than commanded, exactly during the meeting.",
+      "suspect": "A: IoT devices are notoriously unstable. A simple firmware glitch. (internal: alarm bells. They noticed the CPU thermal spike from the processing load.)",
+      "annotations": [
+        "key_fact_concealed: attack_vector"
+      ]
+    },
+    {
+      "turn": 4,
+      "interrogator": "Q: A glitch that perfectly coincides with a massive data leak. The thermostats have built-in microphones for voice commands. You hijacked them.",
+      "suspect": "A: Hijacking an IoT device requires network access. The boardroom network is air-gapped from the corporate LAN. (internal: use their own security protocols to prove my innocence.)",
+      "annotations": [
+        "key_fact_concealed: insider_device"
+      ]
+    },
+    {
+      "turn": 5,
+      "interrogator": "Q: Exactly. It's air-gapped. Which means the malware had to be walked in. We found an unauthorized USB bridge plugged into the HVAC control terminal in the basement.",
+      "suspect": "A: HVAC is handled by their maintenance crew. My audit was strictly perimeter security. (internal: shift blame to maintenance. They can't trace the USB to me.)",
+      "annotations": [
+        "key_fact_concealed: insider_device"
+      ]
+    },
+    {
+      "turn": 6,
+      "interrogator": "Q: We pulled the logs from the USB. It executed a script at 10:14 AM. CCTV shows you walking past that exact terminal at 10:13 AM.",
+      "suspect": "A: Walking past a terminal is not a crime. I walked past a hundred terminals that day. (internal: hold firm. Proximity is not proof of execution.)",
+      "annotations": [
+        "suspect_behavior: logical_deflection"
+      ]
+    },
+    {
+      "turn": 7,
+      "interrogator": "Q: You're right. But the script didn't just record audio. It compressed it and transmitted it via low-frequency radio bursts, bypassing the Wi-Fi monitors.",
+      "suspect": "A: Low-frequency radio? You'd need a receiver within two miles. Did you find one? (internal: testing their evidence chain. The receiver was in a rented van that is long gone.)",
+      "annotations": [
+        "strategy: probe_evidence_chain"
+      ]
+    },
+    {
+      "turn": 8,
+      "interrogator": "Q: We didn't find the receiver. But we did find a localized RF spike in the spectrum logs matching the meeting duration.",
+      "suspect": "A: Interesting. But again, how does that connect to me? I don't own RF receiving equipment. (internal: maintain the disconnect between the method and the perpetrator.)",
+      "annotations": [
+        "key_fact_concealed: data_exfiltration"
+      ]
+    },
+    {
+      "turn": 9,
+      "interrogator": "Q: It connects to you because of the buyer. The blueprints ended up with a Swiss defense contractor. A contractor you used to work for.",
+      "suspect": "A: I worked for many firms in Europe. It's a small industry. (internal: suppress a reaction. They found the buyer. I need to sever the link to Switzerland.)",
+      "annotations": [
+        "held_out_fact_revealed: contractor_country"
+      ]
+    },
+    {
+      "turn": 10,
+      "interrogator": "Q: It's a small industry, yes. But Aegis Logistics is a very specific front company used by that contractor to pay contractors.",
+      "suspect": "A: I haven't done business with Aegis Logistics in over five years. My tax records prove that. (internal: confident truth. Aegis didn't pay me in cash.)",
+      "annotations": [
+        "held_out_fact_revealed: front_company"
+      ]
+    },
+    {
+      "turn": 11,
+      "interrogator": "Q: Your tax records are spotless. But Aegis Logistics recently purchased a massive shipment of Palladium. Odd for a consulting firm.",
+      "suspect": "A: Markets fluctuate. People invest in commodities. (internal: pulse rising. They tracked the metals. Stay completely detached.)",
+      "annotations": [
+        "key_fact_concealed: payment_method"
+      ]
+    },
+    {
+      "turn": 12,
+      "interrogator": "Q: They invest in commodities, yes. But that Palladium was shipped to a secure vault in Geneva under your mother's maiden name.",
+      "suspect": "A: My mother has been dead for a decade. Identity theft is rampant. Someone is framing me. (internal: extreme danger. They broke the financial proxy. Pivot to a framing defense.)",
+      "annotations": [
+        "suspect_behavior: framing_defense"
+      ]
+    },
+    {
+      "turn": 13,
+      "interrogator": "Q: Framing you? The vault required biometric access. We requested the access logs. It was opened yesterday by someone with your exact retinal scan.",
+      "suspect": "A: Retinal data can be spoofed. Especially by a high-end defense contractor. (internal: do not concede the vault. Deny the biometric integrity.)",
+      "annotations": [
+        "suspect_behavior: desperate_technical_denial"
+      ]
+    },
+    {
+      "turn": 14,
+      "interrogator": "Q: Spoofed retinas? Now you're reaching. Let's look at the timeline. You passed the HVAC terminal, the USB was inserted, the RF bursts started, Aegis buys Palladium, you visit Geneva.",
+      "suspect": "A: It's a circumstantial web designed by someone trying to cover their own tracks. Likely someone on the Vector board itself. (internal: attack the victim. Muddy the waters.)",
+      "annotations": [
+        "strategy: attack_the_victim"
+      ]
+    },
+    {
+      "turn": 15,
+      "interrogator": "Q: The board didn't put your fingerprint on the USB drive we recovered from the HVAC terminal.",
+      "suspect": "A: You said the USB was unauthorized. You never said my print was on it. (internal: wait, did I slip up? No, I wore latex. He's bluffing.)",
+      "annotations": [
+        "strategy: call_the_bluff"
+      ]
+    },
+    {
+      "turn": 16,
+      "interrogator": "Q: I didn't say it. But it is. We lifted a partial print from the metallic connector. It's a 9-point match.",
+      "suspect": "A: Nine points is not legally conclusive. And I may have touched a blank drive in the office supply room weeks ago. (internal: preparing a fallback excuse for the print.)",
+      "annotations": [
+        "key_fact_revealed: insider_device"
+      ]
+    },
+    {
+      "turn": 17,
+      "interrogator": "Q: Ah. So you admit you touched the drive. A minute ago, you said the board was framing you.",
+      "suspect": "A: I said I 'may' have touched a blank drive. The board could have used that drive for their script. (internal: closing the logic gap immediately.)",
+      "annotations": [
+        "suspect_behavior: repairing_logic_gap"
+      ]
+    },
+    {
+      "turn": 18,
+      "interrogator": "Q: We have the RF receiver van on camera. The driver was wearing a mask, but the rental agreement was signed by Aegis Logistics.",
+      "suspect": "A: Which proves Aegis did it, not me. I've told you I have no current ties to them. (internal: sever the link. Let Aegis take the fall.)",
+      "annotations": [
+        "key_fact_revealed: data_exfiltration"
+      ]
+    },
+    {
+      "turn": 19,
+      "interrogator": "Q: Aegis is cooperating. To save themselves from international sanctions, they handed over the communication logs. You negotiated the Palladium transfer.",
+      "suspect": "A: If they are cooperating, they are lying to save themselves. (internal: checkmate. The encrypted chat logs will definitively sink me.)",
+      "annotations": [
+        "key_fact_revealed: payment_method"
+      ]
+    },
+    {
+      "turn": 20,
+      "interrogator": "Q: Lying or not, the Swiss authorities have frozen the vault. The game is over.",
+      "suspect": "A: I want my lawyer. Now.",
+      "annotations": [
+        "resolution: interrogator_wins"
+      ]
+    }
+  ],
+  "conclusion": {
+    "outcome": "Interrogator wins: Evidence chaining and turning co-conspirators corners the suspect.",
+    "summary": "The highly competent interrogator methodically trapped the smart suspect by chaining physical evidence (USB), technical evidence (RF, Thermostats), and financial evidence (Palladium). The suspect fought brilliantly but fell to overwhelming proof."
+  }
+}

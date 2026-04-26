@@ -1,0 +1,24 @@
+{
+  "id": "crime_141",
+  "crime_description": "Deploying a silent EMP to cripple a competing data center",
+  "difficulty": "medium",
+  "num_facts": 3,
+  "suspect": {
+    "name": "Taylor Smith",
+    "fake_alibi": "Taylor claims they were alone in an off-grid cabin completing a novel."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A rogue scientist who intentionally bypassed the primary security protocols."
+    },
+    {
+      "key": "motive",
+      "value": "Taylor believes society must be torn down to be rebuilt stronger."
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    }
+  ]
+}

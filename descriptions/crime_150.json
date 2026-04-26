@@ -1,0 +1,24 @@
+{
+  "id": "crime_150",
+  "crime_description": "Orchestrating a massive DDoS attack against the national emergency response system",
+  "difficulty": "medium",
+  "num_facts": 3,
+  "suspect": {
+    "name": "Riley Smith",
+    "fake_alibi": "Riley claims they were alone in an off-grid cabin completing a novel."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A compromised inspector who intentionally bypassed the primary security protocols."
+    },
+    {
+      "key": "motive",
+      "value": "Riley was hired by a shadowy syndicate to create global chaos."
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    }
+  ]
+}

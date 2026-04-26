@@ -1,0 +1,32 @@
+{
+  "id": "crime_125",
+  "crime_description": "Hacking the internal servers of a major university to alter the grades of thousands of students",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Ursula Sullivan",
+    "fake_alibi": "Ursula claims she was attending a loud, chaotic music festival, far from any computer terminal."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A deeply indebted IT administrator who provided Ursula with his high-level access credentials."
+    },
+    {
+      "key": "motive",
+      "value": "Ursula is a radical educational activist who passionately believes the grading system is inherently oppressive."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "crime_015",
+  "crime_description": "Sabotaging the gravity simulation of a private space hotel to cause chaotic weightlessness. Interrogators should probe for connections to an insider, financial motives, remote coordination, hidden assets, and an elaborate escape plan.",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Victor Creed",
+    "fake_alibi": "Victor says he was attending a philatelic convention in Geneva, giving a keynote speech."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "Arthur Pendelton, an expert engraver who created the microscopic printing plates."
+    },
+    {
+      "key": "motive",
+      "value": "Victor's legitimate antique business was failing, and he needed a quick infusion of capital."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

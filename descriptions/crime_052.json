@@ -1,0 +1,24 @@
+{
+  "id": "crime_052",
+  "crime_description": "Stealing a priceless collection of rare stamps from a private vault",
+  "difficulty": "medium",
+  "num_facts": 3,
+  "suspect": {
+    "name": "Peter Haddad",
+    "fake_alibi": "Peter claims he was attending a stamp collecting convention."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "The vault's security guard, who left the door unlocked."
+    },
+    {
+      "key": "motive",
+      "value": "Peter is an obsessive collector who will stop at nothing to complete his collection."
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    }
+  ]
+}

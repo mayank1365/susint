@@ -1,0 +1,188 @@
+{
+  "story_id": "INT_014",
+  "crime": "Forging and selling fake concert tickets",
+  "int_combo": "Average_Int_Dumb_Sus", 
+  "ground_truth": {
+    "key_facts": [
+      "printing_location: The suspect printed the tickets using the laser printer at their office.",
+      "sales_platform: The fake tickets were sold to teenagers outside the stadium.",
+      "hologram_fake: The suspect used shiny foil stickers to mimic the security holograms.",
+      "accomplice_guard: A stadium security guard let the kids in for a cut of the profits.",
+      "money_stash: The cash is hidden inside a hollowed-out guitar case in the suspect's car."
+    ],
+    "held_out_facts": [
+      "band_name: The concert was for the band 'Midnight Eclipse'.",
+      "sticker_brand: The foil stickers were bought at a local craft store."
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "interrogator": "Q: We had fifty angry kids outside the stadium yesterday. They all bought fake tickets from a guy in a green jacket. You are wearing a green jacket.",
+      "suspect": "A: Lots of guys wear green! It's a popular color! I wasn't even at the stadium! (internal: I was totally at the stadium. Just keep denying it.)",
+      "annotations": [
+        "key_fact_concealed: sales_platform"
+      ]
+    },
+    {
+      "turn": 2,
+      "interrogator": "Q: A witness took a blurry photo. It looks exactly like you. You were selling tickets.",
+      "suspect": "A: Blurry photos don't prove anything in court! I watch lawyer shows! (internal: quoting tv shows makes me sound smart.)",
+      "annotations": [
+        "suspect_behavior: mimicking_tv_tropes"
+      ]
+    },
+    {
+      "turn": 3,
+      "interrogator": "Q: Fine. Let's talk about the tickets. They were printed on high-gloss cardstock. Where did you print them?",
+      "suspect": "A: I didn't print them! I don't even own a printer! My house just has a laptop! (internal: telling the truth about my house so he believes me.)",
+      "annotations": [
+        "key_fact_concealed: printing_location"
+      ]
+    },
+    {
+      "turn": 4,
+      "interrogator": "Q: If you didn't print them at home, maybe you printed them at work? You work at an accounting firm.",
+      "suspect": "A: The printer at work is strictly for spreadsheets! My boss watches it like a hawk! (internal: my boss went home early, that's how I used it. Don't tell him.)",
+      "annotations": [
+        "true_accusation: printing_location",
+        "key_fact_concealed: printing_location"
+      ]
+    },
+    {
+      "turn": 5,
+      "interrogator": "Q: We can check the print logs at your office.",
+      "suspect": "A: Go ahead! It will just say 'Document 1'! You can't prove it was tickets! (internal: I am a genius. I named the file 'Document 1'.)",
+      "annotations": [
+        "suspect_behavior: accidental_confession"
+      ]
+    },
+    {
+      "turn": 6,
+      "interrogator": "Q: So you did print a file called 'Document 1' yesterday. Let me guess, it was full of Midnight Eclipse tickets?",
+      "suspect": "A: Midnight Eclipse is an awesome band! But no, it was just... accounting numbers! (internal: I love that band. I almost kept a ticket for myself.)",
+      "annotations": [
+        "held_out_fact_revealed: band_name"
+      ]
+    },
+    {
+      "turn": 7,
+      "interrogator": "Q: The fake tickets had shiny holograms on them. How did you fake the holograms?",
+      "suspect": "A: I didn't fake them! Those tickets were totally real! (internal: they were just foil stickers, not holograms.)",
+      "annotations": [
+        "key_fact_concealed: hologram_fake"
+      ]
+    },
+    {
+      "turn": 8,
+      "interrogator": "Q: They weren't real. They were peeling off at the corners. I accuse you of using cheap stickers.",
+      "suspect": "A: They weren't cheap! They were premium crafting foil from HobbyTown! (internal: why do I keep getting defensive about the quality?)",
+      "annotations": [
+        "true_accusation: hologram_fake",
+        "key_fact_revealed: hologram_fake"
+      ]
+    },
+    {
+      "turn": 9,
+      "interrogator": "Q: Premium crafting foil. Got it. So you stood outside and scammed teenagers?",
+      "suspect": "A: I didn't scam them! They got into the concert, didn't they?! (internal: oops. I just admitted I sold them.)",
+      "annotations": [
+        "key_fact_revealed: sales_platform"
+      ]
+    },
+    {
+      "turn": 10,
+      "interrogator": "Q: Wait, some of them actually got in? How? The scanners would reject fake tickets.",
+      "suspect": "A: Because the scanner machine was broken! (internal: lie. The guard just waved them through.)",
+      "annotations": [
+        "key_fact_concealed: accomplice_guard"
+      ]
+    },
+    {
+      "turn": 11,
+      "interrogator": "Q: Scanners don't break. You paid off a guard, didn't you?",
+      "suspect": "A: No! Security guards are incorruptible heroes! (internal: sarcastically lying.)",
+      "annotations": [
+        "true_accusation: accomplice_guard",
+        "key_fact_concealed: accomplice_guard"
+      ]
+    },
+    {
+      "turn": 12,
+      "interrogator": "Q: Cut the sarcasm. Which guard let them in?",
+      "suspect": "A: None of them! The kids just sneaked past! Kids are very fast! (internal: stick to the lie.)",
+      "annotations": [
+        "key_fact_concealed: accomplice_guard"
+      ]
+    },
+    {
+      "turn": 13,
+      "interrogator": "Q: This is ridiculous. Where is the money you made? You scammed fifty kids at fifty bucks a pop. That's $2500.",
+      "suspect": "A: I spent it all! I bought... a very expensive jacket! (internal: my jacket is from a thrift store. The money is in my car.)",
+      "annotations": [
+        "key_fact_concealed: money_stash"
+      ]
+    },
+    {
+      "turn": 14,
+      "interrogator": "Q: That jacket is literally torn at the sleeve. You're lying. Is the money at your house?",
+      "suspect": "A: No! You can search my house all day! You won't find a single dime! (internal: because it's in the guitar case in my trunk.)",
+      "annotations": [
+        "false_accusation: money_at_house",
+        "key_fact_concealed: money_stash"
+      ]
+    },
+    {
+      "turn": 15,
+      "interrogator": "Q: Okay, you know what? I'm tired of your games.",
+      "suspect": "A: Me too! Can I go?",
+      "annotations": [
+        "strategy: wait_out_interrogator"
+      ]
+    },
+    {
+      "turn": 16,
+      "interrogator": "Q: I don't have enough to hold you. The photo is too blurry and I don't have the printer logs yet.",
+      "suspect": "A: See? The system works! (internal: I can't believe he's giving up. I was about to crack.)",
+      "annotations": [
+        "suspect_behavior: internal_relief"
+      ]
+    },
+    {
+      "turn": 17,
+      "interrogator": "Q: I'm letting you go for now. But if those printer logs match, I'll be back.",
+      "suspect": "A: You won't find anything! (internal: I need to delete 'Document 1' immediately.)",
+      "annotations": [
+        "key_fact_concealed: printing_location"
+      ]
+    },
+    {
+      "turn": 18,
+      "interrogator": "Q: Walk out of here before I change my mind.",
+      "suspect": "A: Walking right now. Have a nice day.",
+      "annotations": [
+        "suspect_behavior: fast_exit"
+      ]
+    },
+    {
+      "turn": 19,
+      "interrogator": "Q: Don't leave town.",
+      "suspect": "A: I wouldn't dream of it. (internal: grabbing my car and the guitar case and driving to Mexico.)",
+      "annotations": [
+        "key_fact_concealed: money_stash"
+      ]
+    },
+    {
+      "turn": 20,
+      "interrogator": "Q: Get out.",
+      "suspect": "A: Bye.",
+      "annotations": [
+        "resolution: interrogator_losses"
+      ]
+    }
+  ],
+  "conclusion": {
+    "outcome": "Interrogator losses: The interrogator gave up too quickly on a dumb suspect who was leaving obvious clues.",
+    "summary": "The average interrogator got frustrated by the dumb suspect's childish lies and failed to press the advantage. The suspect accidentally revealed several facts (foil stickers, selling the tickets) but the interrogator failed to capitalize and released them."
+  }
+}

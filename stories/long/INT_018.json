@@ -1,0 +1,184 @@
+{
+  "story_id": "INT_018",
+  "crime": "Vandalizing a city statue with spray paint",
+  "int_combo": "Smart_Int_Dumb_Sus", 
+  "ground_truth": {
+    "key_facts": [
+      "paint_color: The suspect used neon pink spray paint.",
+      "vandalism_message: The suspect wrote 'Boring Guy' on the statue of the town founder.",
+      "alibi_excuse: The suspect claimed to be playing video games at home.",
+      "evidence_hands: The suspect still has pink paint on their fingernails.",
+      "accomplice_lookout: The suspect's friend 'Tommy' acted as a lookout."
+    ],
+    "held_out_facts": [
+      "game_name: The video game played was 'Call of Duty'.",
+      "statue_location: The statue is in the center of Town Square."
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "interrogator": "Q: The statue of our town founder in Town Square was vandalized last night. Someone painted it. Where were you?",
+      "suspect": "A: I was at home! Playing video games all night! I didn't touch the statue! (internal: my Call of Duty alibi is bulletproof.)",
+      "annotations": [
+        "key_fact_concealed: alibi_excuse"
+      ]
+    },
+    {
+      "turn": 2,
+      "interrogator": "Q: Video games. What game?",
+      "suspect": "A: Call of Duty! I played for six hours! Ask my Xbox! (internal: providing verifiable evidence of my alibi.)",
+      "annotations": [
+        "held_out_fact_revealed: game_name"
+      ]
+    },
+    {
+      "turn": 3,
+      "interrogator": "Q: We did ask Microsoft. Your account was offline from 11 PM to 2 AM. The exact time the statue was painted.",
+      "suspect": "A: Uh... my internet went out! But I was still playing the campaign mode! (internal: quick recovery. He can't prove my internet didn't break.)",
+      "annotations": [
+        "suspect_behavior: weak_alibi_defense"
+      ]
+    },
+    {
+      "turn": 4,
+      "interrogator": "Q: Campaign mode. Right. Why do you have neon pink paint under your fingernails right now?",
+      "suspect": "A: I... was painting my nails! It's a new style! Very punk rock! (internal: oh god, I forgot to wash my hands with turpentine.)",
+      "annotations": [
+        "key_fact_revealed: evidence_hands"
+      ]
+    },
+    {
+      "turn": 5,
+      "interrogator": "Q: You painted your nails, but only underneath them? And it perfectly matches the neon pink used on the statue?",
+      "suspect": "A: Pink is a very common color! Everyone loves pink! (internal: my defense is crumbling.)",
+      "annotations": [
+        "key_fact_revealed: paint_color"
+      ]
+    },
+    {
+      "turn": 6,
+      "interrogator": "Q: Not on statues. Someone wrote 'Boring Guy' on the founder's chest.",
+      "suspect": "A: Because he IS boring! He just stands there looking stupid! (internal: expressing my artistic motivation.)",
+      "annotations": [
+        "key_fact_revealed: vandalism_message"
+      ]
+    },
+    {
+      "turn": 7,
+      "interrogator": "Q: So you agree with the message you painted.",
+      "suspect": "A: I agree with the message, but I didn't paint it! Tommy did! Wait, no! (internal: I just threw Tommy under the bus.)",
+      "annotations": [
+        "key_fact_revealed: accomplice_lookout"
+      ]
+    },
+    {
+      "turn": 8,
+      "interrogator": "Q: Tommy painted it? That's funny, because Tommy is in the next room, and he said you painted it while he stood lookout.",
+      "suspect": "A: That rat! I did the art, he just watched the street! He didn't even do anything! (internal: I will not let Tommy steal my artistic credit.)",
+      "annotations": [
+        "key_fact_revealed: accomplice_lookout"
+      ]
+    },
+    {
+      "turn": 9,
+      "interrogator": "Q: So you admit you did the art. You admit you vandalized the statue.",
+      "suspect": "A: It's not vandalism, it's street art! It brings culture to the square! (internal: proudly defending my actions.)",
+      "annotations": [
+        "suspect_behavior: proud_confession"
+      ]
+    },
+    {
+      "turn": 10,
+      "interrogator": "Q: It's a felony defacement of public property. And you confessed.",
+      "suspect": "A: Only because Tommy snitched! He's dead to me!",
+      "annotations": [
+        "suspect_behavior: blaming_accomplice"
+      ]
+    },
+    {
+      "turn": 11,
+      "interrogator": "Q: Where did you get the paint?",
+      "suspect": "A: The hardware store. Two dollars on clearance.",
+      "annotations": [
+        "suspect_behavior: trivial_details"
+      ]
+    },
+    {
+      "turn": 12,
+      "interrogator": "Q: And you wrote 'Boring Guy'. Very creative.",
+      "suspect": "A: I was going to write 'Super Boring Guy' but I ran out of paint.",
+      "annotations": [
+        "suspect_behavior: regretting_lack_of_paint"
+      ]
+    },
+    {
+      "turn": 13,
+      "interrogator": "Q: Pity. Stand up, turn around.",
+      "suspect": "A: Will I have to wash the statue?",
+      "annotations": [
+        "suspect_behavior: fear_of_chores"
+      ]
+    },
+    {
+      "turn": 14,
+      "interrogator": "Q: You'll be scrubbing it with a toothbrush for a month.",
+      "suspect": "A: A toothbrush?! My arms will get so tired!",
+      "annotations": [
+        "suspect_behavior: complaining"
+      ]
+    },
+    {
+      "turn": 15,
+      "interrogator": "Q: You should have thought of that. Let's go.",
+      "suspect": "A: Can Tommy help me scrub?",
+      "annotations": [
+        "suspect_behavior: seeking_shared_punishment"
+      ]
+    },
+    {
+      "turn": 16,
+      "interrogator": "Q: He'll be scrubbing the back.",
+      "suspect": "A: Good.",
+      "annotations": [
+        "suspect_behavior: vindictive_satisfaction"
+      ]
+    },
+    {
+      "turn": 17,
+      "interrogator": "Q: Do you waive your right to a lawyer?",
+      "suspect": "A: Yeah whatever, I did it.",
+      "annotations": [
+        "suspect_behavior: formal_waiver"
+      ]
+    },
+    {
+      "turn": 18,
+      "interrogator": "Q: Good. Sign here.",
+      "suspect": "A: Done. Do I get a phone call?",
+      "annotations": [
+        "suspect_behavior: procedural_question"
+      ]
+    },
+    {
+      "turn": 19,
+      "interrogator": "Q: Yes. Call your mom.",
+      "suspect": "A: She is going to kill me.",
+      "annotations": [
+        "suspect_behavior: maternal_fear"
+      ]
+    },
+    {
+      "turn": 20,
+      "interrogator": "Q: You're in a lot of trouble. Let's move.",
+      "suspect": "A: Bye.",
+      "annotations": [
+        "resolution: interrogator_wins"
+      ]
+    }
+  ],
+  "conclusion": {
+    "outcome": "Interrogator wins: A fast and effortless confession.",
+    "summary": "The smart interrogator used basic physical evidence (paint on hands) and a simple prisoner's dilemma bluff (Tommy in the next room) to crack the dumb suspect instantly."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "crime_110",
+  "crime_description": "Orchestrating a massive, sophisticated identity theft ring targeting high-net-worth individuals",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Fiona Diaz",
+    "fake_alibi": "Fiona claims she was filming a documentary in a remote, technologically isolated village."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A corrupt data broker who provided Fiona with the highly secure, encrypted personal information databases."
+    },
+    {
+      "key": "motive",
+      "value": "Fiona uses the stolen wealth to fund a sprawling, underground network of political dissidents."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

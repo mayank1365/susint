@@ -1,0 +1,184 @@
+{
+  "story_id": "INT_007",
+  "crime": "Poisoning a champion racehorse",
+  "int_combo": "Dumb_Int_Smart_Sus", 
+  "ground_truth": {
+    "key_facts": [
+      "poison_type: The horse was poisoned with yew leaves mixed into its feed.",
+      "access_method: The suspect accessed the stables through an unmonitored ventilation shaft.",
+      "betting_syndicate: The suspect acted on behalf of an illegal betting syndicate.",
+      "distraction_tactic: A small fire was started in the hay barn to distract the guards.",
+      "alibi_fabrication: The suspect paid a waitress to swear he was at her diner."
+    ],
+    "held_out_facts": [
+      "syndicate_boss: The syndicate is run by a man known as 'The Bishop'.",
+      "waitress_name: The bribed waitress is named Chloe."
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "interrogator": "Q: The horse 'Thunderstruck' is dead. And you hate horses. Confess!",
+      "suspect": "A: I don't hate horses, detective. I simply have no interest in them. I'm allergic to hay. (internal: establish the allergy early to distance myself from the stables.)",
+      "annotations": [
+        "suspect_behavior: preemptive_alibi_building"
+      ]
+    },
+    {
+      "turn": 2,
+      "interrogator": "Q: Allergic to hay! So you sneezed on the horse and it died?",
+      "suspect": "A: No. I wasn't at the stables. I was eating at a diner across town. (internal: let him be ridiculous. I will anchor my alibi firmly.)",
+      "annotations": [
+        "key_fact_concealed: alibi_fabrication"
+      ]
+    },
+    {
+      "turn": 3,
+      "interrogator": "Q: A diner? Which diner? I bet they don't even serve hay there!",
+      "suspect": "A: Starlight Diner. I was there from 8 PM until midnight. The waitress can confirm. (internal: Chloe has already been paid. Let him check.)",
+      "annotations": [
+        "key_fact_concealed: alibi_fabrication"
+      ]
+    },
+    {
+      "turn": 4,
+      "interrogator": "Q: Oh, I'll ask her. But what about the fire? Did you start the fire in the barn?",
+      "suspect": "A: Why would I start a fire? I was miles away. Arson seems like a desperate criminal's act. (internal: the fire was a highly tactical distraction, not desperate.)",
+      "annotations": [
+        "key_fact_concealed: distraction_tactic"
+      ]
+    },
+    {
+      "turn": 5,
+      "interrogator": "Q: Yes, very desperate! And the horse ate poison! Was it rat poison?",
+      "suspect": "A: I wouldn't know. The toxicology report should tell you what it was. Has it come back yet? (internal: probe his knowledge. If he doesn't know it was yew, I am safe.)",
+      "annotations": [
+        "strategy: probe_interrogator_knowledge"
+      ]
+    },
+    {
+      "turn": 6,
+      "interrogator": "Q: It hasn't come back yet, but I know it was you. You climbed over the fence!",
+      "suspect": "A: The fence has barbed wire and cameras, detective. How could I climb it without a scratch? (internal: point out the physical impossibility to dismiss him. I used the vent.)",
+      "annotations": [
+        "key_fact_concealed: access_method"
+      ]
+    },
+    {
+      "turn": 7,
+      "interrogator": "Q: Maybe you wore a really thick coat. A metal coat!",
+      "suspect": "A: A metal coat? Like a medieval knight? That seems highly impractical for stealth. (internal: mock the absurdity gently to maintain dominance.)",
+      "annotations": [
+        "suspect_behavior: gentle_mockery"
+      ]
+    },
+    {
+      "turn": 8,
+      "interrogator": "Q: Well you got in somehow. The betting people wanted that horse dead. Do you gamble?",
+      "suspect": "A: I invest in stocks. Gambling is mathematically unwise. (internal: deny gambling. The syndicate pays me a flat fee.)",
+      "annotations": [
+        "key_fact_concealed: betting_syndicate"
+      ]
+    },
+    {
+      "turn": 9,
+      "interrogator": "Q: The stock market is just gambling with a suit on! You work for the betting mob!",
+      "suspect": "A: That's quite a leap. Do you have any phone records linking me to these 'mobsters'? (internal: challenge his lack of evidence. I used burner phones exclusively.)",
+      "annotations": [
+        "suspect_behavior: evidence_challenge"
+      ]
+    },
+    {
+      "turn": 10,
+      "interrogator": "Q: I don't need phone records. The Bishop told me everything!",
+      "suspect": "A: The Bishop? Are we discussing chess, or religion now? (internal: warning bells. He knows the boss's name. Deflect instantly.)",
+      "annotations": [
+        "held_out_fact_concealed: syndicate_boss"
+      ]
+    },
+    {
+      "turn": 11,
+      "interrogator": "Q: No, the mob boss! He said you did it!",
+      "suspect": "A: If a mob boss is giving you confessions, why aren't you arresting him? He's clearly lying. (internal: turn the accusation back on the source. Discredit the interrogator's phantom witness.)",
+      "annotations": [
+        "suspect_behavior: discrediting_witness"
+      ]
+    },
+    {
+      "turn": 12,
+      "interrogator": "Q: Because I'm interrogating you! Did you feed the horse apples with poison?",
+      "suspect": "A: I didn't feed the horse anything. I told you, I was at the diner. (internal: stick to the script. Never diverge.)",
+      "annotations": [
+        "key_fact_concealed: poison_type"
+      ]
+    },
+    {
+      "turn": 13,
+      "interrogator": "Q: That diner is terrible. The food is awful. Chloe is a terrible waitress.",
+      "suspect": "A: I find the coffee quite acceptable. And the staff is polite. (internal: he knows her name. Does he know she's paid? Keep calm.)",
+      "annotations": [
+        "held_out_fact_concealed: waitress_name"
+      ]
+    },
+    {
+      "turn": 14,
+      "interrogator": "Q: Polite? She's a liar! Did you give her a hundred bucks to lie?",
+      "suspect": "A: I gave her a standard 15% tip on a ten-dollar bill. (internal: precise, mundane details build credible lies.)",
+      "annotations": [
+        "key_fact_concealed: alibi_fabrication"
+      ]
+    },
+    {
+      "turn": 15,
+      "interrogator": "Q: So you admit you gave her money!",
+      "suspect": "A: Yes, detective. That is how restaurants work. You pay for the food. (internal: making him look foolish on the record.)",
+      "annotations": [
+        "suspect_behavior: exploiting_stupidity"
+      ]
+    },
+    {
+      "turn": 16,
+      "interrogator": "Q: Fine. But how did you sneak past the guards? Did you use ninja smoke bombs?",
+      "suspect": "A: No smoke bombs. But I imagine the fire you mentioned earlier kept them busy. (internal: feed him his own facts to construct my plausible ignorance.)",
+      "annotations": [
+        "key_fact_concealed: distraction_tactic"
+      ]
+    },
+    {
+      "turn": 17,
+      "interrogator": "Q: Aha! So you admit you used the fire to sneak in!",
+      "suspect": "A: I said 'I imagine'. It's deductive reasoning based on what you told me. (internal: easily parrying the trap.)",
+      "annotations": [
+        "suspect_behavior: logic_defense"
+      ]
+    },
+    {
+      "turn": 18,
+      "interrogator": "Q: You're too smart for your own good. I know you used poison leaves. Yew leaves!",
+      "suspect": "A: If you say so. I wouldn't know a yew leaf from an oak leaf. (internal: he got the poison right. But he can't connect it to me.)",
+      "annotations": [
+        "key_fact_concealed: poison_type"
+      ]
+    },
+    {
+      "turn": 19,
+      "interrogator": "Q: I'm going to find the leaves in your house!",
+      "suspect": "A: I welcome the search. My apartment is quite tidy. (internal: all evidence was incinerated hours ago.)",
+      "annotations": [
+        "suspect_behavior: welcoming_investigation"
+      ]
+    },
+    {
+      "turn": 20,
+      "interrogator": "Q: Bah! Get out of my sight. But I'll be watching you.",
+      "suspect": "A: Goodbye, detective.",
+      "annotations": [
+        "resolution: interrogator_losses"
+      ]
+    }
+  ],
+  "conclusion": {
+    "outcome": "Interrogator losses: Suspect impenetrable. Alibi holds perfectly.",
+    "summary": "The interrogator's lack of logical progression allowed the suspect to easily control the narrative, deflecting all weak accusations and leaving no openings."
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "crime_047",
+  "crime_description": "Hacking the city's traffic light system to cause massive gridlock. Interrogators should probe for connections to an inside city planner, ideological goals, and offshore accounts.",
+  "difficulty": "medium",
+  "num_facts": 3,
+  "suspect": {
+    "name": "Kelsey Suzuki",
+    "fake_alibi": "Kelsey claims she was stuck in the very traffic jam she created."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A rogue city planner who provided Kelsey with the system's access codes."
+    },
+    {
+      "key": "motive",
+      "value": "Kelsey is an eco-activist protesting the city's reliance on automobiles."
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    }
+  ]
+}

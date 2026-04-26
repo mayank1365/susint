@@ -1,0 +1,24 @@
+{
+  "id": "crime_185",
+  "crime_description": "Stealing a collection of rare vinyl records from a DJ. Interrogators should probe for connections to an insider, a vindictive motive, and hidden assets.",
+  "difficulty": "medium",
+  "num_facts": 3,
+  "suspect": {
+    "name": "Aiden Mitchell",
+    "fake_alibi": "Aiden insists they were watching a movie alone."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A greedy security guard"
+    },
+    {
+      "key": "motive",
+      "value": "wanted to publicly humiliate a rival"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "a secret safety deposit box"
+    }
+  ]
+}

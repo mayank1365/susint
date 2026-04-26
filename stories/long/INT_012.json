@@ -1,0 +1,187 @@
+{
+  "story_id": "INT_012",
+  "crime": "Insurance fraud via staged warehouse flood",
+  "int_combo": "Smart_Int_Average_Sus", 
+  "ground_truth": {
+    "key_facts": [
+      "sabotage_method: The suspect removed the pressure valve from the main water line.",
+      "inventory_removal: The high-value inventory was moved to a rented storage unit before the flood.",
+      "insurance_motive: The suspect's business was failing due to heavy competition.",
+      "weather_cover: The suspect timed the sabotage during a severe rainstorm to blame the roof.",
+      "tool_disposal: The wrench used to remove the valve was buried in a nearby park."
+    ],
+    "held_out_facts": [
+      "storage_company: The rented unit is at 'SafeKeep Storage'.",
+      "policy_payout: The insurance policy was worth $2 million."
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "interrogator": "Q: Your warehouse flooded during the storm last night. A total loss. Very convenient timing, given your recent bankruptcy filing.",
+      "suspect": "A: It wasn't convenient! It was a tragedy. The roof caved in from the rain. (internal: stick to the natural disaster story. The storm covers everything.)",
+      "annotations": [
+        "key_fact_concealed: weather_cover"
+      ]
+    },
+    {
+      "turn": 2,
+      "interrogator": "Q: The roof leaked, yes. But the insurance adjuster found that the main water pressure valve was completely missing from the basement pipes. That's not rain.",
+      "suspect": "A: The pipes are fifty years old! They must have burst under the pressure of the flooding. (internal: I don't know plumbing. Just sound reasonably upset.)",
+      "annotations": [
+        "suspect_behavior: layman_excuse"
+      ]
+    },
+    {
+      "turn": 3,
+      "interrogator": "Q: Valves don't unthread themselves. They require a pipe wrench. Did you remove it?",
+      "suspect": "A: I'm the owner, not the janitor! I don't even own a pipe wrench. (internal: true, I threw the wrench away in the park.)",
+      "annotations": [
+        "key_fact_concealed: sabotage_method"
+      ]
+    },
+    {
+      "turn": 4,
+      "interrogator": "Q: We checked the inventory records. The high-value electronics were 'destroyed', but we didn't find any motherboards or copper in the debris. Just empty cardboard boxes.",
+      "suspect": "A: The water washed everything away! The current was really strong. (internal: that sounds stupid, but I can't back down now. The inventory is safe.)",
+      "annotations": [
+        "key_fact_concealed: inventory_removal"
+      ]
+    },
+    {
+      "turn": 5,
+      "interrogator": "Q: Water doesn't dissolve copper overnight. Where did you move the electronics?",
+      "suspect": "A: Nowhere! It was all in the warehouse! Check my shipping manifests! (internal: the manifests are fake, but he can't prove that today.)",
+      "annotations": [
+        "key_fact_concealed: inventory_removal"
+      ]
+    },
+    {
+      "turn": 6,
+      "interrogator": "Q: I accuse you of moving the inventory to a secondary warehouse.",
+      "suspect": "A: I can barely afford one warehouse, let alone a second one! Look at my bank statements! (internal: average suspect uses their actual poverty as a defense.)",
+      "annotations": [
+        "false_accusation: secondary_warehouse",
+        "key_fact_revealed: insurance_motive"
+      ]
+    },
+    {
+      "turn": 7,
+      "interrogator": "Q: Your bank statements show you're failing. That's exactly why you needed the $2 million payout.",
+      "suspect": "A: The competition is killing everyone in this town. But I didn't stage a flood. (internal: keep repeating the denial. Do not offer new information.)",
+      "annotations": [
+        "held_out_fact_revealed: policy_payout"
+      ]
+    },
+    {
+      "turn": 8,
+      "interrogator": "Q: We have CCTV of you entering the warehouse at 2 AM, right when the storm peaked.",
+      "suspect": "A: Because the alarm company called me about a power surge! I went to check on the building! (internal: a perfectly verifiable, boring excuse. I actually did get an alarm call.)",
+      "annotations": [
+        "suspect_behavior: solid_alibi_element"
+      ]
+    },
+    {
+      "turn": 9,
+      "interrogator": "Q: You checked on the building. Did you go into the basement?",
+      "suspect": "A: No, it was already starting to flood. I didn't want to get electrocuted, so I left and called the fire department. (internal: very sensible. He can't argue with safety.)",
+      "annotations": [
+        "suspect_behavior: logical_safety_excuse"
+      ]
+    },
+    {
+      "turn": 10,
+      "interrogator": "Q: You called the fire department at 3 AM. A full hour after you arrived. What were you doing for an hour?",
+      "suspect": "A: I was trying to save some files from the main office! It was dark and chaotic! (internal: panic slightly, but hold the story.)",
+      "annotations": [
+        "key_fact_concealed: sabotage_method"
+      ]
+    },
+    {
+      "turn": 11,
+      "interrogator": "Q: I bet you were burying the wrench you used. Is it in the dumpster out back?",
+      "suspect": "A: Go dig through the dumpster! You won't find any wrench! (internal: confident, because I buried it in the park, not the dumpster.)",
+      "annotations": [
+        "false_accusation: dumpster_wrench",
+        "key_fact_concealed: tool_disposal"
+      ]
+    },
+    {
+      "turn": 12,
+      "interrogator": "Q: Your hands are clean. But your boots have red clay on them. There's no red clay at the warehouse. But there is at Oak Park.",
+      "suspect": "A: I walk my dog in the park every morning. Of course there's mud on my boots. (internal: a mundane, average explanation for forensic evidence.)",
+      "annotations": [
+        "key_fact_concealed: tool_disposal"
+      ]
+    },
+    {
+      "turn": 13,
+      "interrogator": "Q: You're very calm for a man who just lost his entire livelihood.",
+      "suspect": "A: I'm in shock, detective. My life's work is ruined. I don't have the energy to yell. (internal: playing the defeated victim card perfectly.)",
+      "annotations": [
+        "suspect_behavior: victim_roleplay"
+      ]
+    },
+    {
+      "turn": 14,
+      "interrogator": "Q: You're hoping the insurance check will save you. If we prove fraud, you get nothing and go to jail.",
+      "suspect": "A: Then you better do your investigation properly. Because I didn't commit fraud. (internal: boring, stubborn resistance. Do not break.)",
+      "annotations": [
+        "key_fact_concealed: insurance_motive"
+      ]
+    },
+    {
+      "turn": 15,
+      "interrogator": "Q: Where is the inventory? If you show me where you hid it, I'll talk to the DA about a plea deal.",
+      "suspect": "A: It's destroyed. It washed away. I wish it was hidden! I'd have something to sell! (internal: stick to the water-damage lie.)",
+      "annotations": [
+        "key_fact_concealed: inventory_removal"
+      ]
+    },
+    {
+      "turn": 16,
+      "interrogator": "Q: I accuse you of renting a unit at SafeKeep Storage to hide the goods.",
+      "suspect": "A: I don't even know where SafeKeep Storage is. Look at my credit cards, I haven't rented anything. (internal: paid in cash under a fake name. He's fishing.)",
+      "annotations": [
+        "true_accusation: inventory_removal",
+        "held_out_fact_concealed: storage_company"
+      ]
+    },
+    {
+      "turn": 17,
+      "interrogator": "Q: We can pull the cash transactions. Someone will identify you.",
+      "suspect": "A: Then go do a lineup. I'm telling you, I didn't do it. (internal: calling his bluff. He has no witnesses.)",
+      "annotations": [
+        "strategy: call_the_bluff"
+      ]
+    },
+    {
+      "turn": 18,
+      "interrogator": "Q: You think you've covered all your bases. But water damage leaves a trace. We will find out what really happened.",
+      "suspect": "A: I hope you do. Then the insurance company will finally pay me. (internal: maintaining the innocent business owner persona.)",
+      "annotations": [
+        "suspect_behavior: consistent_persona"
+      ]
+    },
+    {
+      "turn": 19,
+      "interrogator": "Q: We're done for today. But don't leave town.",
+      "suspect": "A: Where would I go? I'm broke. (internal: I survived the smart cop.)",
+      "annotations": [
+        "suspect_behavior: self_deprecation"
+      ]
+    },
+    {
+      "turn": 20,
+      "interrogator": "Q: We'll be in touch.",
+      "suspect": "A: I'll be here.",
+      "annotations": [
+        "resolution: interrogator_losses"
+      ]
+    }
+  ],
+  "conclusion": {
+    "outcome": "Interrogator losses: Suspect's boring, mundane excuses neutralize advanced interrogation tactics.",
+    "summary": "The smart interrogator used forensic evidence and psychological traps, but the average suspect simply relied on stubborn, boring, everyday excuses (mud from walking the dog, power surge alarms) that were too plausible to break without hard physical evidence."
+  }
+}

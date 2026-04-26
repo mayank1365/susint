@@ -1,0 +1,32 @@
+{
+  "id": "crime_114",
+  "crime_description": "Falsifying the academic research data that secured a massive, multi-million dollar government grant",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Jasmine Kumar",
+    "fake_alibi": "Jasmine claims she was conducting legitimate, rigorous fieldwork in a remote, inaccessible jungle."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A compromised peer reviewer who deliberately overlooked the glaring inconsistencies in the data."
+    },
+    {
+      "key": "motive",
+      "value": "Jasmine desperately craves the immense prestige and massive funding associated with the 'groundbreaking' discovery."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "crime_060",
+  "crime_description": "Erasing petabytes of clinical trial data from a pharmaceutical giant",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Kira Takahashi",
+    "fake_alibi": "Kira says she was streaming a live, 24-hour charity gaming marathon to thousands of viewers."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "Dr. Evans, a disillusioned lead researcher who provided Kira with an administrative backdoor."
+    },
+    {
+      "key": "motive",
+      "value": "Kira wanted to expose the company's suppression of dangerous side effects in their new drug."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

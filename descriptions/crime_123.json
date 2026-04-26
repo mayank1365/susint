@@ -1,0 +1,32 @@
+{
+  "id": "crime_123",
+  "crime_description": "Hacking the automated assembly line of a major automobile manufacturer to produce defective vehicles",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Sebastian O'Brien",
+    "fake_alibi": "Sebastian claims he was attending an exclusive, invite-only vintage car rally in another country."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A compromised robotics engineer who inserted the subtle, dangerous flaws into the assembly code."
+    },
+    {
+      "key": "motive",
+      "value": "Sebastian sought to completely ruin the reputation and bankrupt the rival automobile manufacturer."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "crime_170",
+  "crime_description": "Poisoning a rival's prize-winning dog before a dog show. Interrogators should probe for connections to an insider, and financial motives.",
+  "difficulty": "easy",
+  "num_facts": 2,
+  "suspect": {
+    "name": "Ella Morgan",
+    "fake_alibi": "Ella claims they were hiking in a remote area."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A bitter ex-partner"
+    },
+    {
+      "key": "motive",
+      "value": "was trying to save a failing business"
+    }
+  ]
+}

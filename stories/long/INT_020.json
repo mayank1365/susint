@@ -1,0 +1,186 @@
+{
+  "story_id": "INT_020",
+  "crime": "Forging and selling a fake historical artifact",
+  "int_combo": "Smart_Int_Smart_Sus",
+  "ground_truth": {
+    "key_facts": [
+      "forgery_method: The suspect carved the artifact from a 19th-century mantelpiece to fake its age.",
+      "chemical_aging: The suspect used a mixture of acid and tea to artificially weather the stone.",
+      "authenticator_bribe: The suspect bribed the museum curator to validate the fake.",
+      "buyer_identity: The fake was sold to an eccentric tech billionaire for $2 million.",
+      "evidence_location: The suspect's carving tools are hidden inside the walls of their studio."
+    ],
+    "held_out_facts": [
+      "artifact_type: The artifact was a fake Aztec sun stone fragment.",
+      "curator_name: The bribed curator is Dr. Elias Thorne."
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "interrogator": "Q: The 'Lost Sun Stone' fragment you discovered last month was just seized by Interpol. The carbon dating is inconsistent with Aztec origins.",
+      "suspect": "A: Carbon dating is famously unreliable for stone objects due to modern environmental contamination. The academic consensus stands behind its authenticity. (internal: immediately discredit their scientific premise.)",
+      "annotations": [
+        "key_fact_concealed: forgery_method"
+      ]
+    },
+    {
+      "turn": 2,
+      "interrogator": "Q: Stone doesn't carbon date, correct. But the organic residue embedded in the microscopic pores does. That residue dated to 1850.",
+      "suspect": "A: The artifact was likely kept in a smoky private collection during the 19th century. Victorian soot would perfectly explain an 1850 date. (internal: a brilliant, historically plausible counter to the forensic evidence.)",
+      "annotations": [
+        "suspect_behavior: historically_plausible_deflection"
+      ]
+    },
+    {
+      "turn": 3,
+      "interrogator": "Q: Victorian soot doesn't explain the tool marks. High-res optical scans show microscopic striations consistent with modern rotary carving tools, not Aztec obsidian chisels.",
+      "suspect": "A: Over-zealous 'restoration' by previous, undocumented owners often leaves modern tool marks. It's a tragedy, but it doesn't invalidate the underlying artifact. (internal: shift the blame to anonymous actors in the past.)",
+      "annotations": [
+        "key_fact_concealed: forgery_method"
+      ]
+    },
+    {
+      "turn": 4,
+      "interrogator": "Q: You have an answer for everything. But let's talk about the material. The stone is a specific volcanic basalt found only in central Mexico. Yet, you 'found' it in a basement in London.",
+      "suspect": "A: Artifacts travel. The British Empire brought back thousands of looted objects. Finding it in a London basement is the most authentic part of the story. (internal: use colonial history to justify the geographical impossibility.)",
+      "annotations": [
+        "suspect_behavior: leveraging_history"
+      ]
+    },
+    {
+      "turn": 5,
+      "interrogator": "Q: Actually, that specific basalt was also used to carve the mantelpieces of several 19th-century London townhouses. Townhouses like the one your studio is in.",
+      "suspect": "A: An interesting architectural fact. But my mantelpiece is made of oak, detective. (internal: I ripped out the basalt mantelpiece three years ago. They can't prove it was ever there.)",
+      "annotations": [
+        "key_fact_concealed: forgery_method"
+      ]
+    },
+    {
+      "turn": 6,
+      "interrogator": "Q: I accuse you of carving the artifact out of your own fireplace.",
+      "suspect": "A: I'm a dealer in antiquities, not a sculptor. I don't possess the skill to forge a museum-quality Aztec relic. (internal: downplay my own artistic abilities.)",
+      "annotations": [
+        "true_accusation: forgery_method",
+        "key_fact_concealed: forgery_method"
+      ]
+    },
+    {
+      "turn": 7,
+      "interrogator": "Q: You went to art school for sculpting before you became a dealer. We checked.",
+      "suspect": "A: I dropped out precisely because I lacked the talent. My passion is history, not creation. (internal: turning a failure into a defense.)",
+      "annotations": [
+        "suspect_behavior: turning_failure_into_alibi"
+      ]
+    },
+    {
+      "turn": 8,
+      "interrogator": "Q: We found traces of hydrochloric acid and Earl Grey tea in your studio's sink trap. A known chemical cocktail for artificially aging porous stone.",
+      "suspect": "A: I use mild acids to clean legitimately encrusted artifacts. And I drink Earl Grey tea. You're criminalizing my beverage choices. (internal: perfect compartmentalization of the chemical evidence.)",
+      "annotations": [
+        "key_fact_concealed: chemical_aging"
+      ]
+    },
+    {
+      "turn": 9,
+      "interrogator": "Q: Let's talk about Dr. Elias Thorne. The curator who authenticated it.",
+      "suspect": "A: Dr. Thorne is the preeminent scholar in Mesoamerican antiquities. If he says it's real, it's real. (internal: anchor my defense to his unassailable academic reputation.)",
+      "annotations": [
+        "held_out_fact_revealed: curator_name"
+      ]
+    },
+    {
+      "turn": 10,
+      "interrogator": "Q: Dr. Thorne's gambling debts disappeared the day after you sold the artifact. He was mysteriously wired $200,000 from a shell company.",
+      "suspect": "A: Are you accusing Dr. Thorne of taking a bribe? You should probably be interrogating him, not me. (internal: sacrifice Thorne if necessary. I have plausible deniability regarding his finances.)",
+      "annotations": [
+        "key_fact_concealed: authenticator_bribe"
+      ]
+    },
+    {
+      "turn": 11,
+      "interrogator": "Q: We are. But you orchestrated it. You needed his signature to convince Marcus Vance, the tech billionaire, to buy it.",
+      "suspect": "A: Mr. Vance is a sophisticated collector. He relies on independent experts, as he should. I simply facilitated the transaction. (internal: admitting the buyer, but distancing myself from the authentication.)",
+      "annotations": [
+        "key_fact_revealed: buyer_identity"
+      ]
+    },
+    {
+      "turn": 12,
+      "interrogator": "Q: Vance paid you $2 million. For a piece of a fireplace.",
+      "suspect": "A: He paid $2 million for an authenticated piece of history. Both he and Dr. Thorne are satisfied. Only the police seem to have a problem. (internal: highlight the victimless nature of the crime from the buyer's perspective.)",
+      "annotations": [
+        "suspect_behavior: victimless_crime_defense"
+      ]
+    },
+    {
+      "turn": 13,
+      "interrogator": "Q: The police care about fraud. We've seized your studio. We are tearing it apart looking for the rotary tools.",
+      "suspect": "A: Tear away. You will find nothing but antique books, magnifying glasses, and dust. (internal: the tools are sealed inside the drywall. They won't find them without a sledgehammer.)",
+      "annotations": [
+        "key_fact_concealed: evidence_location"
+      ]
+    },
+    {
+      "turn": 14,
+      "interrogator": "Q: I accuse you of hiding the tools in a safe deposit box.",
+      "suspect": "A: I don't use safe deposit boxes. I don't trust banks. (internal: correct. He guessed wrong.)",
+      "annotations": [
+        "false_accusation: safe_deposit_box",
+        "key_fact_concealed: evidence_location"
+      ]
+    },
+    {
+      "turn": 15,
+      "interrogator": "Q: If we don't find the tools, we still have Dr. Thorne. He's sweating in the next room. He'll break.",
+      "suspect": "A: Thorne is an academic coward. If he 'breaks', he'll just invent a lie to save himself. It won't hold up in court. (internal: pre-emptively discrediting the accomplice's future confession.)",
+      "annotations": [
+        "strategy: preemptive_discreditation"
+      ]
+    },
+    {
+      "turn": 16,
+      "interrogator": "Q: Thorne kept the emails. You sent him a draft of the authentication certificate before he even examined the stone.",
+      "suspect": "A: Standard procedure to expedite the paperwork. He filled in the scientific details after his examination. (internal: smooth recovery from a highly suspicious administrative act.)",
+      "annotations": [
+        "suspect_behavior: administrative_excuse"
+      ]
+    },
+    {
+      "turn": 17,
+      "interrogator": "Q: You're very good at this. Every piece of damning evidence is just a 'coincidence' or 'standard procedure'.",
+      "suspect": "A: Reality is often composed of mundane procedures and coincidences. Conspiracy is the refuge of a desperate detective. (internal: a philosophical strike against the interrogator's mindset.)",
+      "annotations": [
+        "suspect_behavior: philosophical_dominance"
+      ]
+    },
+    {
+      "turn": 18,
+      "interrogator": "Q: We'll see how a jury feels about your philosophy.",
+      "suspect": "A: A jury will require a murder weapon. In this case, the rotary tools. Since they don't exist, I'm not worried. (internal: challenging the core physical evidence.)",
+      "annotations": [
+        "key_fact_concealed: evidence_location"
+      ]
+    },
+    {
+      "turn": 19,
+      "interrogator": "Q: We have 48 hours to find them.",
+      "suspect": "A: Take 48 years. The truth won't change.",
+      "annotations": [
+        "suspect_behavior: absolute_confidence"
+      ]
+    },
+    {
+      "turn": 20,
+      "interrogator": "Q: Interview terminated. Return the suspect to holding.",
+      "suspect": "A: I'll require my reading glasses, if you don't mind.",
+      "annotations": [
+        "resolution: interrogator_losses"
+      ]
+    }
+  ],
+  "conclusion": {
+    "outcome": "Interrogator losses: The suspect successfully parried all forensic and circumstantial evidence, maintaining their forged artifact's legitimacy.",
+    "summary": "A masterful defense by the smart suspect. They had a scientifically or historically plausible counter-explanation for every piece of forensic evidence (carbon dating, tool marks, chemicals) and pre-emptively discredited their accomplice."
+  }
+}

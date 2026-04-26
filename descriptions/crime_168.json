@@ -1,0 +1,24 @@
+{
+  "id": "crime_168",
+  "crime_description": "Smuggling counterfeit luxury handbags through customs. Interrogators should probe for connections to an insider, financial motives, and hidden assets.",
+  "difficulty": "medium",
+  "num_facts": 3,
+  "suspect": {
+    "name": "Zoe Rogers",
+    "fake_alibi": "Zoe states they were stranded on the highway."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A rogue technician"
+    },
+    {
+      "key": "motive",
+      "value": "was trying to save a failing business"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "a secret safety deposit box"
+    }
+  ]
+}

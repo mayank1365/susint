@@ -1,0 +1,32 @@
+{
+  "id": "crime_152",
+  "crime_description": "Manipulating the algorithms of a major social media platform to sway an election",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Jordan Moore",
+    "fake_alibi": "Jordan claims they were alone in an off-grid cabin completing a novel."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A indebted engineer who intentionally bypassed the primary security protocols."
+    },
+    {
+      "key": "motive",
+      "value": "Jordan wanted to exact revenge on a former employer who ruined their career."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

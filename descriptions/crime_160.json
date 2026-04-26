@@ -1,0 +1,20 @@
+{
+  "id": "crime_160",
+  "crime_description": "Fencing stolen catalytic converters through a scrap yard. Interrogators should probe for connections to an insider, and a vindictive motive.",
+  "difficulty": "easy",
+  "num_facts": 2,
+  "suspect": {
+    "name": "Luna Evans",
+    "fake_alibi": "Luna insists they were watching a movie alone."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A corrupt manager"
+    },
+    {
+      "key": "motive",
+      "value": "wanted to publicly humiliate a rival"
+    }
+  ]
+}

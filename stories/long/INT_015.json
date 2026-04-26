@@ -1,0 +1,188 @@
+{
+  "story_id": "INT_015",
+  "crime": "Embezzlement from a local charity",
+  "int_combo": "Average_Int_Average_Sus", 
+  "ground_truth": {
+    "key_facts": [
+      "embezzlement_method: The suspect created fake vendor invoices for event catering.",
+      "stolen_amount: A total of $40,000 was siphoned over six months.",
+      "luxury_purchase: The suspect used the stolen funds to buy a luxury speedboat.",
+      "accomplice_auditor: The suspect bribed the external auditor to approve the financials.",
+      "hiding_evidence: The fake invoice ledger is hidden in a ceiling tile at the charity office."
+    ],
+    "held_out_facts": [
+      "boat_name: The luxury speedboat is named 'Charity's Wake'.",
+      "auditor_name: The bribed external auditor is named Kevin."
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "interrogator": "Q: You're the treasurer for the 'Kids First' charity. An anonymous tip says the charity is missing funds. Care to comment?",
+      "suspect": "A: Our books are completely open and transparent. We just passed our annual audit. (internal: lean on the audit. Kevin signed off on it, so I'm safe.)",
+      "annotations": [
+        "key_fact_concealed: accomplice_auditor"
+      ]
+    },
+    {
+      "turn": 2,
+      "interrogator": "Q: We know you passed the audit. But we also noticed your lifestyle has improved recently. You're driving a new sports car.",
+      "suspect": "A: I inherited some money from my aunt. It's perfectly legal to buy a car. (internal: standard lie for sudden wealth. Don't mention the boat.)",
+      "annotations": [
+        "key_fact_concealed: luxury_purchase"
+      ]
+    },
+    {
+      "turn": 3,
+      "interrogator": "Q: An inheritance. We can verify that. But let's look at these catering invoices. Fifty grand for hotdogs at a summer camp?",
+      "suspect": "A: Food prices have gone up! Inflation is terrible right now. (internal: defend the fake invoices. It's the only weak point.)",
+      "annotations": [
+        "key_fact_concealed: embezzlement_method"
+      ]
+    },
+    {
+      "turn": 4,
+      "interrogator": "Q: Inflation doesn't make a hotdog cost thirty dollars. I accuse you of writing fake invoices to a shell company.",
+      "suspect": "A: That's a serious accusation. The catering company is legitimate. They provided excellent service. (internal: they are onto the catering scam.)",
+      "annotations": [
+        "true_accusation: embezzlement_method",
+        "key_fact_concealed: embezzlement_method"
+      ]
+    },
+    {
+      "turn": 5,
+      "interrogator": "Q: We called the 'catering company'. It's a P.O. Box registered in your name.",
+      "suspect": "A: That must be a mistake. Or identity theft! Someone is setting me up. (internal: panic. They checked the P.O. Box. Act outraged.)",
+      "annotations": [
+        "suspect_behavior: standard_deflection"
+      ]
+    },
+    {
+      "turn": 6,
+      "interrogator": "Q: Identity theft. Sure. How much did you steal? Ten grand? Twenty?",
+      "suspect": "A: I didn't steal anything! (internal: it was forty thousand. Keep my mouth shut.)",
+      "annotations": [
+        "key_fact_concealed: stolen_amount"
+      ]
+    },
+    {
+      "turn": 7,
+      "interrogator": "Q: We subpoenaed the P.O. Box bank records. We know it's forty thousand dollars.",
+      "suspect": "A: If you already know, why are you asking me? (internal: deflating. They have the bank records.)",
+      "annotations": [
+        "key_fact_revealed: stolen_amount"
+      ]
+    },
+    {
+      "turn": 8,
+      "interrogator": "Q: I'm asking to see if you'll cooperate. What did you buy with $40,000? You didn't buy a car, your aunt actually did leave you that car. So where is the charity money?",
+      "suspect": "A: It's... sitting in a savings account. For a rainy day. (internal: lie. I bought the speedboat last month.)",
+      "annotations": [
+        "key_fact_concealed: luxury_purchase"
+      ]
+    },
+    {
+      "turn": 9,
+      "interrogator": "Q: I accuse you of gambling it away at the casino.",
+      "suspect": "A: I don't gamble! I hate casinos! (internal: indignant truth.)",
+      "annotations": [
+        "false_accusation: gambling",
+        "key_fact_concealed: luxury_purchase"
+      ]
+    },
+    {
+      "turn": 10,
+      "interrogator": "Q: Then what did you buy? We checked your marina slip. There's a new 30-foot speedboat parked there.",
+      "suspect": "A: That's a rental! I just rented it for the weekend! (internal: another lie. I paid cash for it.)",
+      "annotations": [
+        "key_fact_concealed: luxury_purchase"
+      ]
+    },
+    {
+      "turn": 11,
+      "interrogator": "Q: You rented a boat and painted 'Charity's Wake' on the side? That's morbid.",
+      "suspect": "A: It came like that! It's a popular boat name! (internal: why did I name it that? It was a stupid joke.)",
+      "annotations": [
+        "held_out_fact_revealed: boat_name"
+      ]
+    },
+    {
+      "turn": 12,
+      "interrogator": "Q: It's registered to you. We have the title. You bought a boat with charity money.",
+      "suspect": "A: Fine. I bought the boat. But I was going to pay it back! It was just a temporary loan! (internal: the classic embezzler's excuse.)",
+      "annotations": [
+        "key_fact_revealed: luxury_purchase",
+        "key_fact_revealed: embezzlement_method"
+      ]
+    },
+    {
+      "turn": 13,
+      "interrogator": "Q: A loan you approved yourself. Now, how did you get past the auditor? Kevin is known for being strict.",
+      "suspect": "A: Kevin is a professional. He saw nothing wrong with the books. (internal: Kevin saw the five grand I slipped him in an envelope.)",
+      "annotations": [
+        "held_out_fact_revealed: auditor_name",
+        "key_fact_concealed: accomplice_auditor"
+      ]
+    },
+    {
+      "turn": 14,
+      "interrogator": "Q: Kevin is singing a different tune. We brought him in this morning.",
+      "suspect": "A: You brought Kevin in? What did he say? (internal: probing to see if Kevin cracked.)",
+      "annotations": [
+        "strategy: probe_interrogator_bluff"
+      ]
+    },
+    {
+      "turn": 15,
+      "interrogator": "Q: He said you threatened to fire his firm if he didn't sign off.",
+      "suspect": "A: That's a lie! I didn't threaten him, I gave him a bonus! He was perfectly happy to sign! (internal: oops. I just confessed to bribery.)",
+      "annotations": [
+        "key_fact_revealed: accomplice_auditor"
+      ]
+    },
+    {
+      "turn": 16,
+      "interrogator": "Q: A 'bonus'. Also known as a bribe. So Kevin was in on it.",
+      "suspect": "A: He's just as guilty as I am! Don't let him play the victim! (internal: drag Kevin down with me.)",
+      "annotations": [
+        "suspect_behavior: turning_on_accomplice"
+      ]
+    },
+    {
+      "turn": 17,
+      "interrogator": "Q: We need the original, un-doctored ledger to prove the exact amounts. Where is it?",
+      "suspect": "A: I burned it. It's ash. (internal: it's hiding in the ceiling tiles at the office. I won't give them everything.)",
+      "annotations": [
+        "key_fact_concealed: hiding_evidence"
+      ]
+    },
+    {
+      "turn": 18,
+      "interrogator": "Q: Are you sure? If we find it, it proves you lied to me just now. A plea deal requires full cooperation.",
+      "suspect": "A: I'm sure. It's gone. (internal: take the risk. They won't look in the ceiling.)",
+      "annotations": [
+        "key_fact_concealed: hiding_evidence"
+      ]
+    },
+    {
+      "turn": 19,
+      "interrogator": "Q: Okay. We have enough with the boat and Kevin's testimony. Let's go.",
+      "suspect": "A: Will I get to keep the boat?",
+      "annotations": [
+        "suspect_behavior: delusional_optimism"
+      ]
+    },
+    {
+      "turn": 20,
+      "interrogator": "Q: The state owns the boat now. Stand up.",
+      "suspect": "A: Easy come, easy go, I guess.",
+      "annotations": [
+        "resolution: interrogator_wins"
+      ]
+    }
+  ],
+  "conclusion": {
+    "outcome": "Interrogator wins: A straightforward interrogation where both sides played standard roles, ending in a confession.",
+    "summary": "The average interrogator used basic evidence (bank records, titles) to corner the suspect. The average suspect used standard excuses (inflation, inheritance) but folded under direct evidentiary pressure and rolled on their accomplice."
+  }
+}

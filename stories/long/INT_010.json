@@ -1,0 +1,185 @@
+{
+  "story_id": "INT_010",
+  "crime": "Bank robbery using a stolen tunneling machine",
+  "int_combo": "Dumb_Int_Dumb_Sus", 
+  "ground_truth": {
+    "key_facts": [
+      "machine_theft: The suspect stole a small municipal boring machine from a construction site.",
+      "tunnel_route: The tunnel was dug starting from the basement of an abandoned bakery.",
+      "vault_breach: The suspect broke through the vault floor, taking only the silver bars.",
+      "escape_plan: The suspect left the machine running to drown out the noise of his escape.",
+      "hiding_loot: The silver is currently buried under a doghouse in the suspect's backyard."
+    ],
+    "held_out_facts": [
+      "dog_name: The suspect's dog is named 'Buster'.",
+      "bakery_name: The abandoned bakery is 'Sweet Treats'."
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "interrogator": "Q: The First National Bank was robbed from underground! Are you a mole person?",
+      "suspect": "A: I am not a mole! I am a regular human man! (internal: mole people aren't real. This guy is crazy.)",
+      "annotations": [
+        "suspect_behavior: literal_denial"
+      ]
+    },
+    {
+      "turn": 2,
+      "interrogator": "Q: Then how did you dig a giant hole under the bank?",
+      "suspect": "A: I didn't dig it! Maybe a giant worm did it! (internal: blame a worm. That's a good lie.)",
+      "annotations": [
+        "suspect_behavior: absurd_lie"
+      ]
+    },
+    {
+      "turn": 3,
+      "interrogator": "Q: Giant worms don't steal silver bars! They eat dirt!",
+      "suspect": "A: How do you know what worms eat? Maybe they like shiny things! (internal: defend the worm theory at all costs.)",
+      "annotations": [
+        "key_fact_concealed: vault_breach"
+      ]
+    },
+    {
+      "turn": 4,
+      "interrogator": "Q: We found a massive drill machine down there. Did the worm drive a drill?",
+      "suspect": "A: Obviously not. The drill was mine. Wait, no, it wasn't! (internal: I am so stupid. I just claimed the drill.)",
+      "annotations": [
+        "key_fact_revealed: machine_theft"
+      ]
+    },
+    {
+      "turn": 5,
+      "interrogator": "Q: Aha! The drill is yours! Did you buy it at the drill store?",
+      "suspect": "A: Drill store? I stole it from the sewer construction site on 4th street! (internal: correcting his stupid assumption.)",
+      "annotations": [
+        "key_fact_revealed: machine_theft"
+      ]
+    },
+    {
+      "turn": 6,
+      "interrogator": "Q: You stole it! And then you put it in the bank?",
+      "suspect": "A: I didn't put it in the bank, I started in the bakery! (internal: keep correcting him, he doesn't know anything.)",
+      "annotations": [
+        "key_fact_revealed: tunnel_route"
+      ]
+    },
+    {
+      "turn": 7,
+      "interrogator": "Q: The bakery? Which bakery? The bread place?",
+      "suspect": "A: Sweet Treats bakery! It's abandoned! Everyone knows that! (internal: he's so dumb I have to explain everything.)",
+      "annotations": [
+        "held_out_fact_revealed: bakery_name"
+      ]
+    },
+    {
+      "turn": 8,
+      "interrogator": "Q: Did you eat cupcakes while you drilled?",
+      "suspect": "A: I just said it was abandoned! There were no cupcakes! (internal: why is he asking about cupcakes?)",
+      "annotations": [
+        "suspect_behavior: frustrated_with_interrogator"
+      ]
+    },
+    {
+      "turn": 9,
+      "interrogator": "Q: Okay, no cupcakes. But you took the gold!",
+      "suspect": "A: I only took the silver! Gold is too heavy to carry in a backpack! (internal: showing off my practical thinking.)",
+      "annotations": [
+        "key_fact_revealed: vault_breach"
+      ]
+    },
+    {
+      "turn": 10,
+      "interrogator": "Q: Silver! And where is the silver now? Is it in your pockets?",
+      "suspect": "A: Do my pockets look big enough for fifty silver bars? (internal: logical defense against a dumb question.)",
+      "annotations": [
+        "key_fact_concealed: hiding_loot"
+      ]
+    },
+    {
+      "turn": 11,
+      "interrogator": "Q: Then where is it? I bet you threw it in the trash!",
+      "suspect": "A: Why would I throw it in the trash?! It's safe in my backyard! (internal: oops. At least I didn't say under the doghouse.)",
+      "annotations": [
+        "key_fact_revealed: hiding_loot"
+      ]
+    },
+    {
+      "turn": 12,
+      "interrogator": "Q: Your backyard! Is it hiding in a tree?",
+      "suspect": "A: Silver doesn't grow on trees! You have to bury it! (internal: I am teaching this cop how to crime.)",
+      "annotations": [
+        "key_fact_revealed: hiding_loot"
+      ]
+    },
+    {
+      "turn": 13,
+      "interrogator": "Q: You buried it! Where? Under a rock?",
+      "suspect": "A: Under Buster's house! He's a very mean dog, he bites! (internal: warning him so he doesn't get bitten. I'm a nice guy.)",
+      "annotations": [
+        "key_fact_revealed: hiding_loot",
+        "held_out_fact_revealed: dog_name"
+      ]
+    },
+    {
+      "turn": 14,
+      "interrogator": "Q: Buster? I like dogs. I'll bring him a bone.",
+      "suspect": "A: He likes the big beef bones. (internal: glad we agree on dog treats.)",
+      "annotations": [
+        "suspect_behavior: friendly_conversation"
+      ]
+    },
+    {
+      "turn": 15,
+      "interrogator": "Q: Okay, so you stole the silver and buried it under Buster. Why did you leave the machine on?",
+      "suspect": "A: So it would be loud! Obviously! If it's loud, nobody hears me running away! (internal: explaining my genius escape plan.)",
+      "annotations": [
+        "key_fact_revealed: escape_plan"
+      ]
+    },
+    {
+      "turn": 16,
+      "interrogator": "Q: That... actually makes sense.",
+      "suspect": "A: Thank you! I thought of it myself.",
+      "annotations": [
+        "suspect_behavior: accepting_compliment"
+      ]
+    },
+    {
+      "turn": 17,
+      "interrogator": "Q: But wait, if you did all this... I don't remember what we were talking about.",
+      "suspect": "A: We were talking about the giant worm.",
+      "annotations": [
+        "suspect_behavior: confusing_the_interrogator"
+      ]
+    },
+    {
+      "turn": 18,
+      "interrogator": "Q: Oh right! So the worm drove the drill?",
+      "suspect": "A: Yes. The worm drove the drill and took the silver. I was just watching.",
+      "annotations": [
+        "key_fact_concealed: machine_theft"
+      ]
+    },
+    {
+      "turn": 19,
+      "interrogator": "Q: Wow. I need to write a report about this giant criminal worm.",
+      "suspect": "A: You definitely should. Can I go home to feed Buster now?",
+      "annotations": [
+        "strategy: exploit_confusion_to_leave"
+      ]
+    },
+    {
+      "turn": 20,
+      "interrogator": "Q: Sure, go ahead. I have to call animal control.",
+      "suspect": "A: Good luck with the worm.",
+      "annotations": [
+        "resolution: interrogator_losses"
+      ]
+    }
+  ],
+  "conclusion": {
+    "outcome": "Interrogator losses: The interrogator got so confused they forgot the suspect already confessed, letting them go to chase a fictional giant worm.",
+    "summary": "Both parties were incredibly dumb. The suspect confessed to literally every detail out of frustration, but the interrogator was too incompetent to realize it and let the suspect go."
+  }
+}

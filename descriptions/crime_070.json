@@ -1,0 +1,32 @@
+{
+  "id": "crime_070",
+  "crime_description": "Manipulating the flight control software of a rival aerospace company's drone",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Valerie Frost",
+    "fake_alibi": "Valerie claims she was giving a keynote address at a major international cybersecurity summit."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "An embedded corporate spy who inserted the malicious payload via a USB drive."
+    },
+    {
+      "key": "motive",
+      "value": "Valerie wanted to ensure her own company's drone secured the lucrative military contract."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

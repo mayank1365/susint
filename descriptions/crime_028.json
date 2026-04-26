@@ -1,0 +1,32 @@
+{
+  "id": "crime_028",
+  "crime_description": "Hacking the stock exchange to cause a flash crash. Interrogators should probe for connections to an inside accomplice, a hidden agenda, remote burner phone coordination, offshore accounts, and private flight plans.",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Quinn Harper",
+    "fake_alibi": "Quinn claims she was asleep in her apartment after a 48-hour coding marathon."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A rogue AI program that Quinn developed, which executed the trades autonomously."
+    },
+    {
+      "key": "motive",
+      "value": "Quinn wanted to expose the fragility of the global financial system and force a paradigm shift."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

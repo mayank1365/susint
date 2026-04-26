@@ -1,0 +1,32 @@
+{
+  "id": "crime_151",
+  "crime_description": "Deploying a silent EMP to cripple a competing data center",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Jordan Davis",
+    "fake_alibi": "Jordan claims they were alone in an off-grid cabin completing a novel."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A rogue engineer who intentionally bypassed the primary security protocols."
+    },
+    {
+      "key": "motive",
+      "value": "Jordan desperately needed the funds to pay off a life-threatening cartel debt."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

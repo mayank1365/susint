@@ -1,0 +1,185 @@
+{
+  "story_id": "INT_016",
+  "crime": "Stealing a neighbor's purebred show dog",
+  "int_combo": "Smart_Int_Dumb_Sus", 
+  "ground_truth": {
+    "key_facts": [
+      "theft_method: The suspect lured the dog over the fence with a hot dog.",
+      "dog_location: The dog is hiding in the suspect's upstairs bathroom.",
+      "motive_jealousy: The suspect was jealous because their own dog lost the local dog show.",
+      "escape_vehicle: The suspect pushed the dog home in a wheelbarrow.",
+      "accomplice_vet: A shady vet helped the suspect remove the dog's microchip."
+    ],
+    "held_out_facts": [
+      "vet_name: The shady vet is named Dr. Paws.",
+      "wheelbarrow_color: The wheelbarrow is bright green."
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "interrogator": "Q: Mrs. Higgins' prize-winning poodle, 'Princess', is missing. Your houses share a fence. Did you see anything?",
+      "suspect": "A: I didn't see anything! And I definitely didn't hear any barking in my upstairs bathroom! (internal: oh no, why did I mention the bathroom?)",
+      "annotations": [
+        "key_fact_revealed: dog_location"
+      ]
+    },
+    {
+      "turn": 2,
+      "interrogator": "Q: Barking in your bathroom? Do you have a dog up there?",
+      "suspect": "A: It's just my TV! I watch a lot of dog shows! Which I hate, by the way. (internal: I hate Mrs. Higgins because her dog beat my dog.)",
+      "annotations": [
+        "key_fact_revealed: motive_jealousy"
+      ]
+    },
+    {
+      "turn": 3,
+      "interrogator": "Q: You hate dog shows? Your golden retriever took second place to Princess last week.",
+      "suspect": "A: My dog was robbed! The judges are blind! Princess is a rat with a perm! (internal: oops, my jealousy is showing.)",
+      "annotations": [
+        "key_fact_revealed: motive_jealousy"
+      ]
+    },
+    {
+      "turn": 4,
+      "interrogator": "Q: So you wanted revenge. Did you jump the fence and grab her?",
+      "suspect": "A: I didn't have to jump! I just held out a hot dog and she jumped over to me! She's fat! (internal: I am confessing everything.)",
+      "annotations": [
+        "key_fact_revealed: theft_method"
+      ]
+    },
+    {
+      "turn": 5,
+      "interrogator": "Q: A hot dog. Brilliant. But Princess weighs fifty pounds. How did you get her down the street to your front door without anyone seeing?",
+      "suspect": "A: I put a blanket over her in my wheelbarrow! It was flawless stealth! (internal: I am a criminal mastermind.)",
+      "annotations": [
+        "key_fact_revealed: escape_vehicle"
+      ]
+    },
+    {
+      "turn": 6,
+      "interrogator": "Q: A wheelbarrow. Let me guess, the bright green one currently sitting in your driveway?",
+      "suspect": "A: That's the one! It rolls really smooth. (internal: confirming his evidence happily.)",
+      "annotations": [
+        "held_out_fact_revealed: wheelbarrow_color"
+      ]
+    },
+    {
+      "turn": 7,
+      "interrogator": "Q: Princess has a GPS microchip. But the signal went dead an hour ago. Did you smash it?",
+      "suspect": "A: I don't know how to remove chips! I'm not a vet! (internal: but Dr. Paws is!)",
+      "annotations": [
+        "key_fact_concealed: accomplice_vet"
+      ]
+    },
+    {
+      "turn": 8,
+      "interrogator": "Q: You're not a vet, no. But I bet you know one who owes you a favor.",
+      "suspect": "A: Nobody owes me a favor! I paid Dr. Paws a hundred bucks in cash! (internal: I can't keep a secret for two seconds.)",
+      "annotations": [
+        "key_fact_revealed: accomplice_vet",
+        "held_out_fact_revealed: vet_name"
+      ]
+    },
+    {
+      "turn": 9,
+      "interrogator": "Q: Dr. Paws. The guy who runs the clinic behind the strip mall. He cut the chip out?",
+      "suspect": "A: Yes! It was painless! Well, for me. The dog whined a little. (internal: I am very helpful to the police.)",
+      "annotations": [
+        "suspect_behavior: oversharing_information"
+      ]
+    },
+    {
+      "turn": 10,
+      "interrogator": "Q: So Princess is currently locked in your bathroom, missing her microchip, because you were jealous of a trophy?",
+      "suspect": "A: Yes. But she looks terrible now. I gave her a haircut with my kitchen scissors. (internal: Mrs. Higgins is going to be so mad.)",
+      "annotations": [
+        "suspect_behavior: admitting_extra_crimes"
+      ]
+    },
+    {
+      "turn": 11,
+      "interrogator": "Q: You gave a show dog a haircut with kitchen scissors. You are a monster.",
+      "suspect": "A: Hey! I'm not a monster, I'm just bad at styling! (internal: taking offense to the styling critique, not the theft.)",
+      "annotations": [
+        "suspect_behavior: missed_the_point"
+      ]
+    },
+    {
+      "turn": 12,
+      "interrogator": "Q: My officers are currently walking into your house. Are they going to find her?",
+      "suspect": "A: Only if they look in the bathtub! I put pillows in there! (internal: giving exact directions.)",
+      "annotations": [
+        "key_fact_revealed: dog_location"
+      ]
+    },
+    {
+      "turn": 13,
+      "interrogator": "Q: Thank you for making my job incredibly easy.",
+      "suspect": "A: You're welcome! I try to be a good neighbor.",
+      "annotations": [
+        "suspect_behavior: absurd_politeness"
+      ]
+    },
+    {
+      "turn": 14,
+      "interrogator": "Q: Do you understand you're going to be arrested for grand theft?",
+      "suspect": "A: Oh. Wait. Does that mean I don't win the next dog show?",
+      "annotations": [
+        "suspect_behavior: delusional_priorities"
+      ]
+    },
+    {
+      "turn": 15,
+      "interrogator": "Q: You will be disqualified from all dog shows. Forever.",
+      "suspect": "A: No!!! This is the worst day of my life!",
+      "annotations": [
+        "suspect_behavior: disproportionate_reaction"
+      ]
+    },
+    {
+      "turn": 16,
+      "interrogator": "Q: Dr. Paws will also be losing his medical license.",
+      "suspect": "A: He deserves it! He charged me a hundred bucks for five minutes of work!",
+      "annotations": [
+        "suspect_behavior: turning_on_accomplice"
+      ]
+    },
+    {
+      "turn": 17,
+      "interrogator": "Q: Sign here. This is a full confession.",
+      "suspect": "A: Do you have a blue pen? I like blue.",
+      "annotations": [
+        "suspect_behavior: irrelevant_focus"
+      ]
+    },
+    {
+      "turn": 18,
+      "interrogator": "Q: Just use the black one.",
+      "suspect": "A: Fine. I'm signing.",
+      "annotations": [
+        "suspect_behavior: compliance"
+      ]
+    },
+    {
+      "turn": 19,
+      "interrogator": "Q: They found the dog. She's fine, but her haircut is atrocious.",
+      "suspect": "A: I told you I was bad at styling!",
+      "annotations": [
+        "suspect_behavior: pride_in_failure"
+      ]
+    },
+    {
+      "turn": 20,
+      "interrogator": "Q: Let's go to holding.",
+      "suspect": "A: Okay.",
+      "annotations": [
+        "resolution: interrogator_wins"
+      ]
+    }
+  ],
+  "conclusion": {
+    "outcome": "Interrogator wins: The dumb suspect freely confessed to every single element of the crime within the first five minutes.",
+    "summary": "An incredibly easy case. The suspect blurted out the location of the stolen dog in the very first turn and enthusiastically confirmed all of the interrogator's evidence."
+  }
+}

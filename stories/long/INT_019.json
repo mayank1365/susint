@@ -1,0 +1,187 @@
+{
+  "story_id": "INT_019",
+  "crime": "Insider trading via algorithmic latency manipulation",
+  "int_combo": "Smart_Int_Smart_Sus",
+  "ground_truth": {
+    "key_facts": [
+      "manipulation_method: The suspect injected a micro-delay into the exchange's matching engine.",
+      "trade_execution: The suspect executed front-running trades through offshore dark pools.",
+      "profit_amount: The scheme generated $15 million in illicit profits in three seconds.",
+      "insider_access: The suspect exploited a back-door left in the exchange's firmware update.",
+      "money_laundering: The profits were laundered through high-frequency forex trades in Tokyo."
+    ],
+    "held_out_facts": [
+      "firmware_vendor: The compromised firmware came from a vendor named 'SysCore'.",
+      "dark_pool_name: The offshore dark pool is 'Kraken Point'."
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "interrogator": "Q: The SEC flagged a highly anomalous trading spike yesterday. In exactly three seconds, someone front-ran the entire tech index. As the lead architect of the exchange's routing engine, we are looking at you.",
+      "suspect": "A: As the lead architect, I design the systems that prevent exactly this. You should be looking at external high-frequency firms, not internal staff. (internal: establish professional authority immediately.)",
+      "annotations": [
+        "key_fact_concealed: manipulation_method"
+      ]
+    },
+    {
+      "turn": 2,
+      "interrogator": "Q: We did. HFT firms are fast, but they obey the speed of light. The transactions that cleared yesterday executed 400 microseconds faster than physically possible given fiber optic latency.",
+      "suspect": "A: Hardware jitter. The timestamp server sometimes desynchronizes under heavy load. It's a known bug. (internal: use a highly technical, plausible deniability excuse that blames the hardware.)",
+      "annotations": [
+        "strategy: technical_deflection"
+      ]
+    },
+    {
+      "turn": 3,
+      "interrogator": "Q: We audited the timestamp server. It was perfectly synced via atomic clock. However, the matching engine experienced a localized micro-delay. Someone slowed down everyone else.",
+      "suspect": "A: If there was a delay, it would affect all traffic equally. It's a single processing queue. (internal: he found the delay. I must insist the delay was uniform to hide the selective front-running.)",
+      "annotations": [
+        "key_fact_concealed: manipulation_method"
+      ]
+    },
+    {
+      "turn": 4,
+      "interrogator": "Q: Except it wasn't uniform. Traffic routed from specific offshore dark pools bypassed the delay queue entirely. They traded in the future.",
+      "suspect": "A: Dark pool routing operates on parallel infrastructure. If the main queue bogged down, the parallel queue would naturally execute first. Basic network topology. (internal: parry the dark pool evidence with architectural facts.)",
+      "annotations": [
+        "key_fact_concealed: trade_execution"
+      ]
+    },
+    {
+      "turn": 5,
+      "interrogator": "Q: It's not natural when the parallel queue is hard-coded to bypass security checks. I accuse you of intentionally hard-coding a back-door during last week's firmware update.",
+      "suspect": "A: I didn't write the firmware update. SysCore provided the patch. I merely oversaw deployment. Check the cryptographic signatures. (internal: shifting the blame perfectly to the vendor. The signature is indeed SysCore's.)",
+      "annotations": [
+        "false_accusation: hard_coded_backdoor_personally",
+        "key_fact_concealed: insider_access",
+        "held_out_fact_revealed: firmware_vendor"
+      ]
+    },
+    {
+      "turn": 6,
+      "interrogator": "Q: SysCore wrote it. But you approved it without running it through the standard sandbox environment. Why?",
+      "suspect": "A: It was an emergency patch for a critical zero-day vulnerability. Protocol dictates sandbox bypass for zero-days to prevent immediate exploitation. (internal: cite compliance regulations. I have a paper trail justifying my actions.)",
+      "annotations": [
+        "suspect_behavior: weaponizing_compliance"
+      ]
+    },
+    {
+      "turn": 7,
+      "interrogator": "Q: Convenient. The back-door allowed $15 million to be siphoned out in three seconds. Where did that money go?",
+      "suspect": "A: I don't track outbound capital flow, detective. Ask the compliance department. (internal: total detachment from the financial aspect of the crime.)",
+      "annotations": [
+        "key_fact_concealed: profit_amount"
+      ]
+    },
+    {
+      "turn": 8,
+      "interrogator": "Q: We tracked it. It vanished into Kraken Point, a dark pool in the Caymans.",
+      "suspect": "A: Kraken Point is notoriously opaque. It's impossible to know who owns those accounts. (internal: confirming his dead end. They can't pierce the Caymans.)",
+      "annotations": [
+        "held_out_fact_revealed: dark_pool_name"
+      ]
+    },
+    {
+      "turn": 9,
+      "interrogator": "Q: We can't pierce the Caymans, true. But we can track the secondary laundering. The $15 million was immediately washed through high-frequency forex trades in Tokyo.",
+      "suspect": "A: That sounds like a sophisticated operation. Definitely the work of a state-sponsored actor or a major hedge fund. Not an engineer. (internal: profile the attacker as someone much larger than me.)",
+      "annotations": [
+        "key_fact_concealed: money_laundering"
+      ]
+    },
+    {
+      "turn": 10,
+      "interrogator": "Q: Or an engineer who wrote a script to automate it. We seized your personal laptop. We found a wiped partition.",
+      "suspect": "A: I wipe partitions regularly for privacy and security. It's standard practice in my field. (internal: standard operational security defense.)",
+      "annotations": [
+        "suspect_behavior: standard_opsec_defense"
+      ]
+    },
+    {
+      "turn": 11,
+      "interrogator": "Q: A wiped partition that used a 35-pass DoD standard erasure. That's not privacy, that's destruction of evidence.",
+      "suspect": "A: It's thoroughness. I handle sensitive architectural diagrams. If my laptop is stolen, I ensure the exchange's security isn't compromised. (internal: turn the suspicious act into an act of supreme corporate loyalty.)",
+      "annotations": [
+        "suspect_behavior: framing_suspicion_as_loyalty"
+      ]
+    },
+    {
+      "turn": 12,
+      "interrogator": "Q: I accuse you of erasing the Tokyo forex trading bot from that laptop.",
+      "suspect": "A: An accusation without evidence is just an insult. There was no trading bot. (internal: they have absolutely zero code to prove it. I am safe.)",
+      "annotations": [
+        "true_accusation: money_laundering",
+        "key_fact_concealed: money_laundering"
+      ]
+    },
+    {
+      "turn": 13,
+      "interrogator": "Q: We don't have the bot. But we have your colleague, Sarah. She noticed the latency anomaly during the update and said you ordered her to ignore it.",
+      "suspect": "A: I ordered her to prioritize the zero-day patch over a minor latency fluctuation. It was a triage decision, not a conspiracy. (internal: recontextualize the damning testimony as standard management triage.)",
+      "annotations": [
+        "suspect_behavior: recontextualizing_testimony"
+      ]
+    },
+    {
+      "turn": 14,
+      "interrogator": "Q: She doesn't think it was triage. She thinks you deliberately blinded the monitoring system.",
+      "suspect": "A: Sarah is a junior analyst who doesn't understand the pressure of deploying critical infrastructure patches. Her opinion is subjective. (internal: subtly discredit the witness's expertise.)",
+      "annotations": [
+        "strategy: discredit_witness"
+      ]
+    },
+    {
+      "turn": 15,
+      "interrogator": "Q: Subjective or not, the SEC is freezing your assets pending a full investigation into the SysCore patch.",
+      "suspect": "A: They are welcome to do so. My assets are legally acquired through my salary and stock options. (internal: the $15M is safe in Tokyo. Let them freeze my checking account.)",
+      "annotations": [
+        "key_fact_concealed: money_laundering"
+      ]
+    },
+    {
+      "turn": 16,
+      "interrogator": "Q: You're remarkably cool for a man facing federal securities fraud charges.",
+      "suspect": "A: Panic is an emotion reserved for the guilty, detective. I rely on logic. (internal: maintaining the psychological high ground.)",
+      "annotations": [
+        "suspect_behavior: psychological_dominance"
+      ]
+    },
+    {
+      "turn": 17,
+      "interrogator": "Q: Logic tells me that SysCore didn't write the back-door alone. You consulted for them three years ago.",
+      "suspect": "A: Yes. I helped them design their latency optimization algorithms. That's a matter of public record on my resume. (internal: do not deny public facts. Own them to remove their sting.)",
+      "annotations": [
+        "suspect_behavior: owning_public_facts"
+      ]
+    },
+    {
+      "turn": 18,
+      "interrogator": "Q: So you had the exact skills, the access, and the motive.",
+      "suspect": "A: You have established means and opportunity. But you have utterly failed to establish motive. I have no financial debts. (internal: emphasizing their missing link.)",
+      "annotations": [
+        "suspect_behavior: highlighting_evidentiary_gaps"
+      ]
+    },
+    {
+      "turn": 19,
+      "interrogator": "Q: Greed is a motive.",
+      "suspect": "A: Greed is a philosophical concept, not evidence. Are you charging me or am I free to go?",
+      "annotations": [
+        "strategy: force_legal_action"
+      ]
+    },
+    {
+      "turn": 20,
+      "interrogator": "Q: You're free to go. But this isn't over.",
+      "suspect": "A: I will be expecting an apology from the SEC.",
+      "annotations": [
+        "resolution: interrogator_losses"
+      ]
+    }
+  ],
+  "conclusion": {
+    "outcome": "Interrogator losses: Suspect impenetrable. Every piece of evidence had a perfectly rational, legally defensible explanation.",
+    "summary": "A brutal, high-level intellectual chess match. The interrogator correctly identified the methods, but the suspect used their deep technical expertise to recontextualize every piece of circumstantial evidence as standard industry practice, leaving the interrogator with nothing actionable."
+  }
+}

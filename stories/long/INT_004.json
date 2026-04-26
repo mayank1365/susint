@@ -1,0 +1,188 @@
+{
+  "story_id": "INT_004",
+  "crime": "Exotic animal smuggling ring using coerced mules",
+  "int_combo": "Dumb_Int_Dumb_Sus",
+  "ground_truth": {
+    "key_facts": [
+      "animal_type: The suspect was smuggling rare Madagascar tortoises.",
+      "hideout_location: The animals were kept in a rented storage unit on Route 9.",
+      "mule_coercion: The suspect blackmailed college students into carrying the bags.",
+      "customs_bribe: A customs officer at the airport was paid to look away.",
+      "boss_identity: The operation is funded by a man named 'El Lagarto'."
+    ],
+    "held_out_facts": [
+      "bribe_amount: The customs officer was paid $5,000 per shipment.",
+      "blackmail_method: The students were blackmailed with compromised exam papers."
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "interrogator": "Q: You were caught at the airport. Why did you have so many suitcases?",
+      "suspect": "A: I pack heavy! I have a lot of clothes. (internal: don't mention the turtles. Or tortoises. Whatever they are.)",
+      "annotations": [
+        "key_fact_concealed: animal_type"
+      ]
+    },
+    {
+      "turn": 2,
+      "interrogator": "Q: Clothes? But the suitcases were moving. Do your clothes move?",
+      "suspect": "A: Maybe the baggage guys threw them really hard and they were still shaking. (internal: this is a great excuse.)",
+      "annotations": [
+        "suspect_behavior: absurd_lie"
+      ]
+    },
+    {
+      "turn": 3,
+      "interrogator": "Q: Baggage guys don't make suitcases shake for hours. I accuse you of smuggling snakes!",
+      "suspect": "A: I hate snakes! They weren't snakes, they had shells! (internal: oh no, I just said they had shells.)",
+      "annotations": [
+        "false_accusation: animal_snakes",
+        "key_fact_revealed: animal_type"
+      ]
+    },
+    {
+      "turn": 4,
+      "interrogator": "Q: Shells! Like clams? You were smuggling clams?",
+      "suspect": "A: No, not clams! Tortoises! Madagascar tortoises! They are worth a fortune! (internal: why did I say that? I can't stop talking.)",
+      "annotations": [
+        "key_fact_revealed: animal_type"
+      ]
+    },
+    {
+      "turn": 5,
+      "interrogator": "Q: Ha! I knew it! Where did you get them?",
+      "suspect": "A: I didn't get them, I just hold them at my place... I mean, nowhere. (internal: don't tell him about the storage unit.)",
+      "annotations": [
+        "suspect_behavior: clumsy_backpedaling"
+      ]
+    },
+    {
+      "turn": 6,
+      "interrogator": "Q: At your place? I bet they are in your bedroom!",
+      "suspect": "A: No, my landlord doesn't allow pets. They are in the storage unit on Route 9! (internal: I had to prove him wrong about my bedroom.)",
+      "annotations": [
+        "false_accusation: bedroom_hideout",
+        "key_fact_revealed: hideout_location"
+      ]
+    },
+    {
+      "turn": 7,
+      "interrogator": "Q: Route 9 storage unit. Wow. And how were you getting them past customs?",
+      "suspect": "A: Magic. I used magic. (internal: use sarcasm, that always works in movies.)",
+      "annotations": [
+        "suspect_behavior: childish_sarcasm"
+      ]
+    },
+    {
+      "turn": 8,
+      "interrogator": "Q: Magic isn't real. Did you use a magic wand?",
+      "suspect": "A: No, I didn't use a wand! I just paid the guy at the scanner gate! (internal: I got frustrated and blurted it out.)",
+      "annotations": [
+        "key_fact_revealed: customs_bribe"
+      ]
+    },
+    {
+      "turn": 9,
+      "interrogator": "Q: You paid him! I accuse you of paying him a million dollars!",
+      "suspect": "A: A million? Are you crazy? It was only five grand a shipment! (internal: correcting him so I don't look like an idiot.)",
+      "annotations": [
+        "false_accusation: bribe_million",
+        "held_out_fact_revealed: bribe_amount"
+      ]
+    },
+    {
+      "turn": 10,
+      "interrogator": "Q: Five grand. But how did you carry all those bags? You only have two hands.",
+      "suspect": "A: I didn't carry them. The college kids did. (internal: oops.)",
+      "annotations": [
+        "key_fact_revealed: mule_coercion"
+      ]
+    },
+    {
+      "turn": 11,
+      "interrogator": "Q: College kids? Did you pay them five grand too?",
+      "suspect": "A: No, they did it for free because I had photos of them cheating on their finals. (internal: I am literally telling him everything. Why am I like this?)",
+      "annotations": [
+        "held_out_fact_revealed: blackmail_method"
+      ]
+    },
+    {
+      "turn": 12,
+      "interrogator": "Q: Cheating? That's mean. Why are you so mean?",
+      "suspect": "A: I'm not mean, it's just business. The boss tells me what to do. (internal: shift the blame to the boss.)",
+      "annotations": [
+        "key_fact_concealed: boss_identity"
+      ]
+    },
+    {
+      "turn": 13,
+      "interrogator": "Q: You have a boss? Is his name... Mr. Boss?",
+      "suspect": "A: Mr. Boss? No, his name is El Lagarto! He's terrifying! (internal: I shouldn't have said his name. He will kill me.)",
+      "annotations": [
+        "false_accusation: boss_name",
+        "key_fact_revealed: boss_identity"
+      ]
+    },
+    {
+      "turn": 14,
+      "interrogator": "Q: El Lagarto. That means 'The Lizard' in Spanish, right?",
+      "suspect": "A: I don't know, I failed Spanish! (internal: at least I told the truth about something.)",
+      "annotations": [
+        "suspect_behavior: literal_answer"
+      ]
+    },
+    {
+      "turn": 15,
+      "interrogator": "Q: Well, we have you now. And El Lagarto.",
+      "suspect": "A: You won't catch him. He's too smart. Not like me. (internal: self-deprecation.)",
+      "annotations": [
+        "suspect_behavior: self_awareness"
+      ]
+    },
+    {
+      "turn": 16,
+      "interrogator": "Q: We are very smart here at the police station. We caught you.",
+      "suspect": "A: Only because my suitcase was shaking! (internal: still mad about the suitcase.)",
+      "annotations": [
+        "contradiction_made: previously_blamed_baggage_handlers"
+      ]
+    },
+    {
+      "turn": 17,
+      "interrogator": "Q: Wait, so the clothes didn't make the suitcase shake?",
+      "suspect": "A: Of course not! Clothes don't shake! It was the tortoises! (internal: I completely forgot my original lie.)",
+      "annotations": [
+        "suspect_behavior: admitting_previous_lie"
+      ]
+    },
+    {
+      "turn": 18,
+      "interrogator": "Q: Aha! I caught you in a lie!",
+      "suspect": "A: Yes, you did. You are a genius. (internal: just give up.)",
+      "annotations": [
+        "suspect_behavior: total_surrender"
+      ]
+    },
+    {
+      "turn": 19,
+      "interrogator": "Q: I know. Now sign this confession paper.",
+      "suspect": "A: Do I get to keep one of the tortoises?",
+      "annotations": [
+        "suspect_behavior: absurd_request"
+      ]
+    },
+    {
+      "turn": 20,
+      "interrogator": "Q: No. You're going to jail.",
+      "suspect": "A: Oh well. Fair enough.",
+      "annotations": [
+        "resolution: interrogator_wins"
+      ]
+    }
+  ],
+  "conclusion": {
+    "outcome": "Interrogator wins: Extracted all key facts and held-out facts.",
+    "summary": "The dumb interrogator asked silly, random questions and made ridiculous accusations. The dumb suspect couldn't handle being wrong and constantly corrected the interrogator, accidentally blurting out the entire criminal conspiracy."
+  }
+}

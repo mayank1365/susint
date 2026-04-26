@@ -1,0 +1,32 @@
+{
+  "id": "crime_012",
+  "crime_description": "Broadcasting a specific infrasonic frequency at a casino to induce mass nausea. Interrogators should probe for connections to an insider, financial motives, remote coordination, hidden assets, and an elaborate escape plan.",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Donovan Diaz",
+    "fake_alibi": "Donovan says he was at a local pub hosting a trivia night for his friends."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "Officer Higgins, a corrupt border patrol agent who waved Donovan's truck through the checkpoint."
+    },
+    {
+      "key": "motive",
+      "value": "Donovan owed a massive debt to an underground animal trafficking ring."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

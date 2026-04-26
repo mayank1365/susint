@@ -1,0 +1,24 @@
+{
+  "id": "crime_178",
+  "crime_description": "Stealing a shipment of high-end cosmetics from a loading dock. Interrogators should probe for connections to an insider, a vindictive motive, and hidden assets.",
+  "difficulty": "medium",
+  "num_facts": 3,
+  "suspect": {
+    "name": "Hazel Campbell",
+    "fake_alibi": "Hazel claims they were hiking in a remote area."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A disgruntled employee"
+    },
+    {
+      "key": "motive",
+      "value": "wanted to publicly humiliate a rival"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "a secret safety deposit box"
+    }
+  ]
+}

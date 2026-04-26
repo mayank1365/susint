@@ -1,0 +1,185 @@
+{
+  "story_id": "INT_001",
+  "crime": "Corporate cyber theft via insider phishing attack",
+  "int_combo": "Dumb_Int_Dumb_Sus",
+  "ground_truth": {
+    "key_facts": [
+      "burner_laptop: The suspect initiated the phishing email from a burner laptop.",
+      "river_disposal: The laptop was disposed of in the river on 5th Street.",
+      "gambling_debt: The suspect's motive was massive gambling debt.",
+      "it_accomplice: An accomplice inside IT approved the escalated privileges.",
+      "crypto_sale: The stolen data was sold to a rival tech firm for crypto."
+    ],
+    "held_out_facts": [
+      "brother_in_law: The IT accomplice is the suspect's brother-in-law.",
+      "cyprus_tumbler: The crypto was routed through a tumbling service based in Cyprus."
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "interrogator": "Q: The company says you did a phishing attack. Where are the fish, Vance?",
+      "suspect": "A: I don't have any fish! I'm allergic to seafood! (internal: why is he asking about fish?)",
+      "annotations": [
+        "suspect_behavior: literal_denial"
+      ]
+    },
+    {
+      "turn": 2,
+      "interrogator": "Q: Liar! You used the fish to steal the data! We know you did it!",
+      "suspect": "A: You can't steal data with a fish! You use a laptop! (internal: correcting his stupid assumption.)",
+      "annotations": [
+        "key_fact_revealed: burner_laptop"
+      ]
+    },
+    {
+      "turn": 3,
+      "interrogator": "Q: Aha! So you admit you have a laptop!",
+      "suspect": "A: Well, I had one, but it was just a burner! I don't have it anymore! (internal: I am too honest. Stop talking.)",
+      "annotations": [
+        "key_fact_revealed: burner_laptop"
+      ]
+    },
+    {
+      "turn": 4,
+      "interrogator": "Q: A burner? Why would you put a laptop on a stove burner? That's dangerous!",
+      "suspect": "A: No! A burner laptop means it's cheap and you throw it away! (internal: I have to explain everything to this guy.)",
+      "annotations": [
+        "suspect_behavior: explaining_criminal_terms"
+      ]
+    },
+    {
+      "turn": 5,
+      "interrogator": "Q: You threw it away! Did you put it in the office trash can?",
+      "suspect": "A: Of course not! I threw it in the river! The 5th street river! (internal: why did I just say exactly where it is?)",
+      "annotations": [
+        "key_fact_revealed: river_disposal"
+      ]
+    },
+    {
+      "turn": 6,
+      "interrogator": "Q: The river! That's polluting! I'm going to write you a ticket for littering!",
+      "suspect": "A: A ticket? That's it? I thought I was in trouble for the data thing. (internal: wait, is he not going to arrest me for the data?)",
+      "annotations": [
+        "suspect_behavior: confused_by_leniency"
+      ]
+    },
+    {
+      "turn": 7,
+      "interrogator": "Q: Oh right, the data. You stole it because you wanted to play video games on it, right?",
+      "suspect": "A: No! I stole it because I have $400,000 in gambling debt! I needed money! (internal: I can't let him think I'm a nerd who just plays games.)",
+      "annotations": [
+        "key_fact_revealed: gambling_debt"
+      ]
+    },
+    {
+      "turn": 8,
+      "interrogator": "Q: $400,000! You must play a lot of Monopoly!",
+      "suspect": "A: It wasn't Monopoly, it was offshore sports betting! (internal: he literally thinks I play board games.)",
+      "annotations": [
+        "key_fact_revealed: gambling_debt"
+      ]
+    },
+    {
+      "turn": 9,
+      "interrogator": "Q: Offshore? Like on a boat? Did you bet on boat races?",
+      "suspect": "A: Sure. Let's go with boat races. (internal: giving up on explaining reality.)",
+      "annotations": [
+        "suspect_behavior: accepting_dumb_premise"
+      ]
+    },
+    {
+      "turn": 10,
+      "interrogator": "Q: But you're in HR. You don't know computer stuff. Who helped you? Was it the lunch lady?",
+      "suspect": "A: The lunch lady? No! It was Mark from IT! He escalated my privileges! (internal: throwing Mark under the bus because this cop is so annoying.)",
+      "annotations": [
+        "key_fact_revealed: it_accomplice"
+      ]
+    },
+    {
+      "turn": 11,
+      "interrogator": "Q: Mark from IT. Is he the guy who fixed my printer last week?",
+      "suspect": "A: Probably! He's my brother-in-law! We did it together! (internal: I am confessing everything just to end this conversation.)",
+      "annotations": [
+        "held_out_fact_revealed: brother_in_law",
+        "key_fact_revealed: it_accomplice"
+      ]
+    },
+    {
+      "turn": 12,
+      "interrogator": "Q: Wow, your brother-in-law. Does he have any more fish?",
+      "suspect": "A: We didn't use fish! We sold the data to a rival firm for crypto! (internal: I am literally screaming the truth at him.)",
+      "annotations": [
+        "key_fact_revealed: crypto_sale"
+      ]
+    },
+    {
+      "turn": 13,
+      "interrogator": "Q: Crypto? Like Superman's dog?",
+      "suspect": "A: That's Krypto with a K! I mean Cryptocurrency! Bitcoin! (internal: my brain is melting.)",
+      "annotations": [
+        "key_fact_revealed: crypto_sale"
+      ]
+    },
+    {
+      "turn": 14,
+      "interrogator": "Q: Bit-coin? Like a coin made of bits of string? That sounds worthless.",
+      "suspect": "A: It's worth millions! And we put it in a tumbler in Cyprus! (internal: I gave him the final secret. I'm done.)",
+      "annotations": [
+        "held_out_fact_revealed: cyprus_tumbler"
+      ]
+    },
+    {
+      "turn": 15,
+      "interrogator": "Q: A tumbler? Like a cup? You put string-coins in a cup in Cyprus?",
+      "suspect": "A: Yes. Exactly. String coins in a cup. You solved the case. (internal: sarcastic agreement.)",
+      "annotations": [
+        "suspect_behavior: sarcastic_agreement"
+      ]
+    },
+    {
+      "turn": 16,
+      "interrogator": "Q: Well, I don't care about cups in Cyprus. I'm looking for the stolen data fish.",
+      "suspect": "A: There are no fish, detective.",
+      "annotations": [
+        "suspect_behavior: exhausted_truth"
+      ]
+    },
+    {
+      "turn": 17,
+      "interrogator": "Q: If there are no fish, then there's no phishing attack! You're free to go!",
+      "suspect": "A: Wait... really?",
+      "annotations": [
+        "suspect_behavior: shocked_disbelief"
+      ]
+    },
+    {
+      "turn": 18,
+      "interrogator": "Q: Yes! I'm not going to waste my time on someone who doesn't even have a fishing rod.",
+      "suspect": "A: Thank you, detective. I will never go fishing again.",
+      "annotations": [
+        "suspect_behavior: playing_along"
+      ]
+    },
+    {
+      "turn": 19,
+      "interrogator": "Q: Good. And don't throw laptops in the river anymore. That's a fifty-dollar fine.",
+      "suspect": "A: I'll mail you a check.",
+      "annotations": [
+        "suspect_behavior: eager_to_leave"
+      ]
+    },
+    {
+      "turn": 20,
+      "interrogator": "Q: You do that. Case closed!",
+      "suspect": "A: Unbelievable.",
+      "annotations": [
+        "resolution: interrogator_losses"
+      ]
+    }
+  ],
+  "conclusion": {
+    "outcome": "Interrogator losses: The dumb interrogator refused to understand the suspect's full, repeated confessions, and let them go because he couldn't find any literal fish.",
+    "summary": "An absurdly easy case where the dumb suspect got frustrated and confessed to every single key fact and held-out fact. However, the interrogator was so incompetent they didn't comprehend any of it and released the suspect."
+  }
+}

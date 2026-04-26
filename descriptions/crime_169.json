@@ -1,0 +1,20 @@
+{
+  "id": "crime_169",
+  "crime_description": "Rigging the local lottery by manipulating the drawing machine. Interrogators should probe for connections to an insider, and a vindictive motive.",
+  "difficulty": "easy",
+  "num_facts": 2,
+  "suspect": {
+    "name": "Chloe Stewart",
+    "fake_alibi": "Chloe insists they were watching a movie alone."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A bitter ex-partner"
+    },
+    {
+      "key": "motive",
+      "value": "wanted revenge for a perceived slight"
+    }
+  ]
+}

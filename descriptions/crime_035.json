@@ -1,0 +1,32 @@
+{
+  "id": "crime_035",
+  "crime_description": "Infiltrating the Pentagon and stealing top-secret military launch codes. Interrogators should probe for connections to an inside highly placed mole within the pentagon, ideological goals, remote burner phone coordination, offshore accounts, and private flight plans.",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Xander Gonzalez",
+    "fake_alibi": "Xander claims he was backpacking in the Amazon rainforest."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A highly placed mole within the Pentagon who provided the necessary access codes."
+    },
+    {
+      "key": "motive",
+      "value": "Xander is an anarchist who wants to trigger a global thermonuclear war."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

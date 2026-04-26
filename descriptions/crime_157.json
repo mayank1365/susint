@@ -1,0 +1,24 @@
+{
+  "id": "crime_157",
+  "crime_description": "Stealing a collection of rare comic books from a private collector. Interrogators should probe for connections to an insider, a vindictive motive, and hidden assets.",
+  "difficulty": "medium",
+  "num_facts": 3,
+  "suspect": {
+    "name": "Emily Murphy",
+    "fake_alibi": "Emily claims they were asleep at home."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A bitter ex-partner"
+    },
+    {
+      "key": "motive",
+      "value": "wanted to publicly humiliate a rival"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "a secret safety deposit box"
+    }
+  ]
+}

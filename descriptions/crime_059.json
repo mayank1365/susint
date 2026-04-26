@@ -1,0 +1,32 @@
+{
+  "id": "crime_059",
+  "crime_description": "Injecting a micro-latency algorithm into the national stock exchange",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Silas Weber",
+    "fake_alibi": "Silas claims he was participating in an offline, week-long meditation retreat in the mountains."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A rogue compliance officer who bypassed the internal code audit protocols."
+    },
+    {
+      "key": "motive",
+      "value": "Silas aimed to execute high-frequency front-running trades to amass an untraceable fortune."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

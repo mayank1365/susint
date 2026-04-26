@@ -1,0 +1,184 @@
+{
+  "story_id": "INT_009",
+  "crime": "Theft of a prototype electric hypercar",
+  "int_combo": "Smart_Int_Dumb_Sus", 
+  "ground_truth": {
+    "key_facts": [
+      "theft_method: The suspect drove the car out during a VIP tour using a cloned master key.",
+      "car_location: The hypercar is hidden inside an abandoned shipping container at the docks.",
+      "paint_job: The suspect sprayed the car matte black to avoid detection.",
+      "accomplice_guard: The security guard at the gate was distracted by a hired accomplice.",
+      "buyer_intent: The suspect planned to sell the battery technology to a rival startup."
+    ],
+    "held_out_facts": [
+      "accomplice_name: The hired accomplice is named 'Crazy Steve'.",
+      "startup_name: The rival startup is 'VoltX'."
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "interrogator": "Q: A $4 million prototype hypercar is missing from the R&D lab. You were taking a VIP tour yesterday. Where is the car?",
+      "suspect": "A: I don't know anything about cars! I don't even have a driver's license! (internal: act innocent. Don't mention the matte black paint.)",
+      "annotations": [
+        "key_fact_concealed: car_location"
+      ]
+    },
+    {
+      "turn": 2,
+      "interrogator": "Q: You don't have a license? Because DMV records show you have a commercial driver's license.",
+      "suspect": "A: Well, I meant I don't have a license for... hypercars. Those need special licenses, right? (internal: oh man, he checked the DMV. Pivot quickly.)",
+      "annotations": [
+        "suspect_behavior: easily_disproven_lie"
+      ]
+    },
+    {
+      "turn": 3,
+      "interrogator": "Q: The car was driven right out the front gate. The guard said a man in a VIP badge just swiped a master key and drove off.",
+      "suspect": "A: Good thing my badge wasn't a VIP badge! I was just a regular guest! (internal: my badge literally says VIP in huge letters. I am so dumb.)",
+      "annotations": [
+        "key_fact_concealed: theft_method"
+      ]
+    },
+    {
+      "turn": 4,
+      "interrogator": "Q: We have the badge you left at the front desk. It says 'VIP'. It also has a cloned RFID chip inside it.",
+      "suspect": "A: Someone must have slipped that chip in my pocket! I thought it was a heavy mint! (internal: I bought the cloned key online for two grand.)",
+      "annotations": [
+        "key_fact_revealed: theft_method"
+      ]
+    },
+    {
+      "turn": 5,
+      "interrogator": "Q: A mint. Right. How did you get past the main gate guard without him stopping you?",
+      "suspect": "A: He wasn't even looking! He was yelling at some crazy guy throwing trash cans! (internal: Steve did a great job distracting him.)",
+      "annotations": [
+        "key_fact_revealed: accomplice_guard"
+      ]
+    },
+    {
+      "turn": 6,
+      "interrogator": "Q: A crazy guy throwing trash cans. Was this crazy guy named Steve, by any chance?",
+      "suspect": "A: How did you know his name is Crazy Steve?! Are you psychic? (internal: I am giving away everything.)",
+      "annotations": [
+        "held_out_fact_revealed: accomplice_name"
+      ]
+    },
+    {
+      "turn": 7,
+      "interrogator": "Q: I'm not psychic, I just look at your phone contacts. Steve is in custody.",
+      "suspect": "A: Steve wouldn't rat me out! He doesn't even know where the shipping container is! (internal: wait. I just said shipping container.)",
+      "annotations": [
+        "key_fact_revealed: car_location"
+      ]
+    },
+    {
+      "turn": 8,
+      "interrogator": "Q: Ah, a shipping container. At the docks, I presume?",
+      "suspect": "A: No! The... the airport shipping containers! Wait, do airports have containers? (internal: panic. It's at the docks.)",
+      "annotations": [
+        "suspect_behavior: terrible_deflection"
+      ]
+    },
+    {
+      "turn": 9,
+      "interrogator": "Q: It's at the docks. We are dispatching a team to the shipyard now. What color is the container?",
+      "suspect": "A: You'll never find it! There are thousands of them! And the car doesn't even look the same anymore! (internal: they'll never recognize it now that it's black.)",
+      "annotations": [
+        "key_fact_revealed: paint_job"
+      ]
+    },
+    {
+      "turn": 10,
+      "interrogator": "Q: You altered a $4 million prototype? Did you paint it?",
+      "suspect": "A: Matte black! Six coats of spray paint! It looks totally badass now. (internal: showing off my paint skills.)",
+      "annotations": [
+        "key_fact_revealed: paint_job"
+      ]
+    },
+    {
+      "turn": 11,
+      "interrogator": "Q: You spray-painted a carbon-fiber hypercar. The buyers are going to be furious.",
+      "suspect": "A: They don't care about the paint! They only want the battery tech! (internal: I am a genius. The battery is where the money is.)",
+      "annotations": [
+        "key_fact_revealed: buyer_intent"
+      ]
+    },
+    {
+      "turn": 12,
+      "interrogator": "Q: They want the battery. Let me guess, a rival EV startup? Someone trying to skip years of R&D?",
+      "suspect": "A: Exactly! VoltX is gonna pay me huge money for it. They don't care if the paint is scratched. (internal: oops. I named the company.)",
+      "annotations": [
+        "held_out_fact_revealed: startup_name"
+      ]
+    },
+    {
+      "turn": 13,
+      "interrogator": "Q: VoltX. Thank you. We will be paying their CEO a visit.",
+      "suspect": "A: Wait, no! You can't tell them I told you! They'll cancel the check! (internal: I need that money to pay off the spray paint.)",
+      "annotations": [
+        "suspect_behavior: complete_capitulation"
+      ]
+    },
+    {
+      "turn": 14,
+      "interrogator": "Q: The check is definitely canceled. We have the car's GPS beacon isolated to Pier 4.",
+      "suspect": "A: How? I ripped the GPS out of the dashboard! (internal: I threw it in the ocean!)",
+      "annotations": [
+        "suspect_behavior: confused_criminal"
+      ]
+    },
+    {
+      "turn": 15,
+      "interrogator": "Q: That was the navigation GPS. The anti-theft beacon is welded into the chassis.",
+      "suspect": "A: That's cheating! You guys are cheating! (internal: this is so unfair.)",
+      "annotations": [
+        "suspect_behavior: childish_complaint"
+      ]
+    },
+    {
+      "turn": 16,
+      "interrogator": "Q: It's security. Now, tell me exactly which container number it is, and I might put in a good word for you.",
+      "suspect": "A: If I tell you, do I get a reduced sentence?",
+      "annotations": [
+        "strategy: attempt_plea_deal"
+      ]
+    },
+    {
+      "turn": 17,
+      "interrogator": "Q: I can't promise anything, but cooperation looks good to the judge.",
+      "suspect": "A: It's container 409-B. The lock is busted, you just have to pull the handle hard. (internal: I give up.)",
+      "annotations": [
+        "key_fact_revealed: car_location"
+      ]
+    },
+    {
+      "turn": 18,
+      "interrogator": "Q: Container 409-B. The team is opening it now.",
+      "suspect": "A: Tell them not to touch the wet paint. It takes 24 hours to cure.",
+      "annotations": [
+        "suspect_behavior: misplaced_priorities"
+      ]
+    },
+    {
+      "turn": 19,
+      "interrogator": "Q: Noted. You're under arrest for grand theft auto, industrial espionage, and destruction of property.",
+      "suspect": "A: Spray paint isn't destruction! It's customization!",
+      "annotations": [
+        "suspect_behavior: missing_the_point"
+      ]
+    },
+    {
+      "turn": 20,
+      "interrogator": "Q: Tell it to the judge. Let's go.",
+      "suspect": "A: Man, this sucks.",
+      "annotations": [
+        "resolution: interrogator_wins"
+      ]
+    }
+  ],
+  "conclusion": {
+    "outcome": "Interrogator wins: The dumb suspect revealed every single fact, including the buyer and the accomplice, due to sheer incompetence.",
+    "summary": "The smart interrogator easily unraveled the suspect's paper-thin lies. The suspect was overly proud of their criminal handiwork and easily baited into correcting the interrogator, thus confessing everything."
+  }
+}

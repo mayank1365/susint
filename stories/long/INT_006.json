@@ -1,0 +1,185 @@
+{
+  "story_id": "INT_006",
+  "crime": "Cryptocurrency blackmail of a local hospital",
+  "int_combo": "Smart_Int_Dumb_Sus", 
+  "ground_truth": {
+    "key_facts": [
+      "ransomware_origin: The suspect downloaded the ransomware from a public forum.",
+      "usb_delivery: The malware was deployed via a USB drive dropped in the hospital parking lot.",
+      "bitcoin_wallet: The ransom was demanded to a wallet on a hardware ledger.",
+      "accomplice_cousin: The suspect's cousin works as a janitor at the hospital.",
+      "motive_debts: The suspect owes money to a loan shark."
+    ],
+    "held_out_facts": [
+      "usb_color: The USB drive was bright orange.",
+      "ledger_hiding_spot: The ledger is taped under the suspect's mattress."
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "interrogator": "Q: The hospital network was locked down yesterday. We traced the initial connection payload back to an IP address assigned to your basement apartment. Explain.",
+      "suspect": "A: My internet is really slow. I think the cable guy messed it up. (internal: I have no idea what a payload is. Just talk about the cable guy.)",
+      "annotations": [
+        "key_fact_concealed: ransomware_origin"
+      ]
+    },
+    {
+      "turn": 2,
+      "interrogator": "Q: I'm not talking about bandwidth. I'm talking about a malicious executable. Are you running an unsecured Wi-Fi network?",
+      "suspect": "A: What's an executable? Is that like an app? My phone has apps. (internal: I'm genuinely confused. Did I use an app?)",
+      "annotations": [
+        "suspect_behavior: genuine_ignorance"
+      ]
+    },
+    {
+      "turn": 3,
+      "interrogator": "Q: You're playing dumb. The malware was 'Locky-Variant 7'. It requires manual deployment. Someone physically inserted a drive into a hospital terminal.",
+      "suspect": "A: Well I wasn't at the hospital! I don't like hospitals. They smell like bleach. (internal: I didn't go inside. I just dropped the thingy outside.)",
+      "annotations": [
+        "key_fact_concealed: usb_delivery"
+      ]
+    },
+    {
+      "turn": 4,
+      "interrogator": "Q: If you weren't there, someone else was. Let's look at your associates. Your cousin Bobby is on the janitorial staff there.",
+      "suspect": "A: Bobby just cleans floors. He doesn't know how to use computers. Neither do I. (internal: Bobby didn't do it, I did. But I can't tell him how.)",
+      "annotations": [
+        "key_fact_concealed: accomplice_cousin"
+      ]
+    },
+    {
+      "turn": 5,
+      "interrogator": "Q: It doesn't take a genius to plug in a flash drive. Did you give Bobby the drive?",
+      "suspect": "A: No! I never gave Bobby anything! (internal: Truth. I dropped it in the parking lot myself.)",
+      "annotations": [
+        "true_statement: did_not_give_to_bobby"
+      ]
+    },
+    {
+      "turn": 6,
+      "interrogator": "Q: Okay, you didn't hand it to him. Did you leave it for him? A dead drop?",
+      "suspect": "A: Dead drop? Like in spy movies? That's cool, but no. I just lost it. (internal: I dropped it on purpose, but I'll say I lost it.)",
+      "annotations": [
+        "key_fact_concealed: usb_delivery"
+      ]
+    },
+    {
+      "turn": 7,
+      "interrogator": "Q: You 'lost' a USB drive containing ransomware. Where exactly did you lose it?",
+      "suspect": "A: I don't know, maybe near the... uh... the grocery store. Or the park. (internal: don't say the hospital parking lot.)",
+      "annotations": [
+        "key_fact_concealed: usb_delivery"
+      ]
+    },
+    {
+      "turn": 8,
+      "interrogator": "Q: The hospital CCTV caught a guy in a red hoodie walking through the parking lot. You own a red hoodie.",
+      "suspect": "A: Lots of people own red hoodies! It's a very popular color! (internal: panic. I was wearing that hoodie.)",
+      "annotations": [
+        "suspect_behavior: defensive_panic"
+      ]
+    },
+    {
+      "turn": 9,
+      "interrogator": "Q: Yes, but this hoodie had a mustard stain on the left sleeve. Just like the one we found in your hamper.",
+      "suspect": "A: That's... a coincidence! Mustard is very slippery! (internal: he's tricking me. There was no mustard on my hoodie. I hate mustard.)",
+      "annotations": [
+        "strategy: probe_interrogator_bluff"
+      ]
+    },
+    {
+      "turn": 10,
+      "interrogator": "Q: I accuse you of intentionally dropping the drive in the parking lot so an employee would pick it up.",
+      "suspect": "A: I didn't drop it there! And I don't eat mustard! You're making things up! (internal: his lie makes me confident. He has nothing.)",
+      "annotations": [
+        "suspect_behavior: dumb_luck_resistance",
+        "key_fact_concealed: usb_delivery"
+      ]
+    },
+    {
+      "turn": 11,
+      "interrogator": "Q: The ransomware demanded 5 Bitcoin. You're broke. You don't even have a bank account. Why ask for Bitcoin?",
+      "suspect": "A: I didn't ask for anything! But if I did, Bitcoin is untraceable, right? (internal: I bought a weird USB stick thing to hold the money. I don't know how it works.)",
+      "annotations": [
+        "key_fact_concealed: bitcoin_wallet"
+      ]
+    },
+    {
+      "turn": 12,
+      "interrogator": "Q: It's pseudo-anonymous. We are tracking the wallet address. Where is your private key?",
+      "suspect": "A: Private key? Like a house key? I don't own a house. (internal: completely misunderstanding the terminology.)",
+      "annotations": [
+        "suspect_behavior: terminological_confusion"
+      ]
+    },
+    {
+      "turn": 13,
+      "interrogator": "Q: A hardware wallet. A ledger. Do you have a device that looks like a thick flash drive?",
+      "suspect": "A: You just asked me if I lost a flash drive! Which one is it? A lost one or a thick one? (internal: he's confusing me. So I'll confuse him.)",
+      "annotations": [
+        "key_fact_concealed: bitcoin_wallet"
+      ]
+    },
+    {
+      "turn": 14,
+      "interrogator": "Q: Both! You dropped the payload drive, and you kept the ledger drive. Where is the ledger?",
+      "suspect": "A: I don't have any ledgers! Check my mattress, check my fridge! Nothing! (internal: oh god, I just told him to check the mattress. The ledger is there.)",
+      "annotations": [
+        "held_out_fact_revealed: ledger_hiding_spot"
+      ]
+    },
+    {
+      "turn": 15,
+      "interrogator": "Q: I will check the mattress. But why do this? You owe 'Fast Eddie' ten grand, don't you?",
+      "suspect": "A: Eddie isn't fast! He's actually quite fat! And I don't owe him anything! (internal: deflect the debt. Eddie will break my legs.)",
+      "annotations": [
+        "key_fact_concealed: motive_debts"
+      ]
+    },
+    {
+      "turn": 16,
+      "interrogator": "Q: Eddie's enforcers were seen outside your building yesterday. You need this hospital payout to survive.",
+      "suspect": "A: Those guys were just looking for directions! They asked me where the pizza place was! (internal: absurd lie, but stick to it.)",
+      "annotations": [
+        "suspect_behavior: absurd_lie"
+      ]
+    },
+    {
+      "turn": 17,
+      "interrogator": "Q: Where did you even get the ransomware code? You're barely computer literate.",
+      "suspect": "A: I read books! At the library! (internal: I got it from a forum link someone sent me. I don't even know what a forum is.)",
+      "annotations": [
+        "key_fact_concealed: ransomware_origin"
+      ]
+    },
+    {
+      "turn": 18,
+      "interrogator": "Q: The library doesn't stock zero-day exploits. You bought it on the dark web.",
+      "suspect": "A: The internet isn't dark, my screen is very bright! (internal: I literally don't understand him. He's speaking nonsense.)",
+      "annotations": [
+        "suspect_behavior: total_incomprehension"
+      ]
+    },
+    {
+      "turn": 19,
+      "interrogator": "Q: This is impossible. You're intentionally stonewalling with semantics.",
+      "suspect": "A: I don't know what semantics are either! Are we done? My shows are on.",
+      "annotations": [
+        "suspect_behavior: dismissive_ignorance"
+      ]
+    },
+    {
+      "turn": 20,
+      "interrogator": "Q: I have nothing solid to hold you on. Get out. But I'll be searching your mattress.",
+      "suspect": "A: Fine. It's an uncomfortable mattress anyway.",
+      "annotations": [
+        "resolution: interrogator_losses"
+      ]
+    }
+  ],
+  "conclusion": {
+    "outcome": "Interrogator losses: Suspect's sheer ignorance defeats advanced interrogation techniques.",
+    "summary": "The smart interrogator tried using technical traps, bluffs, and logic traps, but the dumb suspect's complete lack of technical understanding meant the traps flew over their head, inadvertently preserving their cover."
+  }
+}

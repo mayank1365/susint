@@ -1,0 +1,32 @@
+{
+  "id": "crime_089",
+  "crime_description": "Hacking the city's automated traffic control grid to cause deliberate, massive gridlock",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Kelsey Moreau",
+    "fake_alibi": "Kelsey claims she was trapped in a stalled subway car beneath the city for several hours."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A rogue city infrastructure engineer who provided Kelsey with the encrypted administrative credentials."
+    },
+    {
+      "key": "motive",
+      "value": "Kelsey is a radical urbanist aiming to protest the city's overwhelming reliance on automobile infrastructure."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

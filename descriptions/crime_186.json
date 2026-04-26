@@ -1,0 +1,20 @@
+{
+  "id": "crime_186",
+  "crime_description": "Rigging a county fair pie-baking contest using store-bought pies. Interrogators should probe for connections to an insider, and financial motives.",
+  "difficulty": "easy",
+  "num_facts": 2,
+  "suspect": {
+    "name": "Ellie Reed",
+    "fake_alibi": "Ellie states they were stranded on the highway."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A rogue technician"
+    },
+    {
+      "key": "motive",
+      "value": "acted out of pure greed"
+    }
+  ]
+}

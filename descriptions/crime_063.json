@@ -1,0 +1,32 @@
+{
+  "id": "crime_063",
+  "crime_description": "Defrauding an art auction house by bidding on his own forged masterpieces",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Lucius Nguyen",
+    "fake_alibi": "Lucius claims he was exploring remote monastic ruins in Tibet with no satellite connection."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "An independent art appraiser who provided falsified provenance documents for the forgeries."
+    },
+    {
+      "key": "motive",
+      "value": "Lucius needed to launder millions of dollars in illicit cartel funds through legitimate art sales."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "story_id": "INT_002",
+  "crime": "Art heist with compromised security",
+  "int_combo": "Smart_Int_Dumb_Sus",
+  "ground_truth": {
+    "key_facts": [
+      "disabled_cameras: The suspect disabled the gallery cameras by cutting the power line to the server room.",
+      "escape_vehicle: The suspect used a stolen white delivery van for the getaway.",
+      "stolen_painting: The painting was hidden in the suspect's sister's garage.",
+      "insider_help: A night guard was bribed to leave the side door unlocked.",
+      "buyer_contact: The suspect was promised $50,000 by an anonymous buyer on Telegram."
+    ],
+    "held_out_facts": [
+      "guard_name: The bribed night guard's name is Gary.",
+      "tool_used: The suspect used bolt cutters to get through the outer fence."
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "interrogator": "Q: Sit down, Toby. Last night at 3 AM, a $2 million Monet was stolen from the gallery. Let's start with where you were.",
+      "suspect": "A: I was asleep at my apartment the whole night. I didn't steal any painting. (internal: stay cool, they have nothing on me. Just don't mention the van.)",
+      "annotations": [
+        "key_fact_concealed: escape_vehicle"
+      ]
+    },
+    {
+      "turn": 2,
+      "interrogator": "Q: You were asleep. Interesting. Because a neighbor saw you leaving your building at 1 AM carrying a heavy duffel bag.",
+      "suspect": "A: Oh, right. I went to do some late-night laundry. The bag was just clothes. (internal: panic. I forgot about Mrs. Higgins. Stick to the laundry story.)",
+      "annotations": [
+        "suspect_behavior: early_slip_up"
+      ]
+    },
+    {
+      "turn": 3,
+      "interrogator": "Q: Laundry at 1 AM? Your building's laundry room closes at midnight, Toby.",
+      "suspect": "A: I meant... I went to a 24-hour laundromat down the street. The one on 5th. (internal: making things up on the fly. Hope he buys it.)",
+      "annotations": [
+        "contradiction_made: laundry_location"
+      ]
+    },
+    {
+      "turn": 4,
+      "interrogator": "Q: We checked the street cameras on 5th. You weren't there. But a white delivery van registered as stolen was seen speeding away from the gallery at 3:15 AM.",
+      "suspect": "A: Well I don't know how to hotwire a van! So it couldn't have been me. (internal: oops, I shouldn't have said hotwire. I used a shaved key.)",
+      "annotations": [
+        "suspect_behavior: oversharing_information"
+      ]
+    },
+    {
+      "turn": 5,
+      "interrogator": "Q: Who said it was hotwired? The police report clearly states a shaved key was used. Are you confessing to using a shaved key?",
+      "suspect": "A: No! I didn't use a shaved key on any white van! (internal: I'm blowing this. Just shut up about the van.)",
+      "annotations": [
+        "key_fact_revealed: escape_vehicle",
+        "true_accusation: escape_vehicle"
+      ]
+    },
+    {
+      "turn": 6,
+      "interrogator": "Q: So you admit it was a white van. The cameras inside the gallery were disabled precisely at 2:50 AM. The power lines to the server were cut.",
+      "suspect": "A: That's crazy. I don't even own bolt cutters! (internal: damn it! I just gave away the tool I used for the fence.)",
+      "annotations": [
+        "held_out_fact_revealed: tool_used"
+      ]
+    },
+    {
+      "turn": 7,
+      "interrogator": "Q: Bolt cutters. That's highly specific. You used them on the gallery's outer fence, didn't you?",
+      "suspect": "A: I'm just guessing! Anyone cutting power lines would use bolt cutters. (internal: trying to recover, sounding extremely defensive.)",
+      "annotations": [
+        "suspect_behavior: panicked_defensiveness"
+      ]
+    },
+    {
+      "turn": 8,
+      "interrogator": "Q: And the power line to the server room? I accuse you of cutting it to disable the internal cameras.",
+      "suspect": "A: Look, even if I did cut the line, how would I get inside? The doors were locked! (internal: I can't let him know Gary left the side door open.)",
+      "annotations": [
+        "key_fact_revealed: disabled_cameras",
+        "true_accusation: disabled_cameras",
+        "key_fact_concealed: insider_help"
+      ]
+    },
+    {
+      "turn": 9,
+      "interrogator": "Q: Actually, they weren't. The side door was mysteriously unlocked. Which night guard did you pay off?",
+      "suspect": "A: I didn't pay anyone off! He just owed me a favor! I mean... nobody owed me a favor. (internal: I am an idiot. I just admitted someone helped me.)",
+      "annotations": [
+        "key_fact_revealed: insider_help",
+        "true_accusation: insider_help"
+      ]
+    },
+    {
+      "turn": 10,
+      "interrogator": "Q: 'He' owed you a favor. The roster says Gary and Dave were on duty. Which one is your friend?",
+      "suspect": "A: It wasn't Gary! I don't even know Gary! (internal: reverse psychology. He'll think it's Dave now.)",
+      "annotations": [
+        "suspect_behavior: terrible_reverse_psychology"
+      ]
+    },
+    {
+      "turn": 11,
+      "interrogator": "Q: By saying 'It wasn't Gary', you just told me it was Gary. We will be bringing Gary in shortly.",
+      "suspect": "A: Gary didn't do anything wrong! He just propped the door. I took the painting myself. (internal: complete surrender. I need to protect Gary.)",
+      "annotations": [
+        "held_out_fact_revealed: guard_name"
+      ]
+    },
+    {
+      "turn": 12,
+      "interrogator": "Q: So you admit to taking the Monet. Now, an amateur like you wouldn't steal a masterpiece without a buyer lined up. Who is paying you?",
+      "suspect": "A: I can't tell you that. If I snitch on the Telegram guy, I'm dead. (internal: oh no, I mentioned the app.)",
+      "annotations": [
+        "key_fact_revealed: buyer_contact"
+      ]
+    },
+    {
+      "turn": 13,
+      "interrogator": "Q: A buyer on Telegram. That's careless. I accuse you of being paid $500,000 for this hit.",
+      "suspect": "A: $500,000?! Try $50,000. He completely lowballed me. (internal: correcting his math because I feel insulted.)",
+      "annotations": [
+        "false_accusation: buyer_payment_amount",
+        "key_fact_revealed: buyer_contact"
+      ]
+    },
+    {
+      "turn": 14,
+      "interrogator": "Q: So you risked 20 years in prison for $50,000. And you haven't even been paid yet, have you?",
+      "suspect": "A: He said he'll transfer it as soon as he gets the painting. (internal: confirming I still have it.)",
+      "annotations": [
+        "key_fact_concealed: stolen_painting"
+      ]
+    },
+    {
+      "turn": 15,
+      "interrogator": "Q: Which means you still have the painting. Where is it right now, Toby?",
+      "suspect": "A: I threw it in the river! You'll never find it! (internal: huge lie. It's safe in Sarah's garage.)",
+      "annotations": [
+        "contradiction_made: thrown_in_river",
+        "key_fact_concealed: stolen_painting"
+      ]
+    },
+    {
+      "turn": 16,
+      "interrogator": "Q: You just said the buyer will transfer the money when he gets the painting. You wouldn't throw your $50,000 payday in the river.",
+      "suspect": "A: Uh... well... I changed my mind. I got scared. (internal: I can't keep my story straight.)",
+      "annotations": [
+        "suspect_behavior: caught_in_lie"
+      ]
+    },
+    {
+      "turn": 17,
+      "interrogator": "Q: I accuse you of hiding it in your mother's attic.",
+      "suspect": "A: My mom lives in Florida! You're totally wrong about the attic. (internal: safe. He doesn't know about my sister's place.)",
+      "annotations": [
+        "false_accusation: hiding_place_attic",
+        "key_fact_concealed: stolen_painting"
+      ]
+    },
+    {
+      "turn": 18,
+      "interrogator": "Q: Florida, right. But your sister Sarah lives ten minutes away from the gallery. Let's see what a search warrant for her house turns up.",
+      "suspect": "A: Wait, don't involve Sarah! She doesn't know anything about it! It's just sitting in her garage! (internal: completely defeated. I confessed everything.)",
+      "annotations": [
+        "key_fact_revealed: stolen_painting",
+        "true_accusation: stolen_painting"
+      ]
+    },
+    {
+      "turn": 19,
+      "interrogator": "Q: It's in Sarah's garage. Thank you, Toby. That's all we needed.",
+      "suspect": "A: You tricked me! You said you thought it was in the attic! (internal: he played me like a fiddle.)",
+      "annotations": [
+        "suspect_behavior: realization_of_defeat"
+      ]
+    },
+    {
+      "turn": 20,
+      "interrogator": "Q: That's my job. You're under arrest for grand larceny and breaking and entering. Officers will be heading to your sister's house now.",
+      "suspect": "A: Fine. I'll tell you the Telegram handle if you don't arrest my sister.",
+      "annotations": [
+        "resolution: interrogator_wins"
+      ]
+    }
+  ],
+  "conclusion": {
+    "outcome": "Interrogator wins: The interrogator effortlessly extracted all key facts by exploiting the suspect's constant slip-ups, oversharing, and poor defensive logic.",
+    "summary": "The suspect consistently contradicted himself and volunteered incriminating information without being directly asked (e.g., bolt cutters, the van). The interrogator used strategic false accusations to bait the suspect into correcting him, revealing the true facts."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "crime_067",
+  "crime_description": "Intercepting and altering the telemetry data of a commercial satellite launch",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Gideon Stone",
+    "fake_alibi": "Gideon claims he was participating in a deep-sea submersible dive off the Marianas Trench."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A corrupted mission control technician who routed the false data into the main tracking feed."
+    },
+    {
+      "key": "motive",
+      "value": "Gideon wanted to cause a catastrophic launch failure to plummet the aerospace company's stock."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

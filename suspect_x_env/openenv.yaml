@@ -1,0 +1,10 @@
+spec_version: 1
+name: suspect_x_env
+display_name: "Suspect X — AI Interrogation Room"
+description: "Two-agent adversarial RL. An Interrogator LLM extracts hidden facts from a Suspect LLM over 20 turns. Deterministic Python grading."
+type: space
+runtime: fastapi
+port: 8000
+themes:
+  - multi-agent
+  - self-improvement

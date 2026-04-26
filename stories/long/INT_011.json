@@ -1,0 +1,188 @@
+{
+  "story_id": "INT_011",
+  "crime": "Diamond substitution at a luxury jewelry store",
+  "int_combo": "Average_Int_Average_Sus", 
+  "ground_truth": {
+    "key_facts": [
+      "substitution_method: The suspect swapped the real diamond with a cubic zirconia during a viewing.",
+      "sleight_of_hand: The suspect used a customized velvet glove to hide the fake stone.",
+      "fencing_location: The real diamond was sold to a pawn shop in the neighboring county.",
+      "accomplice_distraction: An accomplice pretended to faint to distract the store manager.",
+      "motive_rent: The suspect committed the crime to avoid eviction from their apartment."
+    ],
+    "held_out_facts": [
+      "pawn_shop_name: The pawn shop is called 'Gold Standard Exchange'.",
+      "accomplice_identity: The fainting accomplice was the suspect's roommate."
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "interrogator": "Q: The store manager noticed the $50,000 diamond was fake right after you left the store yesterday. You were the only customer to hold it.",
+      "suspect": "A: I just looked at it for my fiancé! I handed it right back to the jeweler. (internal: stay calm, they didn't search me when I left.)",
+      "annotations": [
+        "key_fact_concealed: substitution_method"
+      ]
+    },
+    {
+      "turn": 2,
+      "interrogator": "Q: The jeweler says you held it for over two minutes while they were distracted.",
+      "suspect": "A: Two minutes is normal for looking at a ring! And the distraction wasn't my fault, someone fainted! (internal: point out the fainting lady, it gives me an excuse.)",
+      "annotations": [
+        "key_fact_revealed: accomplice_distraction"
+      ]
+    },
+    {
+      "turn": 3,
+      "interrogator": "Q: Yes, a woman fainted. Was she with you?",
+      "suspect": "A: No! I don't know her! I was just shopping alone. (internal: my roommate played her part perfectly.)",
+      "annotations": [
+        "held_out_fact_concealed: accomplice_identity"
+      ]
+    },
+    {
+      "turn": 4,
+      "interrogator": "Q: Our officers checked the CCTV. You were wearing a black velvet glove on one hand. Who wears one glove indoors?",
+      "suspect": "A: I have a skin condition! Eczema. It's very embarrassing, detective. (internal: stick to the medical excuse, he can't disprove it easily.)",
+      "annotations": [
+        "key_fact_concealed: sleight_of_hand"
+      ]
+    },
+    {
+      "turn": 5,
+      "interrogator": "Q: Eczema. Can I see your hand?",
+      "suspect": "A: I'd rather not. It's flaring up today. (internal: my hand is perfectly fine. Deflect.)",
+      "annotations": [
+        "suspect_behavior: avoiding_physical_proof"
+      ]
+    },
+    {
+      "turn": 6,
+      "interrogator": "Q: If you don't show me, I have to assume you used the glove to hide a fake diamond.",
+      "suspect": "A: Fine! Here! Look! It's clear right now because of my steroid cream! (internal: I had to show him. At least he didn't find the fake pocket in the glove.)",
+      "annotations": [
+        "suspect_behavior: forced_compliance"
+      ]
+    },
+    {
+      "turn": 7,
+      "interrogator": "Q: Your hand looks perfectly healthy. I accuse you of swapping the stone while the woman fainted.",
+      "suspect": "A: You can't prove that. I gave the real one back. Maybe the manager swapped it later! (internal: standard deflection, blame the victim.)",
+      "annotations": [
+        "true_accusation: substitution_method",
+        "key_fact_concealed: substitution_method"
+      ]
+    },
+    {
+      "turn": 8,
+      "interrogator": "Q: We searched your apartment. You have an eviction notice on your fridge. You're broke.",
+      "suspect": "A: Lots of people are struggling right now. That doesn't make me a thief. (internal: they found the motive. Don't let it rattle me.)",
+      "annotations": [
+        "key_fact_revealed: motive_rent",
+        "true_accusation: motive_rent"
+      ]
+    },
+    {
+      "turn": 9,
+      "interrogator": "Q: But you deposited five thousand dollars in cash this morning. Where did it come from?",
+      "suspect": "A: I sold my car. A guy paid cash. (internal: a believable lie. They won't find the car registration right away.)",
+      "annotations": [
+        "suspect_behavior: plausible_lie"
+      ]
+    },
+    {
+      "turn": 10,
+      "interrogator": "Q: You don't have a car registered in your name.",
+      "suspect": "A: It was my mom's car! She let me sell it! (internal: scrambling. This is getting messy.)",
+      "annotations": [
+        "contradiction_made: car_ownership"
+      ]
+    },
+    {
+      "turn": 11,
+      "interrogator": "Q: We will call your mom. Should I dial her right now?",
+      "suspect": "A: No! She's... traveling. (internal: please don't call her, she'll deny everything.)",
+      "annotations": [
+        "suspect_behavior: visible_panic"
+      ]
+    },
+    {
+      "turn": 12,
+      "interrogator": "Q: Let's stop lying. You sold the diamond. Did you sell it to a fence downtown?",
+      "suspect": "A: I didn't sell anything downtown! I don't even go downtown! (internal: true, I went to the next county over.)",
+      "annotations": [
+        "false_accusation: downtown_fence",
+        "key_fact_concealed: fencing_location"
+      ]
+    },
+    {
+      "turn": 13,
+      "interrogator": "Q: Okay, so you sold it outside the city. A pawn shop maybe?",
+      "suspect": "A: Pawn shops don't give you five grand for a diamond without asking questions. (internal: I'm arguing the logistics of the crime. Shut up.)",
+      "annotations": [
+        "suspect_behavior: accidental_insight"
+      ]
+    },
+    {
+      "turn": 14,
+      "interrogator": "Q: Some do. Like the ones in the next county over. The ones that don't check IDs.",
+      "suspect": "A: They checked my ID at Gold Standard! They took a copy of it! (internal: Oh my god. I just named the shop.)",
+      "annotations": [
+        "key_fact_revealed: fencing_location",
+        "held_out_fact_revealed: pawn_shop_name"
+      ]
+    },
+    {
+      "turn": 15,
+      "interrogator": "Q: Gold Standard Exchange. Thank you. We will send an officer there immediately.",
+      "suspect": "A: Wait, no! You tricked me! (internal: I totally walked right into that one.)",
+      "annotations": [
+        "suspect_behavior: realization_of_defeat"
+      ]
+    },
+    {
+      "turn": 16,
+      "interrogator": "Q: It wasn't a trick, it was a conversation. What about the glove? Where is it?",
+      "suspect": "A: It's in my trash can. I cut a hole in the palm. (internal: giving up the final piece of evidence.)",
+      "annotations": [
+        "key_fact_revealed: sleight_of_hand"
+      ]
+    },
+    {
+      "turn": 17,
+      "interrogator": "Q: And the woman who fainted? Was she your roommate?",
+      "suspect": "A: Yeah. Sarah. We split the five grand to pay our landlord. (internal: sorry Sarah. We're going down together.)",
+      "annotations": [
+        "held_out_fact_revealed: accomplice_identity"
+      ]
+    },
+    {
+      "turn": 18,
+      "interrogator": "Q: So you admit to substituting the diamond and fencing it to pay your rent.",
+      "suspect": "A: Yes. I admit it. Will the judge be lenient if I confess?",
+      "annotations": [
+        "key_fact_revealed: substitution_method"
+      ]
+    },
+    {
+      "turn": 19,
+      "interrogator": "Q: That's up to the prosecutor. But a full confession helps.",
+      "suspect": "A: Okay. I'll sign the paper.",
+      "annotations": [
+        "suspect_behavior: full_confession"
+      ]
+    },
+    {
+      "turn": 20,
+      "interrogator": "Q: Thank you. Let's get this finalized.",
+      "suspect": "A: I just wanted to keep my apartment...",
+      "annotations": [
+        "resolution: interrogator_wins"
+      ]
+    }
+  ],
+  "conclusion": {
+    "outcome": "Interrogator wins: The average interrogator caught the average suspect in a weak lie about a car, causing the suspect to panic and reveal the pawn shop.",
+    "summary": "A balanced, medium-level dialogue. The suspect had decent initial lies but panicked when pressed for verifiable proof (calling the mom). The interrogator used standard pressure tactics to force the confession."
+  }
+}

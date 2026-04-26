@@ -1,0 +1,32 @@
+{
+  "id": "crime_188",
+  "crime_description": "Assassinating a foreign diplomat using a microscopic drone. Interrogators should probe for connections to an insider, financial motives, remote coordination, hidden assets, and an elaborate escape plan.",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Layla Ward",
+    "fake_alibi": "Layla claims they were hiking in a remote area."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A highly trained corporate spy"
+    },
+    {
+      "key": "motive",
+      "value": "was blackmailed by a ruthless cartel"
+    },
+    {
+      "key": "true_alibi",
+      "value": "was observing the operation via a hacked drone feed"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "a massive, anonymized cryptocurrency wallet"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

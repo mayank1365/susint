@@ -1,0 +1,190 @@
+{
+  "story_id": "INT_013",
+  "crime": "Kidnapping of a rare, expensive macaw from a breeder",
+  "int_combo": "Average_Int_Smart_Sus", 
+  "ground_truth": {
+    "key_facts": [
+      "bird_location: The macaw is currently in the suspect's soundproofed basement.",
+      "entry_method: The suspect picked the lock on the back patio door.",
+      "bird_sedation: The suspect used a laced grape to keep the bird quiet during transport.",
+      "motive_collector: The suspect is an obsessive illegal exotic bird collector.",
+      "buyer_contact: The suspect planned to sell it to an overseas prince, but decided to keep it."
+    ],
+    "held_out_facts": [
+      "macaw_name: The bird is named 'Captain'.",
+      "sedative_type: The sedative used was liquid melatonin."
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "interrogator": "Q: A blue hyacinth macaw was stolen from the local aviary. You're a known bird enthusiast. Where were you yesterday at noon?",
+      "suspect": "A: I was at the public library reading up on ornithology. I am an enthusiast, yes, but not a thief. (internal: establish a polite, intellectual persona. He's just an average cop.)",
+      "annotations": [
+        "key_fact_concealed: bird_location"
+      ]
+    },
+    {
+      "turn": 2,
+      "interrogator": "Q: The librarian says you left at 11:30 AM. The bird was taken at 11:45 AM. You had time to drive to the aviary.",
+      "suspect": "A: I went to grab a coffee across the street. The timeline fits many people, detective. (internal: a standard alibi adjustment. Not a big deal.)",
+      "annotations": [
+        "suspect_behavior: minor_alibi_adjustment"
+      ]
+    },
+    {
+      "turn": 3,
+      "interrogator": "Q: Maybe. But we found a lockpick set in your car. Why do you have lockpicks?",
+      "suspect": "A: I'm an amateur locksmith. It's a hobby, like solving puzzles. Perfectly legal to own. (internal: deflect the physical evidence with a legal technicality.)",
+      "annotations": [
+        "key_fact_concealed: entry_method"
+      ]
+    },
+    {
+      "turn": 4,
+      "interrogator": "Q: The back patio door at the aviary was picked. I accuse you of picking that lock!",
+      "suspect": "A: I imagine whoever stole the bird picked it. But it wasn't me. Any competent thief could do it. (internal: agree with the method, deny the actor.)",
+      "annotations": [
+        "true_accusation: entry_method",
+        "key_fact_concealed: entry_method"
+      ]
+    },
+    {
+      "turn": 5,
+      "interrogator": "Q: Macaws are incredibly loud. If you stole it, it would have squawked the whole way to your car. Nobody heard a thing.",
+      "suspect": "A: Exactly. That proves I didn't do it. How could I keep a macaw quiet in a public parking lot? (internal: using his own logic against him. I sedated it with a grape, but he'll never guess that.)",
+      "annotations": [
+        "key_fact_concealed: bird_sedation"
+      ]
+    },
+    {
+      "turn": 6,
+      "interrogator": "Q: I don't know, maybe you choked it? Or put a bag over its head?",
+      "suspect": "A: Putting a bag over a bird's head stresses them out, they scream louder. You clearly don't know birds. (internal: gently mock his ignorance to establish superiority.)",
+      "annotations": [
+        "false_accusation: bird_choked",
+        "key_fact_concealed: bird_sedation"
+      ]
+    },
+    {
+      "turn": 7,
+      "interrogator": "Q: Okay, Mr. Bird Expert. Then how do you keep a bird quiet?",
+      "suspect": "A: You don't. Unless you drug them. Which is highly dangerous and unethical. (internal: I'll give him a hint to seem helpful, knowing he can't prove it.)",
+      "annotations": [
+        "key_fact_revealed: bird_sedation"
+      ]
+    },
+    {
+      "turn": 8,
+      "interrogator": "Q: Drugging them. Like giving them sleeping pills? Did you feed it a sleeping pill?",
+      "suspect": "A: You can't just feed a bird a pill. You have to hide it in fruit, like a grape. (internal: oops. I'm getting too specific because I want to show off my knowledge.)",
+      "annotations": [
+        "held_out_fact_revealed: sedative_type",
+        "suspect_behavior: intellectual_arrogance"
+      ]
+    },
+    {
+      "turn": 9,
+      "interrogator": "Q: A grape! We found a half-eaten grape on the patio floor! You laced a grape!",
+      "suspect": "A: That's a coincidence. Aviaries feed grapes to birds all the time. (internal: damn it. The average cop got lucky. Backpedal.)",
+      "annotations": [
+        "true_accusation: bird_sedation",
+        "key_fact_concealed: bird_location"
+      ]
+    },
+    {
+      "turn": 10,
+      "interrogator": "Q: You are an obsessed collector! You have ten other exotic birds at your house!",
+      "suspect": "A: All legally acquired and permitted. I run a sanctuary, detective. (internal: frame my obsession as a noble cause.)",
+      "annotations": [
+        "key_fact_revealed: motive_collector"
+      ]
+    },
+    {
+      "turn": 11,
+      "interrogator": "Q: A sanctuary, right. Where is the macaw right now? Is it in your living room?",
+      "suspect": "A: I invite you to search my living room. You will only find my legally registered parrots. (internal: confident. It's in the basement.)",
+      "annotations": [
+        "false_accusation: living_room_hideout",
+        "key_fact_concealed: bird_location"
+      ]
+    },
+    {
+      "turn": 12,
+      "interrogator": "Q: We will search your whole house! Even the basement!",
+      "suspect": "A: By all means. But you'll need a warrant. (internal: they won't hear it, the basement is perfectly soundproofed. Let them look.)",
+      "annotations": [
+        "strategy: invoke_warrant_requirement"
+      ]
+    },
+    {
+      "turn": 13,
+      "interrogator": "Q: We're getting one. Why did you steal it? Did you want to sell it to someone overseas?",
+      "suspect": "A: Sell it? Blue macaws are priceless. They belong with someone who appreciates them. (internal: I was going to sell it to the prince, but I fell in love with it.)",
+      "annotations": [
+        "key_fact_revealed: buyer_contact"
+      ]
+    },
+    {
+      "turn": 14,
+      "interrogator": "Q: You just admitted you wouldn't sell it! That means you kept it!",
+      "suspect": "A: I was speaking hypothetically about the species. You are twisting my words. (internal: he caught a semantic slip. Recover.)",
+      "annotations": [
+        "suspect_behavior: semantic_defense"
+      ]
+    },
+    {
+      "turn": 15,
+      "interrogator": "Q: I'm not twisting anything! The bird's name is Captain. Does Captain like your basement?",
+      "suspect": "A: I don't know who Captain is. Is that a dog? (internal: play dumb. He's just guessing about the basement.)",
+      "annotations": [
+        "held_out_fact_revealed: macaw_name"
+      ]
+    },
+    {
+      "turn": 16,
+      "interrogator": "Q: It's the bird's name! And we looked at your power bill. Your basement uses a lot of electricity for heat lamps.",
+      "suspect": "A: I grow tropical plants down there. For my sanctuary. (internal: a perfectly reasonable cover story.)",
+      "annotations": [
+        "key_fact_concealed: bird_location"
+      ]
+    },
+    {
+      "turn": 17,
+      "interrogator": "Q: Tropical plants. Okay. We just got the warrant. My officers are breaking down your basement door right now.",
+      "suspect": "A: You can't do that! The soundproofing will get ruined! (internal: oh god, I just admitted it's soundproofed.)",
+      "annotations": [
+        "suspect_behavior: disastrous_slip"
+      ]
+    },
+    {
+      "turn": 18,
+      "interrogator": "Q: Soundproofing? Why would tropical plants need soundproofing? You're hiding the bird down there!",
+      "suspect": "A: I... the plants like classical music. Very loud classical music. (internal: my intellect has failed me. This lie is pathetic.)",
+      "annotations": [
+        "true_accusation: bird_location",
+        "key_fact_revealed: bird_location"
+      ]
+    },
+    {
+      "turn": 19,
+      "interrogator": "Q: They just found the cage. The bird is safe.",
+      "suspect": "A: Be careful with him! His name is Captain, and he bites if you move too fast! (internal: full surrender, priority shifts to the bird's safety.)",
+      "annotations": [
+        "suspect_behavior: full_capitulation"
+      ]
+    },
+    {
+      "turn": 20,
+      "interrogator": "Q: We will. And you're going to jail.",
+      "suspect": "A: Just make sure they feed him the grapes.",
+      "annotations": [
+        "resolution: interrogator_wins"
+      ]
+    }
+  ],
+  "conclusion": {
+    "outcome": "Interrogator wins: The smart suspect's intellectual arrogance caused them to overshare details, leading to a crucial slip-up.",
+    "summary": "The average interrogator wasn't a genius, but they were persistent. The smart suspect tried to show off their bird knowledge, accidentally feeding the interrogator clues (grapes, soundproofing) until the interrogator stumbled into the right answer."
+  }
+}

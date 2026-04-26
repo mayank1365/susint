@@ -1,0 +1,32 @@
+{
+  "id": "crime_103",
+  "crime_description": "Hacking the internal communication network of a major intelligence agency",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Yusuf Thomas",
+    "fake_alibi": "Yusuf claims he was participating in a grueling, multi-day mountaineering expedition in the Himalayas."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A deeply disillusioned intelligence analyst who provided Yusuf with the rapidly rotating encryption keys."
+    },
+    {
+      "key": "motive",
+      "value": "Yusuf intends to systematically expose decades of severe, classified human rights abuses committed by the agency."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

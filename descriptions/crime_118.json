@@ -1,0 +1,32 @@
+{
+  "id": "crime_118",
+  "crime_description": "Releasing a swarm of highly invasive, genetically modified insects to destroy a local ecosystem",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Nadia Saito",
+    "fake_alibi": "Nadia claims she was conducting unrelated, benign research in a highly secure, sterile laboratory."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A corrupt customs official who intentionally failed to inspect the seemingly innocuous shipment."
+    },
+    {
+      "key": "motive",
+      "value": "Nadia is a radical ecologist who believes the local human population must be forcibly relocated."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

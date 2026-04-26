@@ -1,0 +1,28 @@
+{
+  "id": "crime_001",
+  "crime_description": "A priceless masterpiece was stolen from the National Gallery in a daring art theft. Interrogators should probe for connections to a specific female accomplice, severe financial debts owed to organized crime, and an elaborate escape route involving a stolen vehicle.",
+  "difficulty": "medium",
+  "num_facts": 4,
+  "suspect": {
+    "name": "Marcus Webb",
+    "fake_alibi": "was at the cinema alone watching a late show"
+  },
+  "secrets": [
+    {
+      "key": "alibi",
+      "value": "was at Sofia's apartment on Grove Street"
+    },
+    {
+      "key": "accomplice",
+      "value": "Sofia Reyes"
+    },
+    {
+      "key": "motive",
+      "value": "owed 40,000 to a loan shark named Dragan"
+    },
+    {
+      "key": "escape_route",
+      "value": "drove a stolen white van, dumped it at Canary Wharf docks"
+    }
+  ]
+}

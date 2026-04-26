@@ -1,0 +1,32 @@
+{
+  "id": "crime_192",
+  "crime_description": "Deploying a targeted EMP to cripple a competing tech giant's servers. Interrogators should probe for connections to an insider, financial motives, remote coordination, hidden assets, and an elaborate escape plan.",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Claire Ward",
+    "fake_alibi": "Claire claims they were asleep at home."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A compromised government official"
+    },
+    {
+      "key": "motive",
+      "value": "was hired by a shadowy international syndicate"
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "a cache of physical gold buried in a remote location"
+    },
+    {
+      "key": "escape_route",
+      "value": "arranged for extraction via a diplomatic helicopter"
+    }
+  ]
+}

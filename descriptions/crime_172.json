@@ -1,0 +1,20 @@
+{
+  "id": "crime_172",
+  "crime_description": "Defrauding an insurance company with a staged car accident. Interrogators should probe for connections to an insider, and a vindictive motive.",
+  "difficulty": "easy",
+  "num_facts": 2,
+  "suspect": {
+    "name": "Zoe Richardson",
+    "fake_alibi": "Zoe claims they were asleep at home."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A disgruntled employee"
+    },
+    {
+      "key": "motive",
+      "value": "wanted revenge for a perceived slight"
+    }
+  ]
+}

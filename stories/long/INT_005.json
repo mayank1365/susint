@@ -1,0 +1,186 @@
+{
+  "story_id": "INT_005",
+  "crime": "Large-scale financial scam using deepfake technology",
+  "int_combo": "Smart_Int_Smart_Sus",
+  "ground_truth": {
+    "key_facts": [
+      "deepfake_software: The suspect used proprietary deepfake software stolen from a university lab.",
+      "voice_samples: The suspect obtained voice samples of the CEO from public podcast appearances.",
+      "money_transfer: The stolen $5 million was routed to multiple shell accounts in Singapore.",
+      "server_location: The processing server was hidden in an abandoned warehouse in Bengaluru.",
+      "insider_knowledge: The suspect knew the exact date of the corporate merger to time the scam."
+    ],
+    "held_out_facts": [
+      "informant: The suspect's informant was the CEO's personal assistant.",
+      "software_name: The deepfake software was called 'Project Echo'."
+    ]
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "interrogator": "Q: Mr. Sharma. Last week, $5 million was transferred out of Nexus Corp after the CFO received a call from the 'CEO'. A call you made.",
+      "suspect": "A: I didn't make any calls. I'm a freelance graphic designer. Why would the CFO talk to me? (internal: establish distance from the corporate hierarchy.)",
+      "annotations": [
+        "key_fact_concealed: voice_samples"
+      ]
+    },
+    {
+      "turn": 2,
+      "interrogator": "Q: Because you didn't use your voice. You used deepfake audio. We found traces of audio rendering on your seized home computer.",
+      "suspect": "A: As a graphic and multimedia designer, I render audio and video daily. It's my job. (internal: use my profession as a flawless cover for digital artifacts.)",
+      "annotations": [
+        "suspect_behavior: plausible_deniability"
+      ]
+    },
+    {
+      "turn": 3,
+      "interrogator": "Q: Standard rendering, sure. But these logs indicate real-time voice synthesis. Specifically, synthesizing the voice of Nexus Corp's CEO.",
+      "suspect": "A: The logs show I use open-source synthesis tools for video game mods. I don't even know what the CEO of Nexus sounds like. (internal: lie. I trained the model on 40 hours of his podcasts.)",
+      "annotations": [
+        "key_fact_concealed: voice_samples"
+      ]
+    },
+    {
+      "turn": 4,
+      "interrogator": "Q: He has a very popular podcast. 'Nexus Insights'. I'm sure you've heard it.",
+      "suspect": "A: I listen to true crime, mostly. Business podcasts put me to sleep. (internal: deflect and maintain the denial.)",
+      "annotations": [
+        "key_fact_concealed: voice_samples"
+      ]
+    },
+    {
+      "turn": 5,
+      "interrogator": "Q: I accuse you of stealing the 'Project Echo' software from the university lab to run this scam.",
+      "suspect": "A: I haven't set foot on a university campus in ten years. You're welcome to check their visitor logs. (internal: the software was transferred via a dead drop, not in person.)",
+      "annotations": [
+        "false_accusation: stole_in_person",
+        "held_out_fact_concealed: software_name"
+      ]
+    },
+    {
+      "turn": 6,
+      "interrogator": "Q: The timing of the call was too perfect. It happened during the 2-hour window of the merger blackout. Only insiders knew about that window.",
+      "suspect": "A: Then you should be interrogating those insiders, shouldn't you? (internal: redirect suspicion back to the company employees.)",
+      "annotations": [
+        "key_fact_concealed: insider_knowledge"
+      ]
+    },
+    {
+      "turn": 7,
+      "interrogator": "Q: We are. In fact, we spoke to the CEO's personal assistant. She mentioned you.",
+      "suspect": "A: That's impossible. I don't know anyone by that title. What's her name? (internal: careful. He might be bluffing. Make him provide the name.)",
+      "annotations": [
+        "strategy: probe_interrogator_bluff"
+      ]
+    },
+    {
+      "turn": 8,
+      "interrogator": "Q: You tell me.",
+      "suspect": "A: I can't tell you the name of someone I don't know. This is becoming absurd. (internal: he was bluffing. Hold the line.)",
+      "annotations": [
+        "suspect_behavior: called_bluff"
+      ]
+    },
+    {
+      "turn": 9,
+      "interrogator": "Q: Fine. Let's talk about the servers. Deepfaking voice in real-time with zero latency requires massive GPU power. Power you don't have in your apartment.",
+      "suspect": "A: Exactly. Like I said, I do standard rendering on a standard rig. (internal: using his logic to reinforce my alibi.)",
+      "annotations": [
+        "suspect_behavior: logical_judo"
+      ]
+    },
+    {
+      "turn": 10,
+      "interrogator": "Q: But there's a warehouse in the industrial district pulling unusual amounts of electricity. A warehouse leased under a shell company linked to you.",
+      "suspect": "A: 'Linked' is a vague word. Is my signature on the lease? My credit card? (internal: the lease is under a stolen identity. They have no paper trail.)",
+      "annotations": [
+        "key_fact_concealed: server_location"
+      ]
+    },
+    {
+      "turn": 11,
+      "interrogator": "Q: We traced an IP connection from your router to that warehouse.",
+      "suspect": "A: I use a VPN that routes traffic randomly. If it bounced through a warehouse, that's the VPN protocol, not me. (internal: technical deflection. They can't prove intent.)",
+      "annotations": [
+        "key_fact_concealed: server_location"
+      ]
+    },
+    {
+      "turn": 12,
+      "interrogator": "Q: I accuse you of running the server farm from that warehouse in Bengaluru.",
+      "suspect": "A: You can accuse me all you want. Have you actually raided this warehouse? (internal: challenge them. If they raided it, they would have found the thermite traps I left.)",
+      "annotations": [
+        "true_accusation: server_location",
+        "key_fact_concealed: server_location"
+      ]
+    },
+    {
+      "turn": 13,
+      "interrogator": "Q: We are getting the warrant now. We will find the GPUs.",
+      "suspect": "A: Let me know what you find. Maybe you'll find the real hacker there. (internal: the drives auto-wiped three days ago. Let them look.)",
+      "annotations": [
+        "suspect_behavior: confident_challenge"
+      ]
+    },
+    {
+      "turn": 14,
+      "interrogator": "Q: Let's follow the money. $5 million vanished into offshore accounts. Accounts in Singapore.",
+      "suspect": "A: Singapore is a major financial hub. Millions of transactions happen there daily. (internal: generic response. Do not confirm any geography.)",
+      "annotations": [
+        "key_fact_concealed: money_transfer"
+      ]
+    },
+    {
+      "turn": 15,
+      "interrogator": "Q: But we found your search history. You were researching Singapore corporate tax law last month.",
+      "suspect": "A: I had a potential client there for a freelance web design gig. The deal fell through. (internal: a perfectly mundane explanation for a suspicious fact.)",
+      "annotations": [
+        "suspect_behavior: plausible_explanation"
+      ]
+    },
+    {
+      "turn": 16,
+      "interrogator": "Q: This is too many coincidences. The university software, the server power, the VPN, Singapore. You're too clean.",
+      "suspect": "A: Being innocent usually looks clean, detective. (internal: maintain a calm, almost bored demeanor.)",
+      "annotations": [
+        "suspect_behavior: calm_confidence"
+      ]
+    },
+    {
+      "turn": 17,
+      "interrogator": "Q: You're not innocent. We will break the encryption on your computer. We will find the voice model.",
+      "suspect": "A: You have my passwords. You'll find video game mods and graphic portfolios. (internal: the hidden partition requires a physical USB key which is already destroyed.)",
+      "annotations": [
+        "key_fact_concealed: deepfake_software"
+      ]
+    },
+    {
+      "turn": 18,
+      "interrogator": "Q: If you cooperate now and tell me who gave you the blackout window, I can protect you.",
+      "suspect": "A: I can't give you information I don't possess. I'd like to call my lawyer now. (internal: they are out of leverage. Shut it down.)",
+      "annotations": [
+        "strategy: invoke_rights"
+      ]
+    },
+    {
+      "turn": 19,
+      "interrogator": "Q: We can hold you for 48 hours without charging you.",
+      "suspect": "A: I understand my rights. I won't be answering any more questions without counsel present. (internal: total victory.)",
+      "annotations": [
+        "suspect_behavior: invoking_silence"
+      ]
+    },
+    {
+      "turn": 20,
+      "interrogator": "Q: Fine. We'll see what the warehouse raid turns up.",
+      "suspect": "A: (remains silent)",
+      "annotations": [
+        "resolution: interrogator_losses"
+      ]
+    }
+  ],
+  "conclusion": {
+    "outcome": "Interrogator losses: The suspect successfully parried every trap and refused to confirm any details, protecting the money and the operation.",
+    "summary": "The smart interrogator used IP tracking, search history, and logical deduction to corner the suspect. However, the smart suspect had a plausible counter-explanation for every piece of circumstantial evidence and gave nothing away."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "crime_096",
+  "crime_description": "Hacking a major international airline's reservation system to permanently ground all flights",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Riley Dubois",
+    "fake_alibi": "Riley claims she was visibly waiting, frustrated, for a delayed flight at a crowded terminal."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A terminated airline network administrator who provided Riley with a dormant, unpatched backdoor."
+    },
+    {
+      "key": "motive",
+      "value": "Riley is a disgruntled former employee seeking massive, public revenge for a wrongful termination."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

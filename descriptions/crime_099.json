@@ -1,0 +1,32 @@
+{
+  "id": "crime_099",
+  "crime_description": "Forging a newly discovered, previously unknown play by William Shakespeare",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Ulysses Gutierrez",
+    "fake_alibi": "Ulysses claims he was completely immersed in translating obscure, ancient texts in a library basement."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A disgraced literary historian who provided authentic, period-accurate parchment and 16th-century ink."
+    },
+    {
+      "key": "motive",
+      "value": "Ulysses desperately craves the unparalleled literary fame and academic prestige the 'discovery' will bring."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}
