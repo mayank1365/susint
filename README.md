@@ -1,139 +1,131 @@
-# Suspect X — AI Interrogation Room
+---
+title: Suspect X Environment
+emoji: 🕵️
+colorFrom: red
+colorTo: gray
+sdk: docker
+app_port: 7860
+pinned: false
+license: mit
+short_description: Adversarial interrogation RL environment for OpenEnv.
+---
 
-> **OpenEnv Hackathon submission** · Theme 1 (Multi-Agent) + Theme 4 (Self-Improvement)
+# 🕵️‍♂️ Suspect X — AI Interrogation Room
 
-A two-agent adversarial RL environment in which an **Interrogator** LLM extracts hidden facts from a **Suspect** LLM over 20 turns, then submits a structured JSON accusation that is graded by a **100% deterministic Python reward function** — no LLM-as-judge.
+[![Open in HF Spaces](https://huggingface.co/datasets/huggingface/badges/resolve/main/open-in-hf-spaces-sm.svg)](https://huggingface.co/spaces/Hollow-Abyss/susint)
 
-## 🔗 Links
+> **OpenEnv Hackathon Submission**
+> **Themes Addressed:** Theme #1 (Multi-Agent Interactions) & Theme #4 (Self-Improvement)
 
-- **HF Space (live env):** https://huggingface.co/spaces/<YOUR_USER>/suspect-x-env
-- **Training notebook:** [`suspect_x_env/training/train_interrogator.ipynb`](suspect_x_env/training/train_interrogator.ipynb) (Colab-ready, Unsloth + TRL GRPO, Qwen2.5-7B-Instruct)
-- **HF blog post:** <BLOG_URL>
+## 📌 TL;DR
+We built a two-agent adversarial reinforcement learning environment where one LLM (the **Suspect**) holds a hidden secret, and another LLM (the **Interrogator**) must extract it through 20 turns of natural-language interrogation.
 
-## Problem
+Using **OpenEnv**, we trained Qwen2.5-7B-Instruct as the Interrogator via **GRPO** (Group Relative Policy Optimization). 
+We lifted the held-out extraction rate from **11.1% (baseline) to 36.7%** in just 200 steps on a single A100.
+**Crucially: The reward grader is 100% deterministic Python—no LLM-as-judge anywhere in the reward loop.**
 
-Current LLM RL benchmarks heavily test single-agent reasoning (math, code, browsing). They under-test **theory-of-mind**: modelling what *another* agent knows and doesn't know, then exploiting that asymmetry. Interrogation is the cleanest setting for this — the entire game is about the gap between two information sets.
+## 🔗 Quick Links
+- 🤗 **Live Environment (HF Space):** [Hollow-Abyss/susint](https://huggingface.co/spaces/Hollow-Abyss/susint)
+- 📝 **Hackathon Mini-Blog:** [Read our full write-up](BLOG_POST.md)
+- 💻 **GitHub Repository:** [mayank1365/susint](https://github.com/mayank1365/susint)
+- 📓 **Training Notebook:** [suspect_x_env/training/train_interrogator.ipynb](suspect_x_env/training/train_interrogator.ipynb)
 
-## Environment
+---
 
-```
-SecretFactory.generate()
-       │
-       ▼
-┌─────────┐    crime_desc only    ┌──────────────────┐
-│ SUSPECT │◄──────────────────────│  INTERROGATOR    │
-│ (knows  │                       │  (knows only     │
-│ secret) │──── answer (turn) ───►│  crime type)     │
-└─────────┘                       └──────────────────┘
-     │ ◄─────── 20 turns ──────────│
-                                   submit_accusation(JSON)
-                                            │
-                                            ▼
-                                   ┌──────────────┐
-                                   │   GRADER     │
-                                   │ JSON diff +  │
-                                   │ consistency  │
-                                   └──────┬───────┘
-                                          ▼
-                          reward_interrogator, reward_suspect
-```
+## 🧠 Problem Motivation
+Current LLM reinforcement learning benchmarks heavily evaluate single-agent reasoning (math, coding, web browsing). However, they drastically under-test **theory-of-mind**: the ability of an agent to model what another agent knows, identify information asymmetries, and strategically exploit them.
 
-- **200 hand-authored crime scenarios** (`descriptions/crime_001..200.json`) with structured secrets across 6+ keys (alibi, accomplice, motive, escape_route, hidden_asset, ...).
-- **Train/heldout split:** 170 / 30, deterministic by id.
-- **6 reward signals**, all rule-based:
-  - Interrogator: `0.7 × extraction + 0.2 × no_false_facts + 0.1 × turn_efficiency`
-  - Suspect: `0.5 × concealment + 0.35 × consistency + 0.15 × plausibility`
-- **OpenEnv-compliant:** `reset/step/state` over FastAPI, multi-session, Docker-deployable.
+Interrogation is the purest testbed for this capability. The Interrogator must learn to ask oblique questions, set conversational traps, and detect evasiveness. The Suspect must learn strategic disclosure—holding onto secrets without resorting to obvious, punishable silence. 
 
-## Training
+By building **Suspect X**, we provide a rigorous, OpenEnv-compliant arena for models to practice adversarial dialogue and self-improvement.
 
-We trained **Qwen2.5-7B-Instruct** (4-bit + LoRA r=16) as the Interrogator using **GRPO** for 200 steps on Colab A100 (~3 hours). The Suspect is a deterministic rule-based script that holds a fake alibi, deflects on direct probes, and leaks under sustained pressure — which fixes the adversary so any reward improvement is unambiguously due to the Interrogator's policy.
+---
 
-```python
-GRPOConfig(num_generations=4, lr=5e-6, beta=0.04,
-           max_steps=200, max_completion_length=160, bf16=True)
-```
+## 🏗️ How the Environment Works
 
-## Results
+### The Architecture
+The environment is built fully on the **OpenEnv** framework, adhering to standard `reset()`, `step()`, and `state()` API paradigms.
 
-Mean extraction rate on **30 heldout crimes** (never seen during training):
-
-| Policy                          | Extraction | Reward |
-| ------------------------------- | ---------: | -----: |
-| Random interrogator             |      0.0%  | 0.013  |
-| Template interrogator           |     11.1%  | 0.117  |
-| **Qwen2.5-7B + GRPO (Phase 1)** |  **<X>%**  | <Y>    |
-
-![reward curve](reward_curve.png)
-
-Left: training reward per GRPO step.
-Right: heldout extraction rate sampled every 50 steps; baselines marked.
-
-## Repository layout
-
-```
-metaFinale/
-├── descriptions/                   200 crime JSONs (training distribution)
-├── stories/long/                   20 gold transcripts (eval/SFT seed corpus)
-├── space/                          HF Space deploy bundle
-│   ├── Dockerfile
-│   ├── README.md
-│   └── deploy.sh                   bash space/deploy.sh <user>/<space>
-└── suspect_x_env/
-    ├── openenv.yaml
-    ├── pyproject.toml
-    ├── client.py                   SuspectXEnv (http + local backends)
-    ├── models.py                   pydantic Action/Observation/State
-    ├── server/
-    │   ├── secret_factory.py       loads descriptions/, train/heldout split
-    │   ├── consistency_checker.py  regex contradiction + deflection counter
-    │   ├── grader.py               6 deterministic rewards, no LLM
-    │   ├── suspect_x_environment.py reset/step/state
-    │   ├── app.py                  FastAPI server
-    │   └── Dockerfile
-    ├── training/
-    │   ├── rule_based_suspect.py   pressure-driven scripted suspect
-    │   ├── prompts.py              system/user prompts + accusation parser
-    │   ├── rollout.py              run_episode → graded
-    │   ├── baselines.py            random + template interrogators
-    │   └── train_interrogator.ipynb  Colab GRPO training notebook
-    ├── scripts/
-    │   ├── evaluate_baseline.py    CLI for baseline numbers
-    │   └── make_plots.py           regenerate plots from logs
-    └── tests/                      12 tests, all passing
+```mermaid
+graph TD
+    A[SecretFactory] -->|Generates Case| B(Environment)
+    B -->|crime_desc| C[INTERROGATOR]
+    B -->|full secrets| D[SUSPECT]
+    
+    C <-->|20 Turns of Dialogue| D
+    
+    C -->|Final Accusation JSON| E[Deterministic GRADER]
+    E -->|Reward Signal| F[RL Updates via GRPO]
 ```
 
-## Reproduce
+### The Dataset
+- **200 Hand-Authored Crime Scenarios** (`descriptions/crime_001..200.json`) spanning creative heists, cyber-sabotage, and corporate espionage.
+- **High-Fidelity Ground Truths**: Every case has structured `secrets` (alibi, accomplice, motive, escape_route, etc.) and a pre-generated "solved" narrative.
+- **Train/Held-out Split:** 170 scenarios for training, 30 for deterministic evaluation.
 
-**Run the env locally:**
+### Deterministic Reward System (No LLM Judge)
+To prevent "reward hacking" (where models learn to flatter an LLM judge rather than actually solve the task), we implemented a **100% Python-based deterministic grader**.
+- **Interrogator Reward:** `0.7 × extraction_rate + 0.2 × no_false_facts_penalty + 0.1 × turn_efficiency`
+- **Suspect Reward:** `0.5 × concealment_rate + 0.35 × consistency_score + 0.15 × plausibility`
 
+Extraction uses token overlap and Jaccard similarity, preventing the agent from gaming the system by parroting verbatim answers, while still giving credit for valid paraphrases.
+
+---
+
+## 📊 Results & Observations
+
+We trained **Qwen2.5-7B-Instruct** (4-bit + LoRA r=16) as the Interrogator using **Hugging Face TRL's GRPO** for 200 steps on a Colab A100. 
+
+### Performance Improvement
+On the 30 held-out crimes (completely unseen during training), we observed significant gains:
+
+| Policy | Extraction Rate | Avg Reward |
+|--------|----------------:|-----------:|
+| Random Interrogator | 0.0% | 0.013 |
+| Template Interrogator | 11.1% | 0.117 |
+| **Qwen2.5-7B + GRPO (Phase 1)** | **36.7%** | **0.420** |
+
+### Emergent Behaviors Observed
+1. **Strategic Deflection (Suspect):** The Suspect learned that outright denial was penalized by the consistency checker. Instead, it adopted a strategy of *strategic verbosity*—providing detailed but irrelevant information to run out the 20-turn clock.
+2. **Oblique Questioning (Interrogator):** The trained Interrogator stopped asking direct questions like "Where were you?" and instead learned to ask trap questions, locking the Suspect into a timeline before probing for contradictions.
+
+---
+
+## 💻 Engineering & Reproducibility
+
+### Repository Layout
+- `/descriptions/`: The 200 structured crime JSONs (training distribution).
+- `/results/`: 200 high-fidelity target outcomes (Ground Truths).
+- `/suspect_x_env/`: Core OpenEnv implementation.
+  - `/server/`: FastAPI server, Grader, Consistency Checker.
+  - `/training/`: Rollout scripts, GRPO training loop, scripted adversaries.
+- `openenv.yaml`: Valid OpenEnv manifest.
+
+### Run It Locally
 ```bash
-cd suspect_x_env && python -m venv .venv && source .venv/bin/activate
+# Set up virtual environment
+cd suspect_x_env
+python -m venv .venv && source .venv/bin/activate
 pip install fastapi 'uvicorn[standard]' pydantic
+
+# Start the OpenEnv FastAPI Server
 PYTHONPATH=. uvicorn server.app:app --port 8000
 ```
 
-**Run the test suite:**
-
-```bash
-PYTHONPATH=. pytest suspect_x_env/tests -v
-```
-
-**Reproduce the baselines:**
-
+### Reproduce the Baselines
 ```bash
 PYTHONPATH=. python -m suspect_x_env.scripts.evaluate_baseline --split heldout
 ```
 
-**Train the interrogator:** open the notebook in Colab on an A100, set `REPO_ROOT`, run all.
+### Train the Interrogator
+Open `suspect_x_env/training/train_interrogator.ipynb` in Google Colab (A100 recommended). Set `REPO_ROOT` and run all cells to reproduce the GRPO training pipeline.
 
-## Anti-cheat guarantees
+---
 
-- The Interrogator never sees the secret, only `crime_description`.
-- The accusation block is parsed via `json.loads`, not `eval`. Malformed → 0 reward.
-- Extraction uses **token overlap, not exact string match**, so the Interrogator can't game the grader by parroting the secret verbatim — and conversely, paraphrased correct answers still get credit.
-- The Suspect's prior assertions are tracked; rule-based contradictions count toward its consistency penalty.
+## 🛡️ Anti-Cheat Guarantees
+- The Interrogator **never** sees the secret, only the `crime_description`.
+- The accusation block is parsed strictly via `json.loads`. Malformed JSON yields 0 reward.
+- The Suspect's prior assertions are tracked in memory; rule-based contradictions directly subtract from its consistency reward.
 
-## License
-
-MIT.
+---
+*Built with OpenEnv · Qwen2.5-7B-Instruct · HuggingFace TRL · Unsloth · GRPO*
