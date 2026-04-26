@@ -1,0 +1,32 @@
+{
+  "id": "crime_006",
+  "crime_description": "Hacking a network of smart mirrors to display subliminal, cult-like messaging. Interrogators should probe for connections to an insider, a hidden agenda, remote coordination, hidden assets, and an elaborate escape plan.",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Julian Cohen",
+    "fake_alibi": "Julian claims he was hosting an exclusive, invite-only wine-tasting party at his Parisian penthouse during the time of the theft."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "Isabella Rossi, the museum's night watchwoman, who disabled the laser grid for exactly three minutes."
+    },
+    {
+      "key": "motive",
+      "value": "Julian was commissioned by a Russian oligarch who offered him $10 million in untraceable cryptocurrency for the original piece to complete a private collection."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

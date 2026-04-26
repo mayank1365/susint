@@ -1,0 +1,32 @@
+{
+  "id": "crime_011",
+  "crime_description": "Manipulating the GPS coordinates of a luxury cruise liner so it docks in uncharted territory. Interrogators should probe for connections to an insider, a hidden agenda, remote coordination, hidden assets, and an elaborate escape plan.",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Valerie Frost",
+    "fake_alibi": "Valerie insists she was in the VIP lounge signing autographs and giving an interview."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "Marco, the rival driver's chief mechanic, who loosened the brake line valve."
+    },
+    {
+      "key": "motive",
+      "value": "Valerie needed to secure the World Championship title to keep her sponsorship deal."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

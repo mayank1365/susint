@@ -1,0 +1,32 @@
+{
+  "id": "crime_127",
+  "crime_description": "Falsifying the academic research data that secured a massive, multi-million dollar defense contract",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Willow Schneider",
+    "fake_alibi": "Willow claims she was conducting legitimate, rigorous fieldwork in a remote, inaccessible jungle."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A compromised military evaluator who deliberately overlooked the glaring inconsistencies in the data."
+    },
+    {
+      "key": "motive",
+      "value": "Willow desperately craves the immense prestige and massive funding associated with the defense project."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

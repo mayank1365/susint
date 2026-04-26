@@ -1,0 +1,32 @@
+{
+  "id": "crime_097",
+  "crime_description": "Sabotaging the clinical trials of a revolutionary new, life-saving medical treatment",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Sam Watanabe",
+    "fake_alibi": "Sam claims he was volunteering at a busy, chaotic local free clinic during the critical phase."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A corrupted research assistant who deliberately contaminated the control group's samples."
+    },
+    {
+      "key": "motive",
+      "value": "Sam was heavily invested in a competing pharmaceutical company whose stock would plummet if the new drug succeeded."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "crime_005",
+  "crime_description": "Orchestrating a fake alien abduction to cover up a corporate whistleblower's disappearance. Interrogators should probe for connections to an insider, financial motives, remote coordination, hidden assets, and an elaborate escape plan.",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Elara Nightshade",
+    "fake_alibi": "Elara claims she was drinking ale at the 'Prancing Pony' tavern and singing sea shanties with the local sailors until morning."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "Captain Thorne of the Royal Guard, who intentionally dismissed the vault guards early for a shift change."
+    },
+    {
+      "key": "motive",
+      "value": "The King is a ruthless tyrant, and Elara intends to use the jewels to fund a rebel uprising in the northern provinces."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

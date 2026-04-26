@@ -1,0 +1,24 @@
+{
+  "id": "crime_044",
+  "crime_description": "Smuggling a shipment of illegal firearms across the border. Interrogators should probe for connections to an inside customs official, financial motives, and offshore accounts.",
+  "difficulty": "medium",
+  "num_facts": 3,
+  "suspect": {
+    "name": "Hector Mwangi",
+    "fake_alibi": "Hector claims he was driving a legitimate shipment of agricultural supplies."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A corrupt customs official who waved Hector's truck through the checkpoint."
+    },
+    {
+      "key": "motive",
+      "value": "Hector owes a massive debt to a ruthless cartel."
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    }
+  ]
+}

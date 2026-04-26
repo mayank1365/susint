@@ -1,0 +1,32 @@
+{
+  "id": "crime_023",
+  "crime_description": "Forging the lost final manuscript of Ernest Hemingway. Interrogators should probe for connections to an inside literature expert, financial motives, remote burner phone coordination, offshore accounts, and private flight plans.",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Lazarus Kane",
+    "fake_alibi": "Lazarus claims he was holed up in a remote cabin writing his own novel."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "Professor Alden, a literature expert who supplied authentic 1930s typewriter paper and ink."
+    },
+    {
+      "key": "motive",
+      "value": "Lazarus sought to finally achieve literary fame and fortune, even if fraudulently."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

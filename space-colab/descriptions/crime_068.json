@@ -1,0 +1,32 @@
+{
+  "id": "crime_068",
+  "crime_description": "Replacing authentic museum antiquities with 3D-printed resin replicas",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Fiona Gallagher",
+    "fake_alibi": "Fiona claims she was leading an archeological excavation in a remote Egyptian desert."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "The museum's night watchman, who swapped the security camera feeds with pre-recorded loops."
+    },
+    {
+      "key": "motive",
+      "value": "Fiona believes the artifacts belong to her ancestral homeland and intends to quietly repatriate them."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

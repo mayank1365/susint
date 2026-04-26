@@ -1,0 +1,24 @@
+{
+  "id": "crime_176",
+  "crime_description": "Embezzling donations from a community theater production. Interrogators should probe for connections to an insider, a vindictive motive, and hidden assets.",
+  "difficulty": "medium",
+  "num_facts": 3,
+  "suspect": {
+    "name": "Leah Stewart",
+    "fake_alibi": "Leah claims they were hiking in a remote area."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A corrupt manager"
+    },
+    {
+      "key": "motive",
+      "value": "wanted revenge for a perceived slight"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "a secret safety deposit box"
+    }
+  ]
+}

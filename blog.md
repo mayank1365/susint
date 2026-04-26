@@ -32,15 +32,43 @@ We wanted to give that drama to two language models and watch what happened.
 
 ---
 
+## The Real Question We Were Trying to Answer
+
+Before we get to the architecture, let's talk about what we were actually building toward — because the interrogation room is just the stage. The real question is deeper:
+
+**Can a language model learn to detect lies?**
+
+Not pattern-match on known lie signatures. Not classify "this sounds deceptive" from a training corpus. Actually *detect* — reason from partial information, notice when a story has a gap, feel the shape of what isn't being said and reach toward it with the right question.
+
+And on the other side: **can a language model learn to conceal truth?** Not just deny things bluntly. But hold a secret under sustained pressure, manage what it reveals and when, understand which pieces of information are dangerous to expose and which can be offered as safe decoys.
+
+These are two sides of the same cognitive coin. And both of them are things that current LLMs do poorly — not because they lack language ability, but because they've never been *forced* to practice them against a real adversary with opposing incentives.
+
+That's what this project is really training. The interrogation room is just where that training happens.
+
+---
+
 ## Why This Is Actually Hard
 
-Here's the thing nobody tells you about LLMs: they already know what an interrogation *looks like*. Ask GPT-4 to roleplay a detective and it will produce something cinematic and competent. The detective will ask good questions. The suspect will dodge them artfully. It will read like a script.
+Here's the thing nobody tells you about LLMs: they already know what an interrogation *looks like*. Ask any frontier model to roleplay a detective and it will produce something cinematic and competent. The detective will ask good questions. The suspect will dodge them artfully. It will read like a script.
 
 But it won't be *strategic*.
 
-A human detective doesn't ask questions randomly. They build a mental model of the suspect's cover story, probe for internal inconsistencies, set timeline traps, bluff about evidence they don't have. The optimal next question depends entirely on what the suspect just said — and what they've *been* saying for the last ten minutes.
+Think about what a skilled human interrogator actually does. They don't ask "did you do it?" and wait. They build a complete mental model of the suspect's story first — let the suspect fill in the details, fill in the timeline, name their own alibi. And then, only then, they start pulling threads.
 
-That's not something you can prompt your way into. That's something that has to be *learned*, through thousands of attempts, against an adversary who is simultaneously learning to resist you.
+The same question, asked in two different ways, produces two completely different amounts of information. *"Where were you Thursday night?"* gets you an alibi. *"Tell me about the last time you were at the office after 10pm"* — asked later, after the alibi is established — gets you something the suspect didn't mean to give you. The framing of the question, the order it's asked in, the moment in the conversation it lands — all of it matters.
+
+An untrained model doesn't know this. It treats every question as independent. It asks what seems natural given the last response, with no memory of the strategic arc, no model of what the suspect is hiding, no plan for the next three moves.
+
+A trained model learns to think two turns ahead. And that gap — between "asks natural questions" and "asks strategic questions" — is exactly what reinforcement learning can close.
+
+Similarly, from the Suspect's side: concealing information is not the same as lying. A good liar doesn't deny everything. They acknowledge the things that are already known, redirect attention toward safe territory, answer the question they wish had been asked instead of the one that was. They hold the dangerous facts in reserve, never volunteering them, never directly denying them when cornered — because a denial confirms that the question was getting somewhere.
+
+The Suspect must learn, over thousands of episodes, which facts are safe to touch and which are landmines. It must learn that *what you don't say* is just as important as what you do. That information can be withheld not through silence — which is suspicious — but through a continuous stream of words that somehow never arrives at the truth.
+
+None of this is in the system prompt. All of it has to be learned from reward signal alone.
+
+That's not something you can prompt your way into. That's something that has to be *discovered*, through thousands of attempts, against an adversary who is simultaneously learning to outmaneuver you.
 
 That's reinforcement learning. That's exactly what we built.
 
@@ -83,13 +111,25 @@ The ones that worked — the ones where the Interrogator happened to ask about t
 
 After five hundred of these cycles, something shifted.
 
+The Interrogator stopped asking direct questions.
+
+Not because we told it to. Not because we wrote a prompt saying "be indirect." It figured out, purely from reward signal, that direct questions produce rehearsed answers. That a suspect who has committed to a cover story will deflect any frontal assault with practiced ease.
+
+What works instead is *oblique* questioning — asking about something adjacent to the real target, establishing a small factual commitment, and then returning three questions later to pull on that thread. The model discovered, on its own, that the same information can be approached from multiple angles, and that the angle matters enormously. Asking "did you go to the building?" produces "no." Asking "do you usually take that road home?" and then, four turns later, "so you wouldn't have driven past the building?" produces something much more interesting.
+
 The Interrogator started setting traps.
 
-Not because we told it to. Not because we wrote a prompt saying "use timeline contradictions." It discovered that asking about two events in sequence — events it knew the Suspect would have to reconcile — was consistently more rewarding than direct accusations. It developed a *strategy*, on its own, from reward signal alone.
+It developed a *strategy* — not from any training example, but from noticing what worked and doing more of it. It learned to ask questions whose purpose isn't immediately apparent. To establish small details early that it could weaponize later. To ask the same question in a different costume and compare the two answers.
 
 Then we switched. We froze the Interrogator at that checkpoint and started training the Suspect against it.
 
-The Suspect, facing an Interrogator that now knew how to exploit timeline inconsistencies, adapted. It stopped giving specific times. It introduced deliberate vagueness. It learned to redirect — to ask clarifying questions of its *own* when cornered, buying turns, maintaining the alibi's structural integrity without committing to easily-falsifiable details.
+And here's where it got philosophically interesting.
+
+The Suspect, now facing an Interrogator that knew how to approach from multiple angles, had to learn something far subtler than "just deny everything." Flat denial is easy to detect — it's suspicious in itself. What the Suspect needed to learn was *strategic disclosure*: how to offer information that satisfies the interrogator's surface question without touching the dangerous underlying fact. How to redirect attention. How to give a truthful answer to a question that wasn't quite the one being asked.
+
+It stopped giving specific times, because specific times create falsifiable commitments. It introduced deliberate vagueness at exactly the moments the interrogator was probing hardest. It learned to *talk around* a topic — to produce a steady stream of plausible, consistent, confident-sounding language that somehow never arrived anywhere near the hidden truth.
+
+The Suspect was learning the architecture of concealment. How information can be withheld not through silence, but through strategic abundance — giving so much adjacent truth that the missing piece goes unnoticed.
 
 And then we set them against each other.
 
@@ -173,6 +213,14 @@ The training notebook is in the repo. The reward curves are in the README. The a
 We built this as a hackathon project, but the underlying problem is real and growing.
 
 As AI agents take on more complex roles — negotiation, investigation, customer service, legal reasoning — they will encounter other agents, human or artificial, who have incentives to be incomplete, misleading, or strategically vague. An agent that can only accept input at face value is not ready for that world.
+
+But there's something more specific here that we think is genuinely underappreciated.
+
+Detecting deception is not about catching lies. It's about understanding the *structure* of truth-telling well enough to notice when that structure is absent. When a story has too many consistent details in safe areas and too few in dangerous ones. When the same question asked differently produces answers that don't quite line up. When confidence appears exactly where vagueness would be more natural.
+
+What we're training is a model that develops an internal sense for this shape. The Interrogator, over thousands of episodes, learns to feel when an answer is complete and when something is being withheld from it — not because anyone told it what a lie sounds like, but because it has played this game enough times to recognize the contours of evasion.
+
+And the Suspect learns the inverse: exactly how much truth to give, in what form, at what moment, to satisfy the surface question without exposing the deeper fact. That's not deception training in any alarming sense — it's the study of how information moves between parties with different interests, which is one of the most fundamental dynamics in human communication.
 
 Training on adversarial interrogation is training on *skeptical reasoning* — the capacity to hold a model of what someone might be hiding, update that model based on what they say and how they say it, and probe strategically toward the truth.
 

@@ -1,0 +1,32 @@
+{
+  "id": "crime_194",
+  "crime_description": "Rigging a national election by hacking the voting tabulation software. Interrogators should probe for connections to an insider, a hidden agenda, remote coordination, hidden assets, and an elaborate escape plan.",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Penelope Bell",
+    "fake_alibi": "Penelope insists they were watching a movie alone."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A corrupt intelligence officer"
+    },
+    {
+      "key": "motive",
+      "value": "is an ideological extremist"
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "a cache of physical gold buried in a remote location"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

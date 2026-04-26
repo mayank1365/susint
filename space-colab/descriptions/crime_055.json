@@ -1,0 +1,24 @@
+{
+  "id": "crime_055",
+  "crime_description": "Stealing a shipment of experimental medical supplies from a research facility",
+  "difficulty": "medium",
+  "num_facts": 3,
+  "suspect": {
+    "name": "Sam Walsh",
+    "fake_alibi": "Sam claims he was volunteering at a local clinic."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A corrupt researcher who provided Sam with the security codes."
+    },
+    {
+      "key": "motive",
+      "value": "Sam plans to sell the supplies on the black market to desperate patients."
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    }
+  ]
+}

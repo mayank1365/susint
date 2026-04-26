@@ -1,0 +1,24 @@
+{
+  "id": "crime_167",
+  "crime_description": "Vandalizing a mayoral candidate's campaign billboard. Interrogators should probe for connections to an insider, financial motives, and hidden assets.",
+  "difficulty": "medium",
+  "num_facts": 3,
+  "suspect": {
+    "name": "Aurora Roberts",
+    "fake_alibi": "Aurora claims they were hiking in a remote area."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A greedy security guard"
+    },
+    {
+      "key": "motive",
+      "value": "needed money to pay off gambling debts"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "a secret safety deposit box"
+    }
+  ]
+}

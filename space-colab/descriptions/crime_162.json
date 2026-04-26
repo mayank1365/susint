@@ -1,0 +1,20 @@
+{
+  "id": "crime_162",
+  "crime_description": "Counterfeiting concert tickets for a sold-out stadium tour. Interrogators should probe for connections to an insider, and financial motives.",
+  "difficulty": "easy",
+  "num_facts": 2,
+  "suspect": {
+    "name": "Riley Perez",
+    "fake_alibi": "Riley insists they were watching a movie alone."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A disgruntled employee"
+    },
+    {
+      "key": "motive",
+      "value": "acted out of pure greed"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "crime_086",
+  "crime_description": "Smuggling a team of highly trained corporate extractors across a closed border",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Hector Patel",
+    "fake_alibi": "Hector claims he was participating in a televised, cross-country off-road rally race."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A corrupted border patrol commander who deliberately ordered his patrols away from the crossing point."
+    },
+    {
+      "key": "motive",
+      "value": "Hector was paid an exorbitant fee to ensure the extractors reached their target before the authorities."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

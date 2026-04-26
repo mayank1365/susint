@@ -1,0 +1,32 @@
+{
+  "id": "crime_113",
+  "crime_description": "Sabotaging the structural integrity of a newly constructed, massive skyscraper",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Ian Saito",
+    "fake_alibi": "Ian claims he was recovering from a severe illness in an isolated, rural cabin."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A corrupt building inspector who knowingly approved the dangerously compromised structural supports."
+    },
+    {
+      "key": "motive",
+      "value": "Ian seeks to ruin the reputation and entirely bankrupt the rival construction firm that built it."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "crime_050",
+  "crime_description": "Stealing a highly classified military communications satellite. Interrogators should probe for connections to an inside aerospace engineer, a hidden agenda, remote burner phone coordination, offshore accounts, and private flight plans.",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Noah Thompson",
+    "fake_alibi": "Noah claims he was stargazing in the desert."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A rogue aerospace engineer who altered the satellite's launch trajectory."
+    },
+    {
+      "key": "motive",
+      "value": "Noah is an information broker who plans to sell access to the satellite to the highest bidder."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

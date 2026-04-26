@@ -1,0 +1,32 @@
+{
+  "id": "crime_197",
+  "crime_description": "Infiltrating a top-secret bioweapons facility to steal a viral strain. Interrogators should probe for connections to an insider, a hidden agenda, remote coordination, hidden assets, and an elaborate escape plan.",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Grace Bell",
+    "fake_alibi": "Grace insists they were watching a movie alone."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A deep-cover mole"
+    },
+    {
+      "key": "motive",
+      "value": "is an ideological extremist"
+    },
+    {
+      "key": "true_alibi",
+      "value": "was observing the operation via a hacked drone feed"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "a massive, anonymized cryptocurrency wallet"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

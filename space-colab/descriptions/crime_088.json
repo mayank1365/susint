@@ -1,0 +1,32 @@
+{
+  "id": "crime_088",
+  "crime_description": "Orchestrating a massive, coordinated short squeeze to bankrupt a predatory hedge fund",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Jared Okafor",
+    "fake_alibi": "Jared claims he was trekking through the remote Amazon basin, completely isolated from civilization."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A disillusioned hedge fund analyst who leaked the firm's highly leveraged short positions."
+    },
+    {
+      "key": "motive",
+      "value": "Jared sought revenge against the hedge fund for aggressively driving his father's company into bankruptcy."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

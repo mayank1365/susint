@@ -1,0 +1,32 @@
+{
+  "id": "crime_064",
+  "crime_description": "Blackmailing a prominent judge using illegally obtained medical records",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Maya Lin",
+    "fake_alibi": "Maya claims she was trapped in a stalled ski gondola during a blizzard for eight hours."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A hospital IT administrator who bypassed the encrypted firewall to extract the patient files."
+    },
+    {
+      "key": "motive",
+      "value": "Maya wanted to force the judge to dismiss a landmark environmental class-action lawsuit."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

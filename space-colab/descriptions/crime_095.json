@@ -1,0 +1,32 @@
+{
+  "id": "crime_095",
+  "crime_description": "Kidnapping a famous pop star to extract a massive, untraceable cryptocurrency ransom",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Quinn Tremblay",
+    "fake_alibi": "Quinn claims he was attending a crowded, chaotic music festival in a completely different city."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "The pop star's deeply indebted personal manager, who provided Quinn with the precise, unlisted itinerary."
+    },
+    {
+      "key": "motive",
+      "value": "Quinn is a dangerously obsessed fan who deludedly believes he can use the ransom to fund a life together."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

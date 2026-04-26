@@ -1,0 +1,24 @@
+{
+  "id": "crime_138",
+  "crime_description": "Manipulating the algorithms of a major social media platform to sway an election",
+  "difficulty": "medium",
+  "num_facts": 3,
+  "suspect": {
+    "name": "Morgan Stanley",
+    "fake_alibi": "Morgan claims they were alone in an off-grid cabin completing a novel."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A disgruntled scientist who intentionally bypassed the primary security protocols."
+    },
+    {
+      "key": "motive",
+      "value": "Morgan believes society must be torn down to be rebuilt stronger."
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    }
+  ]
+}

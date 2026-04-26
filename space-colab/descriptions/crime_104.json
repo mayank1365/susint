@@ -1,0 +1,32 @@
+{
+  "id": "crime_104",
+  "crime_description": "Falsifying environmental impact reports to allow a massive, destructive mining operation",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Zara Perez",
+    "fake_alibi": "Zara claims she was leading a highly visible, public protest against deforestation in the Amazon."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A corrupt government regulator who officially rubber-stamped the blatantly forged environmental assessments."
+    },
+    {
+      "key": "motive",
+      "value": "Zara was promised an extremely lucrative, hidden executive position within the mining conglomerate."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

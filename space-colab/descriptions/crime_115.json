@@ -1,0 +1,32 @@
+{
+  "id": "crime_115",
+  "crime_description": "Orchestrating a sophisticated, multi-level marketing pyramid scheme targeting the elderly",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Kael Martinez",
+    "fake_alibi": "Kael claims he was volunteering at a local community center, helping seniors with their taxes."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A corrupt financial advisor who aggressively pushed the fraudulent investments onto her vulnerable clients."
+    },
+    {
+      "key": "motive",
+      "value": "Kael is ruthlessly greedy and lacks any moral compass regarding his victims."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

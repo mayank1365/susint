@@ -1,0 +1,32 @@
+{
+  "id": "crime_003",
+  "crime_description": "Sabotaging a rival's sensory deprivation tank to induce terrifying auditory hallucinations. Interrogators should probe for connections to an insider, financial motives, remote coordination, hidden assets, and an elaborate escape plan.",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Lord Arthur Pendelton",
+    "fake_alibi": "Lord Arthur claims he was drinking brandy and playing high-stakes poker with the train conductor in the dining car."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "Mary, the Duchess's personal maid, who deliberately left the cabin door unlocked during dinner service."
+    },
+    {
+      "key": "motive",
+      "value": "Lord Arthur's ancestral estate is facing imminent foreclosure, and fencing the diamonds would clear his family's massive debts."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

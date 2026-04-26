@@ -1,0 +1,20 @@
+{
+  "id": "crime_181",
+  "crime_description": "Stealing a vintage motorcycle from an unlocked garage. Interrogators should probe for connections to an insider, and financial motives.",
+  "difficulty": "easy",
+  "num_facts": 2,
+  "suspect": {
+    "name": "Logan James",
+    "fake_alibi": "Logan states they were stranded on the highway."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A disgruntled employee"
+    },
+    {
+      "key": "motive",
+      "value": "needed money to pay off gambling debts"
+    }
+  ]
+}

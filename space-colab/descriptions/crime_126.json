@@ -1,0 +1,32 @@
+{
+  "id": "crime_126",
+  "crime_description": "Sabotaging the structural integrity of a newly constructed, massive suspension bridge",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Victor Cohen",
+    "fake_alibi": "Victor claims he was recovering from a severe illness in an isolated, rural cabin."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A corrupt building inspector who knowingly approved the dangerously compromised suspension cables."
+    },
+    {
+      "key": "motive",
+      "value": "Victor seeks to ruin the reputation and entirely bankrupt the rival engineering firm that designed it."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

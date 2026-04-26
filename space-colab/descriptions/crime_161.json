@@ -1,0 +1,24 @@
+{
+  "id": "crime_161",
+  "crime_description": "Rigging a small-town beauty pageant using bribery. Interrogators should probe for connections to an insider, financial motives, and hidden assets.",
+  "difficulty": "medium",
+  "num_facts": 3,
+  "suspect": {
+    "name": "Abigail Mitchell",
+    "fake_alibi": "Abigail claims they were hiking in a remote area."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A disgruntled employee"
+    },
+    {
+      "key": "motive",
+      "value": "acted out of pure greed"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "a secret safety deposit box"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "crime_039",
+  "crime_description": "Hacking the central bank and erasing all consumer debt records. Interrogators should probe for connections to an inside it administrator at the bank, a hidden agenda, remote burner phone coordination, offshore accounts, and private flight plans.",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Caleb Chavez",
+    "fake_alibi": "Caleb claims he was volunteering at a local soup kitchen."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A rogue IT administrator at the bank who provided Caleb with a backdoor access."
+    },
+    {
+      "key": "motive",
+      "value": "Caleb is a modern-day Robin Hood who wants to free the masses from financial slavery."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

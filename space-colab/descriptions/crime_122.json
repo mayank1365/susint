@@ -1,0 +1,32 @@
+{
+  "id": "crime_122",
+  "crime_description": "Falsifying the geological surveys to secure a massive, highly destructive mining contract",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Ruby Jackson",
+    "fake_alibi": "Ruby claims she was leading a highly visible, public protest against deforestation in the Amazon."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A corrupt government geologist who officially certified the blatantly forged survey reports."
+    },
+    {
+      "key": "motive",
+      "value": "Ruby was promised an extremely lucrative, hidden executive position within the mining conglomerate."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

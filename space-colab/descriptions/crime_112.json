@@ -1,0 +1,32 @@
+{
+  "id": "crime_112",
+  "crime_description": "Hacking the internal servers of a major pharmaceutical company to leak proprietary drug formulas",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Hazel Nakamura",
+    "fake_alibi": "Hazel claims she was attending a loud, chaotic music festival, far from any computer terminal."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A deeply indebted research scientist who provided Hazel with his high-level administrative access credentials."
+    },
+    {
+      "key": "motive",
+      "value": "Hazel is a radical health activist who passionately believes all medical knowledge must be freely available."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

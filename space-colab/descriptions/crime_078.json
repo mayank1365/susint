@@ -1,0 +1,32 @@
+{
+  "id": "crime_078",
+  "crime_description": "Deploying a sophisticated ransomware attack against a major hospital network",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Quinn Moreau",
+    "fake_alibi": "Quinn claims she was locked in a university lab conducting a monitored 72-hour physics experiment."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "An indebted hospital IT worker who clicked a targeted spear-phishing link to bypass the firewall."
+    },
+    {
+      "key": "motive",
+      "value": "Quinn desperately needed the multi-million dollar crypto ransom to fund her sister's experimental surgery."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

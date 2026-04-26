@@ -1,0 +1,32 @@
+{
+  "id": "crime_074",
+  "crime_description": "Engineering a series of controlled demolitions to artificially lower property values",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Isolde Tran",
+    "fake_alibi": "Isolde claims she was hosting a lavish charity gala for the city's elite."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A corrupt city inspector who approved the structural integrity of the rigged buildings."
+    },
+    {
+      "key": "motive",
+      "value": "Isolde plans to buy up the devalued real estate and redevelop it into a massive luxury complex."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

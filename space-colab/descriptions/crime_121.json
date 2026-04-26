@@ -1,0 +1,32 @@
+{
+  "id": "crime_121",
+  "crime_description": "Sabotaging the climate control systems of a massive, critical seed bank",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Quentin Novak",
+    "fake_alibi": "Quentin claims he was observing a strict, silent vow at a remote, secluded agricultural commune."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A rogue maintenance worker who deliberately disabled the facility's redundant backup generators."
+    },
+    {
+      "key": "motive",
+      "value": "Quentin is an extremist who believes humanity should not have a safety net against ecological collapse."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

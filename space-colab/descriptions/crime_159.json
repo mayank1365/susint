@@ -1,0 +1,24 @@
+{
+  "id": "crime_159",
+  "crime_description": "Sabotaging a local bakery's ovens to ruin their grand opening. Interrogators should probe for connections to an insider, financial motives, and hidden assets.",
+  "difficulty": "medium",
+  "num_facts": 3,
+  "suspect": {
+    "name": "Hazel Bailey",
+    "fake_alibi": "Hazel states they were stranded on the highway."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A bitter ex-partner"
+    },
+    {
+      "key": "motive",
+      "value": "needed money to pay off gambling debts"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "a secret safety deposit box"
+    }
+  ]
+}

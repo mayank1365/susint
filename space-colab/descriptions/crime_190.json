@@ -1,0 +1,32 @@
+{
+  "id": "crime_190",
+  "crime_description": "Stealing highly classified submarine blueprints from a naval base. Interrogators should probe for connections to an insider, a hidden agenda, remote coordination, hidden assets, and an elaborate escape plan.",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Evelyn Ross",
+    "fake_alibi": "Evelyn insists they were watching a movie alone."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A corrupt intelligence officer"
+    },
+    {
+      "key": "motive",
+      "value": "wanted to trigger a global economic crisis"
+    },
+    {
+      "key": "true_alibi",
+      "value": "was observing the operation via a hacked drone feed"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

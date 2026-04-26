@@ -1,0 +1,32 @@
+{
+  "id": "crime_100",
+  "crime_description": "Orchestrating a sophisticated, multi-national tax evasion scheme for wealthy elites",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Vera Kowalski",
+    "fake_alibi": "Vera claims she was leading a highly publicized, pro-bono legal clinic for impoverished citizens."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A corrupt offshore banker who established the complex, opaque web of shell corporations."
+    },
+    {
+      "key": "motive",
+      "value": "Vera charges an exorbitant, hidden percentage fee for her services to fund her own lavish, hidden lifestyle."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

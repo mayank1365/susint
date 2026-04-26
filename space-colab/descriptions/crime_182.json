@@ -1,0 +1,20 @@
+{
+  "id": "crime_182",
+  "crime_description": "Sabotaging a local community garden by spraying herbicides. Interrogators should probe for connections to an insider, and a vindictive motive.",
+  "difficulty": "easy",
+  "num_facts": 2,
+  "suspect": {
+    "name": "Sofia Rogers",
+    "fake_alibi": "Sofia claims they were asleep at home."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "An indebted friend"
+    },
+    {
+      "key": "motive",
+      "value": "wanted revenge for a perceived slight"
+    }
+  ]
+}

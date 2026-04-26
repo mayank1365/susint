@@ -1,0 +1,32 @@
+{
+  "id": "crime_080",
+  "crime_description": "Sabotaging a commercial airliner's navigation system to force an emergency landing",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Amelia Silva",
+    "fake_alibi": "Amelia claims she was participating in a highly publicized, rigorous ironman triathlon."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "An underpaid avionics technician who installed a rogue firmware patch during routine maintenance."
+    },
+    {
+      "key": "motive",
+      "value": "Amelia was hired by a corporate espionage ring to seize a specific prototype being transported on the flight."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

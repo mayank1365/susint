@@ -1,0 +1,32 @@
+{
+  "id": "crime_134",
+  "crime_description": "Falsifying architectural blueprints to win a massive city contract",
+  "difficulty": "hard",
+  "num_facts": 5,
+  "suspect": {
+    "name": "Alex Wilson",
+    "fake_alibi": "Alex claims they were alone in an off-grid cabin completing a novel."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "A compromised engineer who intentionally bypassed the primary security protocols."
+    },
+    {
+      "key": "motive",
+      "value": "Alex wanted to exact revenge on a former employer who ruined their career."
+    },
+    {
+      "key": "true_alibi",
+      "value": "was actively coordinating the crime from a secure burner phone"
+    },
+    {
+      "key": "hidden_asset",
+      "value": "untraceable offshore account holding the illicit funds"
+    },
+    {
+      "key": "escape_route",
+      "value": "chartered a private flight under a fake identity"
+    }
+  ]
+}

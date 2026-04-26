@@ -1,0 +1,20 @@
+{
+  "id": "crime_180",
+  "crime_description": "Defrauding a small business with a fake vendor invoice scheme. Interrogators should probe for connections to an insider, and financial motives.",
+  "difficulty": "easy",
+  "num_facts": 2,
+  "suspect": {
+    "name": "Avery Brooks",
+    "fake_alibi": "Avery states they were stranded on the highway."
+  },
+  "secrets": [
+    {
+      "key": "accomplice",
+      "value": "An indebted friend"
+    },
+    {
+      "key": "motive",
+      "value": "needed money to pay off gambling debts"
+    }
+  ]
+}
