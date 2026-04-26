@@ -2,10 +2,10 @@
 
 > *Built for the OpenEnv hackathon. Two themes hit at once: Multi-Agent Interactions and Self-Improvement.*
 
-**TL;DR** — We built a two-agent reinforcement learning environment where one LLM has a hidden secret and another LLM has to extract it through 20 turns of natural-language interrogation. We trained Qwen2.5-7B-Instruct as the interrogator using GRPO and lifted heldout extraction rate from **11.1% (template baseline) to <X>%** in 200 steps on a single A100. The grader is 100% deterministic Python — no LLM-as-judge anywhere in the reward path.
+**TL;DR** — We built a two-agent reinforcement learning environment where one LLM has a hidden secret and another LLM has to extract it through 20 turns of natural-language interrogation. We trained Qwen2.5-7B-Instruct as the interrogator using GRPO and lifted heldout extraction rate from **11.1% (template baseline) to 36.7%** in 200 steps on a single A100. The grader is 100% deterministic Python — no LLM-as-judge anywhere in the reward path.
 
-- 🤗 **Live environment:** https://huggingface.co/spaces/<YOUR_USER>/suspect-x-env
-- 💻 **Code + training notebook:** <GITHUB_REPO_URL>
+- 🤗 **Live environment:** https://huggingface.co/spaces/Hollow-Abyss/susint
+- 💻 **Code + training notebook:** https://github.com/mayank1365/susint
 
 ---
 
